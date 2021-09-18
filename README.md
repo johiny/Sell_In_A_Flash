@@ -1,5 +1,5 @@
 ![Sell in A Flash](https://i.ibb.co/ygWHtxS/logo.png)
-:rocket:<h2>Objetivo</h2>
+## :rocket:Objetivo
 <p>Crear una plataforma de ventas sencilla pero funcional con cada uno de los modulos correspondientes junto con una estetica y UX excelente.</p>
 <br><br><br><br><br>
 Mission Tic 2021 Project<br>
