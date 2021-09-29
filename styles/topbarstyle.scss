@@ -2,7 +2,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
@@ -65,7 +64,6 @@ nav li:hover{
 
 
 #leftbar li{
-float: left;
 border-bottom:1px solid rgba($color: #616161, $alpha: 0.1);
 border-top: 1px solid rgba($color: #616161, $alpha: 0.1);;
 font-family: 'Lato',sans-serif;
