@@ -2,3 +2,16 @@
     margin: 0;
     padding: 0;
 }
+.formulario {
+    position: relative;
+    top: -10px;
+    border: solid rgb(175, 173, 173) 1px;
+    background: white;
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    
+}
