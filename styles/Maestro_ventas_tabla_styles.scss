@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+.cuerpo_central{
+    width: 89.54vw;
+    height: 93.6vh;
+    position: absolute;
+    left: 201px;
+    top: 62px;
+    display: grid;
+}
+
+h1{
+    position: relative;
+    font-family: 'Roboto',sans-serif;
+    font-size: 63px;
+    top: 10px;
+    left: 20px;
+    opacity: .35;
+}
+
+.tabla th{
+    font-family: 'Roboto',sans-serif;
+    background: white;
+    border-radius: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    
+}
+
+.tabla td{
+    font-family: 'Roboto',sans-serif;
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.22);
+    text-align: center;
+}
+.tabla{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    height: 750px;
+    width: 1260px;
+    background: #FBFAFA;
+    border-radius: 50px;
+}
+.tabla table{
+    position: relative;
+    left: .25%;
+    border-collapse: separate;
+    border-spacing: 45px 20px;
+}
