@@ -55,3 +55,51 @@ h1 {
   border-collapse: separate;
   border-spacing: 45px 20px;
 }
+
+.cuerpo_central__opciones-caja2-buscador {
+  position: absolute;
+  top: 3%;
+  left: 62%;
+  height: 0px;
+  width: 280px;
+  padding-top: 60px;
+  border: none;
+  background: #FBFAFA;
+  border-radius: 56px;
+  font-size: 200px;
+}
+
+.cuerpo_central__opciones-caja2-buscador input {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  border: none;
+  border-radius: 56px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.cuerpo_central__opciones-caja2-buscador input:focus {
+  outline: none;
+}
+
+.cuerpo_central__opciones-caja2-buscador button {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 56px;
+  border: none;
+  background: #FBFAFA;
+}
+
+.cuerpo_central__opciones-caja2-buscador img {
+  height: 40px;
+  width: 40px;
+}
+
+.cuerpo_central__opciones-caja2-buscador button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
