@@ -61,3 +61,24 @@ h1 {
     top: 7px;
     left: 5px;
 }
+
+.boton-generico {
+    margin: 7px;
+    border: solid 1px;
+    border-radius: 5px;
+    width: 260px;
+    height: 27px;
+    font-size: 15px;
+}
+
+.boton-generico:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: rgb(218, 206, 206);
+}
+
+.boton-entrar {
+    font-weight: 900;
+    position: relative;
+    top: 9px;
+}
