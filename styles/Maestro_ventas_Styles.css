@@ -1,14 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-.cuerpo_central {
-  width: 89.54vw;
-  height: 93.6vh;
-  position: absolute;
-  left: 201px;
-  top: 62px;
-  display: -ms-grid;
-  display: grid;
-}
-
 .cuerpo_central__titulo {
   position: absolute;
   width: 223px;

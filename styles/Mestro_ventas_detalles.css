@@ -1,0 +1,46 @@
+.detalles {
+  position: absolute;
+  height: 770px;
+  width: 1620px;
+  background: #FBFAFA;
+  top: 11%;
+  left: 1%;
+  border-radius: 40px;
+}
+
+.cuerpo_central__Titulo {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  font-family: 'Roboto',sans-serif;
+  font-size: 72px;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.cuerpo_central__detalles-titulo {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  font-size: 64px;
+  font-family: 'Roboto',sans-serif;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.cuerpo_central__detalles-tabla {
+  position: absolute;
+  top: 10%;
+  left: -1.2%;
+  border-collapse: separate;
+  border-spacing: 40px 30px;
+}
+
+.cuerpo_central__detalles-tabla th {
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+}
+
+.cuerpo_central__detalles-tabla td {
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
