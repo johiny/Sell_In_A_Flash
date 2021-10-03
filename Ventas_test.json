@@ -1,0 +1,76 @@
+{  "venta1": {
+    "ID":1,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta2": {
+    "ID":2,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta3":{
+    "ID":3,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta4":{
+    "ID":4,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta5":{
+    "ID":5,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta6":{
+    "ID":6,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta7":{
+    "ID":7,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    },
+    "venta8":{
+    "ID":8,
+    "Fecha":0,
+    "Cantidad":0,
+    "Cliente" :0,
+    "Encargado":0,
+    "Valor Total":0,
+    "Estado":0
+    }
+}
+
+    
+    
