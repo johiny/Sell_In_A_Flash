@@ -47,7 +47,9 @@ popupsuccess = () => {popupspace.innerHTML =`
 <div class="Guardar-Popup" id="guardar-popup">
 <h2 class="Guardar-Popup__titulo">
     ¡Cambios Guardados <br> Correctamente!
-</h2>`
+</h2>
+<img src="iconos\\check-mark-svgrepo-com.svg">`
+
 };
 
 cargar("Ventas_test.json");
