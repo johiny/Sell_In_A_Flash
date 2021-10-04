@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="frame.css">
+    <link rel="stylesheet" href="mihojadeestilos.css">
+    <link rel="stylesheet" href="estilo-tabla.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MóduloProductos</title>
+</head>
+<body>
+    <header class="wrapper">
+        <nav>
+            <ul class="navlinks">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Info Ventas</a></li>
+        <li><a href="#">Estado Ventas </a></li>
+            </ul>    
+        </nav>
+        <div id="leftbar">
+            <img id="logo" src="logo.png">
+            <ul id="leftbar_links">
+                <li><a href="#">Gestión</a></li>
+            </ul>
+        </div>
+    </header>
+    <form>
+        <div class="datos_form">
+            <span>ID Producto:</span>
+                <input type="number" id="number" name="number"/>
+        </div>
+        <div class="datos_form">
+            <label for="mensaje">Descripción:</label>
+                <textarea id="mensaje" type="textarea" name="mensaje"></textarea>
+        </div>
+        <div class="datos_form">
+            <span>Precio:</span>
+                <input type="number" id="value" name="number"/>
+        </div>
+        <div class="datos_form">
+            <span>Estado:</span>
+                <select id="select" name="select">
+                    <option>Disponible</option>
+                    <option>No disponible</option>
+                </select>
+        </div>
+            <input id="enviar" type="submit" name="enviar" value="Guardar">
