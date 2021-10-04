@@ -1,0 +1,57 @@
+.datos_form{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.datos_form label{
+    font-weight: 600;
+    font-size: 110%;
+    display: inline-block;
+}
+
+#enviar{
+    font-size: 15px;
+}
+
+select{
+    font-size: 15px;
+    font-family:'Lato',sans-serif;
+}
+
+.datos_form input, .datos_form select, .datos_form textarea{
+    font-family:'Lato',sans-serif;
+    background-color: darkgray;
+    border-radius: 5px;
+    border:darkgray 1px;
+    height: 40px;
+
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+
+form{
+    color: rgb(107, 98, 98);
+    margin-top: 100px;
+    margin-left: 300px;
+    font-family:'Lato',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+
+}
+
+
+.contenedor img{
+    position: absolute;
+    left: 800px;
+    bottom: 250px;
+    height: 300px;
+    width: 300px;
+}
+
