@@ -1,74 +1,75 @@
-{  "venta1": {
+{  "venta1":
+    {
     "ID":1,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"24/03/2009",
+    "Cantidad":30,
+    "Cliente" :198567845,
+    "Encargado":"Jose Antonio",
+    "Valor_Total":400000,
+    "Estado":"Entregada"
     },
     "venta2": {
     "ID":2,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"12/12/2021",
+    "Cantidad":"300",
+    "Cliente" :13567845,
+    "Encargado":"Mario",
+    "Valor_Total":85000,
+    "Estado":"Cancelada"
     },
     "venta3":{
     "ID":3,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"04/06/2007",
+    "Cantidad":"12",
+    "Cliente" :7630373047,
+    "Encargado":"Jose Miguel",
+    "Valor_Total":130000,
+    "Estado":"Entregada"
     },
     "venta4":{
     "ID":4,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"11/12/2014",
+    "Cantidad":17,
+    "Cliente" :18363378,
+    "Encargado":"Mario",
+    "Valor_Total":230000,
+    "Estado":"En Proceso"
     },
     "venta5":{
     "ID":5,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"12/12/2020",
+    "Cantidad":65,
+    "Cliente" :289463098,
+    "Encargado":"Maria Ordoñez",
+    "Valor_Total":780000,
+    "Estado":"Cancelada"
     },
     "venta6":{
     "ID":6,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"21/08/2020",
+    "Cantidad":4,
+    "Cliente" :18363378,
+    "Encargado":"Jose Antonio",
+    "Valor_Total":430000,
+    "Estado":"Entregada"
     },
     "venta7":{
     "ID":7,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"10/08/2009",
+    "Cantidad":40,
+    "Cliente" :927492739,
+    "Encargado":"Mario",
+    "Valor_Total":34000,
+    "Estado":"En Proceso"
     },
     "venta8":{
     "ID":8,
-    "Fecha":0,
-    "Cantidad":0,
-    "Cliente" :0,
-    "Encargado":0,
-    "Valor Total":0,
-    "Estado":0
+    "Fecha":"11/12/2016",
+    "Cantidad":4,
+    "Cliente" :198567845,
+    "Encargado":"Jose Miguel",
+    "Valor_Total":1000000,
+    "Estado":"Cancelada"
     }
 }
 

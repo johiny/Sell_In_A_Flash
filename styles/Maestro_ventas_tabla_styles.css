@@ -104,3 +104,44 @@ h1 {
 #tabla__estado_selector option {
   border-radius: 15px;
 }
+
+.Guardar-Popup {
+  border-radius: 40px;
+  top: 10%;
+  position: absolute;
+  height: 750px;
+  width: 300px;
+  left: 79%;
+  background: #FBFAFA;
+}
+
+.Guardar-Popup__titulo {
+  position: relative;
+  top: 5%;
+  font-family: 'Roboto',sans-serif;
+  text-align: center;
+}
+
+.Guardar-Popup__button {
+  position: relative;
+  top: 10%;
+  left: 15%;
+  border: none;
+  padding: 15px 60px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  background: white;
+  border-radius: 56px;
+}
+
+.Guardar-Popup__button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+a {
+  color: #47525E;
+}
+
+a:visited {
+  text-decoration: none;
+}
