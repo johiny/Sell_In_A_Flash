@@ -1,5 +1,4 @@
-Presentación
-Amante de las computadoras desde los 6 años
-mientras que otros niños pedian coches de juguete o balones a sus padres yo queria mi primera PC.
+//Presentación
 
-Espero que el proyecto al final de los sprints sea una plataforma de ventas sencilla pero funcional con cada uno de los modulos establecidos y con estética minimalista.
+//Amante de las computadoras desde los 6 años mientras que otros niños pedían coches de juguete o balones a sus padres yo quería mi primera PC.
+//Espero que al final de los sprints el proyecto sea una plataforma de ventas sencilla pero funcional con cada uno de los modulos establecidos y con estética minimalista.
