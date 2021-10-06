@@ -1,4 +1,5 @@
 import Inputs from "../components/inputs";
+import Boton from "../components/boton";
 import logo from "../imagenes/logo.png"
 
 function Login(){
@@ -15,9 +16,7 @@ function Login(){
             <div className="posicion">
                 <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                 <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
-                <div>
-                    <button className="boton-generico boton-entrar">Entrar</button>
-                </div>
+                <Boton />
                 <div>
                     <button className="boton-generico"><i className="fas fa-envelope"></i> Entrar Por Correo Electronico</button>
                 </div>

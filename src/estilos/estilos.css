@@ -1,10 +1,10 @@
-* {
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background-image: radial-gradient(grey, white);
+  background-color: rgb(206, 202, 202);
 }
 .formulario {
   position: relative;
@@ -84,7 +84,7 @@ h1 {
 .boton-entrar {
   font-weight: 900;
   position: relative;
-  top: 9px;
+  top: -30px;
 }
 
 a {
