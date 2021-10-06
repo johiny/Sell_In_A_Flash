@@ -1,17 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="stylegu.css">
-    <script href="App.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de Usuarios</title>
-</head>
-<body>
-    <header class="wrapper">
+import logo from './logo.svg';
+import './styles/App.css';
+
+function App() {
+  return (
+    <div className="App">
+          <header className="wrapper">
         <nav>
-            <ul class="navlinks">
+            <ul className="navlinks">
                 <li>
                     <a href="#">
                         Inicio
@@ -30,7 +25,7 @@
             </ul>
         </nav>
         <div id="leftbar">
-            <img id="logo" src="logo.png">
+            <img id="logo" src="logo.png"/>
             <ul id="leftbar_links">
                 <li><a href="#">Gestión</a></li>
             </ul>
@@ -42,9 +37,6 @@
                 ID de usuario
             </label>
             <input name="id" type="search" list="usuarios"/>
-            <!--<datalist id="usuarios">
-                
-            </datalist>-->
         </div>
         
         <button id="buscar_id" type="button">
@@ -56,7 +48,7 @@
             </legend>
             <img src="./nn.jpg" height="500px"/>
         </fieldset>
-        <table id="tabus1" xºcellpadding="50" cellspacing="20">
+        <table id="tabus1" cellpadding="50" cellspacing="20">
             <tr>
                 <th > Id. (Cédula) </th>
                 <th > Nombres </th>
@@ -68,7 +60,7 @@
                 <th > Estado </th>
 
             </tr>
-            <tbody style="text-align:left">
+            <tbody >
                 <tr>
                     <td >1152443922</td>
                     <td >Juan Esteban </td>
@@ -80,12 +72,12 @@
                     <td >Autorizado</td>
                 </tr>
                 <tr>
-                    <td><input type="number" name="cedula" placeholder="Cédula..."></td>
-                    <td><input type="text" name="nombre" placeholder="Nombres..."></td>
-                    <td><input type="text" name="apellidos" placeholder="Apellidos..."></td>
-                    <td><input type="text" name="correo" placeholder="Correo..."></td>
-                    <td><input type="text" name="telefono" placeholder="Teléfono..."></td>
-                    <td><input type="text" name="cargo" placeholder="Cargo..."></td>
+                    <td><input type="number" name="cedula" placeholder="Cédula..."/></td>
+                    <td><input type="text" name="nombre" placeholder="Nombres..."/></td>
+                    <td><input type="text" name="apellidos" placeholder="Apellidos..."/></td>
+                    <td><input type="text" name="correo" placeholder="Correo..."/></td>
+                    <td><input type="text" name="telefono" placeholder="Teléfono..."/></td>
+                    <td><input type="text" name="cargo" placeholder="Cargo..."/></td>
                     <td><select type="text" name="rol" placeholder="Rol...">
                         <option value="vendedor">Vendedor</option> 
                         <option value="administrador">Administrador</option>
@@ -110,7 +102,11 @@
         </div>
     </main>
     <footer>
-
+        
     </footer>
-</body>
- <!--
+
+    </div>
+  );
+}
+
+export default App;
