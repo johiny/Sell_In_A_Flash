@@ -100,7 +100,7 @@ nav li:hover {
   color: #47525E;
 }
 
-#tabus1{
+.tabus1{
   margin-left: 10%;
   background-color: #fbfafa;
   border: 0;
@@ -122,28 +122,20 @@ td{
   justify-content: left;
 }
 
-#informacion1 {
-  margin-left: 50%;
-  padding-top: 0%;
-}
 
-#actualizar_datos button {
-  margin-top: 20px;
-  background-color: rgba(245, 245, 245, 0.37);
-  border: 1px solid rgba(15, 13, 13, 0.103);
-  border-radius: 5px; 
-  color: rgb(131, 131, 119); 
-  padding: 12px 25px;
-  position:relative;
-}
-
-#maingu button{
+.mainguButton{
   margin-top: 40px;
   background-color: rgba(245, 245, 245, 0.37);
-  border: 1px solid rgba(15, 13, 13, 0.103);
+  border: 2px solid rgba(15, 13, 13, 0.103);
   border-radius: 5px; 
   color: rgb(131, 131, 119); 
   padding: 12px 25px;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.mainguButton:hover{
+  box-shadow: 3px 3px rgb(95, 95, 87);
 }
 
 fieldset{
