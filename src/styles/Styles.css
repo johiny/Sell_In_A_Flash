@@ -6,20 +6,6 @@
   list-style: none;
 }
 /* Nav Bar Styles ------------------------------------------------------------------*/
-.cuerpo_central {
-  width: 89.54vw;
-  height: 93.6vh;
-  position: absolute;
-  left: 201px;
-  top: 62px;
-  display: -ms-grid;
-  display: grid;
-}
-
-body {
-  background-color: white;
-}
-
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,9 +82,24 @@ nav li:hover {
   color: #47525E;
 }
 
+/* Cuerpo Central main */
+
+.cuerpo_central {
+  width: 89.54vw;
+  height: 93.6vh;
+  position: absolute;
+  left: 201px;
+  top: 62px;
+  display: grid;
+}
+
+body {
+  background-color: white;
+}
+
 /* Index Ventas Style -------------------------------------------------------------*/
 
-.cuerpo_central__titulo {
+.cuerpo_central__Ventas-index-titulo {
   position: absolute;
   width: 223px;
   height: 84px;
@@ -136,7 +137,7 @@ nav li:hover {
   background: rgba(117, 231, 149, 0.12);
 }
 
-.cuerpo_central__opciones-caja1 button {
+.Button_grande{
   position: absolute;
   top: 50%;
   left: 11%;
@@ -160,7 +161,7 @@ a:visited {
   background-color: rgba(148, 148, 148, 0.2);
 }
 
-.cuerpo_central__opciones-caja2-buscador {
+.Buscador_index_Ventas {
   position: absolute;
   top: 50%;
   left: 53%;
@@ -173,7 +174,7 @@ a:visited {
   font-size: 200px;
 }
 
-.cuerpo_central__opciones-caja2-buscador input {
+.Buscador_index_Ventas input {
   position: absolute;
   top: 12%;
   left: 5%;
@@ -183,11 +184,11 @@ a:visited {
   font-size: 14px;
 }
 
-.cuerpo_central__opciones-caja2-buscador input:focus {
+.Buscador_index_Ventas input:focus {
   outline: none;
 }
 
-.cuerpo_central__opciones-caja2-buscador button {
+.Buscador_index_Ventas button {
   position: absolute;
   top: 20%;
   left: 80%;
@@ -199,8 +200,204 @@ a:visited {
   background: #FBFAFA;
 }
 
-.cuerpo_central__opciones-caja2-buscador img {
+.Buscador_index_Ventas img {
   height: 40px;
   width: 40px;
 }
 
+/* Tabla Styles --------------------------------------------------------------------- */
+
+.cuerpo_central__Ventas-tabla-titulo {
+  position: relative;
+  font-family: 'Roboto',sans-serif;
+  font-size: 63px;
+  top: 10px;
+  left: 20px;
+  opacity: .35;
+} 
+
+.tabla th {
+  font-family: 'Roboto',sans-serif;
+  background: white;
+  border-radius: 7px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.tabla td {
+  font-family: 'Roboto',sans-serif;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.tabla {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  height: 750px;
+  width: 1260px;
+  background: #FBFAFA;
+  border-radius: 50px;
+}
+
+.tabla table {
+  position: relative;
+  left: .05%;
+  border-collapse: separate;
+  border-spacing: 45px 20px;
+}
+
+.Buscador_Tabla_Ventas {
+  position: absolute;
+  top: 3%;
+  left: 62%;
+  height: 0px;
+  width: 280px;
+  padding-top: 60px;
+  border: none;
+  background: #FBFAFA;
+  border-radius: 56px;
+  font-size: 200px;
+}
+
+.Buscador_Tabla_Ventas input {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  border: none;
+  border-radius: 56px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.Buscador_Tabla_Ventas input:focus {
+  outline: none;
+}
+
+.Buscador_Tabla_Ventas button {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 56px;
+  border: none;
+  background: #FBFAFA;
+}
+
+.Buscador_Tabla_Ventas img {
+  height: 40px;
+  width: 40px;
+}
+
+.Buscador_Tabla_Ventas button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+#tabla__estado_selector {
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#tabla__estado_selector option {
+  border-radius: 15px;
+}
+
+.Guardar-Popup {
+  border-radius: 40px;
+  top: 10%;
+  position: absolute;
+  height: 750px;
+  width: 300px;
+  left: 79%;
+  background: #FBFAFA;
+}
+
+.Guardar-Popup__titulo {
+  position: relative;
+  top: 5%;
+  font-family: 'Roboto',sans-serif;
+  text-align: center;
+}
+
+.Guardar-Popup__button {
+  position: relative;
+  top: 10%;
+  left: 15%;
+  border: none;
+  padding: 15px 60px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  background: white;
+  border-radius: 56px;
+}
+
+.Guardar-Popup__button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+a {
+  color: #47525E;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.Guardar-Popup img {
+  position: relative;
+  top: 6%;
+  left: 25%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Detalles style ------------------------------------------------------------------ */
+
+.detalles {
+  position: absolute;
+  height: 770px;
+  width: 1620px;
+  background: #FBFAFA;
+  top: 11%;
+  left: 1%;
+  border-radius: 40px;
+}
+
+.cuerpo_central__detalles-titulo {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  font-size: 64px;
+  font-family: 'Roboto',sans-serif;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.cuerpo_central__detalles-tabla {
+  position: absolute;
+  top: 10%;
+  left: -1.2%;
+  border-collapse: separate;
+  border-spacing: 40px 30px;
+}
+
+.cuerpo_central__detalles-tabla th {
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+}
+
+.cuerpo_central__detalles-tabla td {
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  text-align: center;
+}

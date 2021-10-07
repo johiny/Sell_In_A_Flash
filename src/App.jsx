@@ -1,8 +1,9 @@
 import IndexVentas from "pages/IndexVentas"
-
+import TableIndex from "pages/TableIndex";
+import DetallesVenta from "pages/DetallesVenta"
 function App() {
   return (
-      <IndexVentas/>
+      <DetallesVenta/>
   );
 }
 export default App;
