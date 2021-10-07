@@ -103,15 +103,14 @@ nav li:hover {
 .tabus1{
   margin-left: 10%;
   background-color: #fbfafa;
-  border: 0;
-  padding-left: 0%;
+
 }
 
-th{
+.tabus1 th{
   width: 250px;
 }
 
-td{
+.tabus1 td{
   text-align: center;
 }
 
@@ -122,6 +121,10 @@ td{
   justify-content: left;
 }
 
+#informacion1 {
+  margin-left: 50%;
+  padding-top: 0%;
+}
 
 .mainguButton{
   margin-top: 40px;
