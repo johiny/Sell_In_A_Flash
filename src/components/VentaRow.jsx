@@ -2,7 +2,7 @@
 const VentaRow = (venta) => {
     return(
 <tr>
-    <td>{venta.ID}</td>
+    <td>{venta.id}</td>
     <td contenteditable class="campo">{venta.Fecha}</td>
     <td contenteditable class="campo">{venta.Cantidad}</td>
     <td contenteditable class="campo">{venta.Cliente}</td>

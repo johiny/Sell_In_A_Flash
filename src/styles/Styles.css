@@ -25,6 +25,7 @@ nav {
 .navlinks {
   float: right;
   margin-right: 30%;
+  cursor: pointer;
 }
 
 .navlinks li {
@@ -147,6 +148,7 @@ body {
   font-size: 24px;
   background: #FBFAFA;
   border-radius: 56px;
+  cursor: pointer;
 }
 
 a {
@@ -235,6 +237,10 @@ a:visited {
   padding-bottom: 5px;
   border: 1px solid rgba(0, 0, 0, 0.22);
   text-align: center;
+}
+
+.campo {
+  outline: none;
 }
 
 .tabla {

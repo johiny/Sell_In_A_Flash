@@ -1,10 +1,10 @@
 import NavBars from "components/NavBars.jsx"
-import Cuerpo_central from "components/Cuerpo_central"
+import CuerpoCentral from "components/CuerpoCentral"
 const DetallesVenta = () => {
     return(
         <div>
         <NavBars/>
-        <Cuerpo_central/>
+        <CuerpoCentral/>
         </div>
     )
 }

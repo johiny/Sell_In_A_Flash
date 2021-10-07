@@ -1,5 +1,5 @@
 import Buscador from "components/Buscador.jsx"
-const Buscar_option = () =>{
+const BuscarOption = () =>{
     return(
         <div className="cuerpo_central__opciones-caja2">
             <h3>¿O prefieres buscar<br></br> algo en específico?</h3>
@@ -8,4 +8,4 @@ const Buscar_option = () =>{
     )
 }
 
-export default Buscar_option;
+export default BuscarOption;

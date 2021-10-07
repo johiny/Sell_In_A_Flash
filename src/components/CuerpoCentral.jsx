@@ -1,22 +1,22 @@
-import Buscar_option from "components/Buscar_option";
-import Listar_option from "components/Listar_option";
+import BuscarOption from "components/BuscarOption";
+import ListarOption from "components/ListarOption";
 import Buscador from "components/Buscador.jsx"
 import Tabla from "components/Tabla.jsx"
 import Detallesblock from "components/Detallesblock.jsx";
-const Cuerpo_central = (props) =>{
-    if (props.contenido == "cuerpo_central__opciones")
+const CuerpoCentral = (props) =>{
+    if (props.contenido === "cuerpo_central__opciones")
     {
     return(
     <div className="cuerpo_central">
     <h1 className={props.titulo}>Ventas</h1>
     <div className={props.contenido}>
-    <Listar_option/>
-    <Buscar_option/>
+    <ListarOption/>
+    <BuscarOption/>
     </div>
     </div>
     )
     }
-    else if (props.contenido == "tabla") {
+    else if (props.contenido === "tabla") {
         return(
         <div className="cuerpo_central">
         <h1 className={props.titulo}>Ventas</h1>
@@ -36,4 +36,4 @@ const Cuerpo_central = (props) =>{
     
 }
 
-export default Cuerpo_central;
+export default CuerpoCentral;

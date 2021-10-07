@@ -1,7 +1,9 @@
-
+import {Link} from "react-router-dom"
 const Boton = (props) => {
     return(
-        <button className={props.className} ><a href="https://google.com">{props.mensaje}</a></button>   
+        <Link to={props.link}>
+        <button className={props.className} >{props.mensaje}</button>
+        </Link>   
     )
 } 
 
