@@ -1,11 +1,12 @@
-import NavBars from "components/NavBars.jsx"
-import CuerpoCentral from "components/CuerpoCentral.jsx"
+import Buscador from "components/Buscador";
+import Tabla from "components/Tabla";
 const TableIndex = () => {
     return(
-        <div>
-        <NavBars/>
-        <CuerpoCentral titulo="cuerpo_central__Ventas-tabla-titulo" contenido="tabla"/>
-        </div>
+        <>
+        <h1 className="cuerpo_central__Ventas-tabla-titulo">Ventas</h1>
+        <Buscador estilo="Buscador_Tabla_Ventas"/>
+        <Tabla/>
+        </>
     )
 }
 

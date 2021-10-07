@@ -3,12 +3,14 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Layout from "layouts/Layout";
 import IndexVentas from "pages/IndexVentas"
 import TableIndex from "pages/TableIndex";
 import DetallesVenta from "pages/DetallesVenta"
 function App() {
   return (
     <Router>
+      <Layout>
       <Switch>
         <Route path="/IndexVentas">
         <IndexVentas/>
@@ -20,6 +22,7 @@ function App() {
           <DetallesVenta/>
         </Route>
         </Switch>
+        </Layout>
     </Router>
   );
 }

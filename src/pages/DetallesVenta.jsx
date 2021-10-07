@@ -1,11 +1,10 @@
-import NavBars from "components/NavBars.jsx"
-import CuerpoCentral from "components/CuerpoCentral"
+import Detallesblock from "components/Detallesblock";
 const DetallesVenta = () => {
     return(
-        <div>
-        <NavBars/>
-        <CuerpoCentral/>
-        </div>
+        <>
+        <h1 className="cuerpo_central__detalles-titulo">ID</h1>
+        <Detallesblock/>
+        </>
     )
 }
 
