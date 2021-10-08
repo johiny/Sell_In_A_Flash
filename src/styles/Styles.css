@@ -87,10 +87,11 @@ nav li:hover {
 
 .cuerpo_central {
   width: 89.54vw;
-  height: 93.6vh;
+  height: 93vh;
   position: absolute;
   left: 201px;
   top: 62px;
+  overflow: hidden;
 }
 
 body {
@@ -237,6 +238,7 @@ a:visited {
   border: 1px solid rgba(0, 0, 0, 0.22);
   text-align: center;
 }
+
 
 .campo {
   outline: none;

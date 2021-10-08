@@ -1,7 +1,8 @@
 import VentaRow from "components/VentaRow.jsx"
+import CheckMark from "media/check-mark.svg"
 const Tabla = () => {
     return(
-        <div>
+        <>
         <div class="tabla">
             <table id="tabla">
                 <colgroup>
@@ -26,9 +27,16 @@ const Tabla = () => {
                 <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
             </table>
         </div>
-        <div id="guardar-popup">
+        <div class="Guardar-Popup" id="guardar-popup">
+        <h2 class="Guardar-Popup__titulo">
+    Has hecho cambios<br></br>
+    ¿Quieres guardarlos?
+</h2>
+<button class="Guardar-Popup__button">
+    Guardar
+</button>
         </div>
-        </div>
+        </>
     )
 }
 

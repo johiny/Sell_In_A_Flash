@@ -1,5 +1,5 @@
 import Logo from 'media/Logo.png';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 const NavBars = () => {
     return(
         <header className="wrapper">
@@ -7,9 +7,9 @@ const NavBars = () => {
             <ul className="navlinks">
         <li>Inicio</li>
         <li>Info Ventas</li>
-        <Link to="/IndexVentas">
+        <NavLink to="/IndexVentas" activeClassName="selected">
         <li>Estado Ventas</li>
-        </Link>
+        </NavLink>
             </ul>    
         </nav>
         <div id="leftbar">
