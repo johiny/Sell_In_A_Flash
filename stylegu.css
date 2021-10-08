@@ -139,9 +139,16 @@ nav li:hover {
 
 .mainguButton:hover{
   box-shadow: 3px 3px rgb(95, 95, 87);
+  background-color: rgba(146, 146, 146, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 fieldset{
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+input{
+  border-radius: 5px;
 }

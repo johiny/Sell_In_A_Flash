@@ -25,7 +25,7 @@ function App() {
                 </ul>
             </nav>
             <div id="leftbar">
-                <img id="logo" src="logo.png">
+                <img id="logo" src="logo.png"/>
                 <ul id="leftbar_links">
                     <li><a href="#">Gestión</a></li>
                 </ul>
@@ -37,9 +37,7 @@ function App() {
                     ID de usuario
                 </label>
                 <input name="id" type="search" list="usuarios"/>
-                <!--<datalist id="usuarios">
-                    
-                </datalist>-->
+
             </div>
             
             <button class="mainguButton" type="button">
@@ -75,12 +73,12 @@ function App() {
                         <td >Autorizado</td>
                     </tr>
                     <tr>
-                        <td><input type="number" name="cedula" placeholder="Cédula..."></td>
-                        <td><input type="text" name="nombre" placeholder="Nombres..."></td>
-                        <td><input type="text" name="apellidos" placeholder="Apellidos..."></td>
-                        <td><input type="text" name="correo" placeholder="Correo..."></td>
-                        <td><input type="text" name="telefono" placeholder="Teléfono..."></td>
-                        <td><input type="text" name="cargo" placeholder="Cargo..."></td>
+                        <td><input type="number" name="cedula" placeholder="Cédula..."/></td>
+                        <td><input type="text" name="nombre" placeholder="Nombres..."/></td>
+                        <td><input type="text" name="apellidos" placeholder="Apellidos..."/></td>
+                        <td><input type="text" name="correo" placeholder="Correo..."/></td>
+                        <td><input type="text" name="telefono" placeholder="Teléfono..."/></td>
+                        <td><input type="text" name="cargo" placeholder="Cargo..."/></td>
                         <td><select type="text" name="rol" placeholder="Rol...">
                             <option value="vendedor">Vendedor</option> 
                             <option value="administrador">Administrador</option>

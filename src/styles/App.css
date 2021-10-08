@@ -103,15 +103,14 @@ nav li:hover {
 .tabus1{
   margin-left: 10%;
   background-color: #fbfafa;
-  border: 0;
-  padding-left: 0%;
+
 }
 
-th{
+.tabus1 th{
   width: 250px;
 }
 
-td{
+.tabus1 td{
   text-align: center;
 }
 
@@ -122,6 +121,10 @@ td{
   justify-content: left;
 }
 
+#informacion1 {
+  margin-left: 50%;
+  padding-top: 0%;
+}
 
 .mainguButton{
   margin-top: 40px;
@@ -136,9 +139,16 @@ td{
 
 .mainguButton:hover{
   box-shadow: 3px 3px rgb(95, 95, 87);
+  background-color: rgba(146, 146, 146, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 fieldset{
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+input{
+  border-radius: 5px;
 }
