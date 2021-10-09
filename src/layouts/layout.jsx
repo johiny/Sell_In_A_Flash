@@ -1,11 +1,13 @@
-import React from 'react'
+import NavBars from "components/NavBars";
 
-const layout = () => {
+const Layout = ({children}) => {
     return (
-        <div>
-            
-        </div>
+        <>
+        <NavBars/>
+        <main className="cuerpo_central">{children}</main>
+        <footer></footer>
+        </>
     )
 }
 
-export default layout;
+export default Layout;
