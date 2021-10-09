@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import Inputs from "components/inputs";
-import Boton from "components/Boton";
+import Boton from "components/BotonJ";
 import logo from "media/Logo.png"
 import "styles/estilos.css"
 function Login(){
@@ -16,10 +16,8 @@ function Login(){
                     <div className="posicion">
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                         <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
-                        <Link to='/index'>
-                            <Boton nombre='Entrar' clases='boton-generico boton-entrar'/>
-                        </Link> 
-                        <Boton nombre={<i class="fab fa-google"></i>} Snombre='Entrar Con Google' clases='boton-generico'/>   
+                        <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/index'/>
+                        <Boton mensaje={<i class="fab fa-google"></i>} Snombre='Entrar Con Google' className='boton-generico'/>   
                         <div>
                             <a href="" className="enlace">¿ Recuperar Contraseña ?</a>
                         </div>
