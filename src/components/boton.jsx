@@ -1,12 +1,10 @@
-import {Link} from 'react-router-dom'
-
-function Boton({Snombre, nombre, clases}){
+import {Link} from "react-router-dom"
+const BotonJ = (props) => {
     return(
-        <div>
-            <button className={clases}>{nombre} {Snombre}</button>
-        </div>
-        
-    );
-}
+        <Link to={props.link}>
+        <button className={props.className} >{props.mensaje}</button>
+        </Link>   
+    )
+} 
 
-export default Boton;
+export default BotonJ;

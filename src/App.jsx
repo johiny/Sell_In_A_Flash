@@ -3,7 +3,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Layout from "layouts/layout";
+import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
