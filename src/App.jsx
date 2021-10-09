@@ -14,7 +14,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Venta/Table","/Maestro-Venta/DetallesVenta"]} >
+      <Route path='/index' exact>
+            <Index />
+      </Route>
+        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Venta/Table","/Maestro-Venta/DetallesVenta", "Index"]} >
         <Layout>
           <Switch>
             <Route path="/Maestro-Ventas/DetallesVenta">
@@ -30,12 +33,9 @@ function App() {
               <IndexVentas/>
             </Route>
           </Switch>
-          <Route path='/index'>
-            <Index />
-            </Route>
         </Layout>
         </Route>
-        <Route path='/'>
+        <Route path='/' exact>
             <Login />
             </Route>
       </Switch>
