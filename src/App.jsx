@@ -3,13 +3,13 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Layout from "layouts/Layout";
+import Layout from "layouts/layout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
-import Login from './pages/Login';
-import Index from './pages/Index'
-import './estilos/estilos.css';
+import Login from 'pages/Login';
+import Index from 'pages/Index'
+import 'estilos/estilos.css';
 function App() {
   return (
     <Router>
