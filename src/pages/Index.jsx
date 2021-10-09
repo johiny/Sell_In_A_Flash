@@ -1,4 +1,4 @@
-import Layout from "layouts/layout";
+import Layout from "layouts/Layout";
 import logo from "media/Logo.png"
 
 function Index(){

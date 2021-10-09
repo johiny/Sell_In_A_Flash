@@ -1,5 +1,5 @@
 import Logo from 'media/Logo.png';
-import {NavLink} from "react-router-dom";
+import {NavLink,Link} from "react-router-dom";
 const NavBars = () => {
     return(
         <header className="wrapper">
@@ -13,7 +13,7 @@ const NavBars = () => {
             </ul>    
         </nav>
         <div id="leftbar">
-            <img id="logo" src={Logo} alt="logo SF"></img>
+            <Link to="/index"><img id="logo" src={Logo} alt="logo SF"></img></Link>
             <ul id="leftbar_links">
                 <li>Gestión</li>
             </ul>
