@@ -1,4 +1,4 @@
-import logo from "../imagenes/logo.png"
+import logo from "/media/logo.png"
 
 function Index(){
     return(

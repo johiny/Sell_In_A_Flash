@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom'
-import Inputs from "../components/inputs";
-import Boton from "../components/boton";
-import logo from "../imagenes/logo.png"
+import Inputs from "/components/inputs";
+import Boton from "/components/boton";
+import logo from "/media/logo.png"
 
 function Login(){
     return (
