@@ -1,0 +1,30 @@
+.Datos{
+    font-family: 'Lato',sans-serif;
+    
+}
+
+.Foto{
+    height: 500px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+
+}
+
+.cajatexto{
+    width: 345px;
+    height: 80px;
+}
+
+.tabla{
+    display: grid;
+    grid-column: auto;
+    border: gray solid 5px;
+    grid-template-rows: 50px 50px 50px;
+}
+
+.pages{
+    list-style: none;
+    display: flex;
+}
+

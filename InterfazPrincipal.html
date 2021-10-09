@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Estilos/EstiloBase.css">
-    <link rel="stylesheet" href="Estilos/EstilosInterfaz.css">
-    <link rel="stylesheet" href="Estilos/EstiloTabla.css">
+    <link rel="stylesheet" href="./Estilos/EstiloInterfazPrincipal.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,24 +26,24 @@
     </header>
     <main>
     <form>
-        <label for="ID">
+        <label class="Datos" for="ID">
             ID Producto &NonBreakingSpace;
             <input name="ID"/>
         </label>
         <br>
         <br>
-        <label for="Descripción">
+        <label class="Datos" for="Descripción">
             Descripción &NonBreakingSpace;
-            <input name="Descripción" placeholder="¿Qué producto vas a ingresar?" type="text" required autofocus/>
+            <input class="cajatexto" name="Descripción" type="text" required/>
         </label>
         <br>
         <br>
-        <label for="Precio">
+        <label class="Datos" for="Precio">
             Precio &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
             &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
             <input name="Precio" placeholder="0" type="number" required/>
         </label> &NonBreakingSpace; &NonBreakingSpace; 
-        <label>
+        <label class="Datos">
         Status &NonBreakingSpace;
         <select name="estado" id="estado">
             <option value="" selected></option>
@@ -57,7 +55,7 @@
         <br>
         <button type="submit">Guardar</button>
         <button type="button">Ver</button>
-        <section>
+        <section class="Foto">
             <img src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
         </section>
         <div>
@@ -74,7 +72,7 @@
             <button type="button">Buscar</button>
         </div>
             <table>
-                <thead>
+                <thead class="tabla">
                     <tr>
                         <th></th>
                         <th>ID Producto</th>
@@ -103,7 +101,7 @@
                         entradas
                     </div>
                     <div>
-                        <ul>
+                        <ul class="pages">
                             <li><span>1</span></li>
                             <li><button>2</button></li>
                             <li><button>3</button></li>
