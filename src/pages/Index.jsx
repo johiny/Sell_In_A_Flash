@@ -5,23 +5,23 @@ function Index(){
         <div>
             <header>
                 <nav>
-                    <ul>
-                        <li>Inicio</li>
-                        <li>Info Ventas</li>
-                        <li>Estado Ventas</li>
+                    <ul >
+                        <li><button>Inicio</button></li>
+                        <li><button>Info Ventas</button></li>
+                        <li><button>Estado Ventas</button></li>
                     </ul>    
                 </nav>
                 <div>
-                    <ul>
-                        <li>logo</li>
-                        <li>Gestión</li>
+                    <ul >
+                        <img src={logo} alt="logo" />
+                        <li><button>Gestión</button></li>
                     </ul>
                 </div>
             </header>
             <main>
                 <ul>
                     <li>Administra tus ventas de manera sencilla</li>
-                    <li>Comenzar</li>
+                    <li><button>Comenzar</button></li>
                 </ul>
             </main>
             <footer></footer>
