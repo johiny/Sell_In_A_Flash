@@ -1,18 +1,18 @@
 body {
   margin: 0;
   padding: 0;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
-  background-color: rgb(206, 202, 202);
+  background-color: rgb(247, 244, 244);
 }
 .formulario {
-  position: relative;
-  top: -10px;
   border: solid rgb(175, 173, 173) 1px;
   background: white;
-  width: 350px;
-  height: 400px;
+  width: 28%;
+  height: 450px;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -56,7 +56,7 @@ h1 {
   border: 0px;
   position: relative;
   left: 10px;
-  width: 270px;
+  width: 300px;
 
 }
 
@@ -67,11 +67,11 @@ h1 {
 }
 
 .boton-generico {
-  margin: 7px;
+  margin: 0px;
   border: solid 1px;
   border-radius: 5px;
-  width: 260px;
-  height: 27px;
+  width: 90%;
+  height: 30px;
   font-size: 15px;
 }
 
@@ -82,13 +82,63 @@ h1 {
 }
 
 .boton-entrar {
+  margin: 1%;
   font-weight: 900;
-  position: relative;
-  top: -30px;
 }
 
-a {
+.enlace {
   color: black;
   position: relative;
-  top: 40px;
+  top: 80px;
+}
+.sidebar{
+  border: solid 1px;
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgb(214, 212, 212);
+}
+.sidebar > ul {
+  text-align: center;
+
+}
+.navbar > button {
+  width: 100px;
+}
+
+.navbar {
+  display: flex;
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background: rgb(214, 212, 212);
+}
+
+.navbar > ul {
+  display: flex;
+  position: relative;
+  left: 1065px;
+  text-align: center;
+}
+
+.botonav {
+  width: 100px;
+  height: 100%;
+  font-size: 15px;
+}
+
+.nnn {
+  display: flex;
+  justify-content: center;
+  left: 1000px;
+}
+
+.botonG {
+  width: 100%;
+  height: 50px;
+  font-size: 15px;
+}
+
+.fondo {
+  background-color: white;
 }

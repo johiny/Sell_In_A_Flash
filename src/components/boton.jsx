@@ -1,13 +1,9 @@
 import {Link} from 'react-router-dom'
 
-function Boton(){
+function Boton({Snombre, nombre, clases}){
     return(
         <div>
-            <Link to='/index'>
-                <div>
-                    <button className="boton-generico boton-entrar">Entrar</button>
-                </div>
-            </Link> 
+            <button className={clases}>{nombre} {Snombre}</button>
         </div>
         
     );
