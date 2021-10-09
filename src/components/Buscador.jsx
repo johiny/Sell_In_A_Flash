@@ -1,4 +1,5 @@
 import Find from 'media/Find_icon.svg';
+// Buscador
 const Buscador = (props) => {
     return(
         <div className={props.estilo} id="Buscador">
