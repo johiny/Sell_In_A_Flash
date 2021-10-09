@@ -5,8 +5,10 @@ body {
   text-decoration: none;
 }
 
-body {
+
+.body_login {
   background-color: rgb(247, 244, 244);
+  height: 100vh;
 }
 .formulario {
   border: solid rgb(175, 173, 173) 1px;
@@ -26,7 +28,7 @@ body {
   
 }
 
-h1 {
+.titulo_login {
   margin: 20px;
   font-family: cursive;
   font-size: 35px;

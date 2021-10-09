@@ -8,8 +8,7 @@ import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
 import Login from 'pages/Login';
-import Index from 'pages/Index'
-import 'estilos/estilos.css';
+import Index from 'pages/Index';
 function App() {
   return (
     <Router>
@@ -35,7 +34,7 @@ function App() {
           </Switch>
         </Layout>
         </Route>
-        <Route path='/' exact>
+        <Route path='/'>
             <Login />
             </Route>
       </Switch>

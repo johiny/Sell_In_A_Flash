@@ -1,4 +1,5 @@
 import Detallesblock from "components/Detallesblock";
+import "styles/Styles.css"
 const DetallesVenta = () => {
     return(
         <>

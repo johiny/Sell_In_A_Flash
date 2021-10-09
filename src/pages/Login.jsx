@@ -2,16 +2,16 @@ import {Link} from 'react-router-dom'
 import Inputs from "components/inputs";
 import Boton from "components/boton";
 import logo from "media/Logo.png"
-
+import "styles/estilos.css"
 function Login(){
     return (
-        <div>
+        <div className="body_login">
             <header>
                 <img src={logo} alt="logo" className="logo"/>
             </header>
                 <form className="formulario">
                     <div>
-                        <h1>Sell In A Flash</h1>
+                        <h1 className="titulo_login">Sell In A Flash</h1>
                     </div>
                     <div className="posicion">
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
