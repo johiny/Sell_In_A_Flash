@@ -7,7 +7,7 @@ const NavBars = () => {
             <ul className="navlinks">
         <li>Inicio</li>
         <li>Info Ventas</li>
-        <NavLink to="/IndexVentas" activeClassName="selected">
+        <NavLink to="/Maestro-Ventas" activeClassName="selected">
         <li>Estado Ventas</li>
         </NavLink>
             </ul>    

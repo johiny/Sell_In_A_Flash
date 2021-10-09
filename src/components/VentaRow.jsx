@@ -2,7 +2,7 @@ import {Link} from "react-router-dom"
 const VentaRow = (venta) => {
     return(
 <tr>
-    <td><Link to="/DetallesVenta">1</Link></td>
+    <td><Link to="/Maestro-Ventas/DetallesVenta">1</Link></td>
     <td contenteditable className="campo">{venta.Fecha}</td>
     <td contenteditable className="campo">{venta.Cantidad}</td>
     <td contenteditable className="campo">{venta.Cliente}</td>
