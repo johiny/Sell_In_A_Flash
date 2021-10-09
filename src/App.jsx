@@ -7,6 +7,9 @@ import Layout from "layouts/Layout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
+import Login from './pages/Login';
+import Index from './pages/Index'
+import './estilos/estilos.css';
 function App() {
   return (
     <Router>
@@ -27,11 +30,17 @@ function App() {
               <IndexVentas/>
             </Route>
           </Switch>
+          <Route path='/index'>
+            <Index />
+            </Route>
         </Layout>
         </Route>
+        <Route path='/'>
+            <Login />
+            </Route>
       </Switch>
     </Router>
-        
   );
-}
+}  
+        
 export default App;
