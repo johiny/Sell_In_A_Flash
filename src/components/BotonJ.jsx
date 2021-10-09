@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-const BotonJ = (props) => {
+const Boton = (props) => {
     return(
         <Link to={props.link}>
         <button className={props.className} >{props.mensaje}</button>
@@ -7,4 +7,4 @@ const BotonJ = (props) => {
     )
 } 
 
-export default BotonJ;
+export default Boton;
