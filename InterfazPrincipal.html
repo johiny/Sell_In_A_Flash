@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/EstiloBase.css">
+    <link rel="stylesheet" href="Estilos/EstilosInterfaz.css">
+    <link rel="stylesheet" href="Estilos/EstiloTabla.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MóduloProductos</title>
+</head>
+<body>
+    <header class="wrapper">
+        <nav>
+            <ul class="navlinks">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Info Ventas</a></li>
+        <li><a href="#">Estado Ventas </a></li>
+            </ul>    
+        </nav>
+        <div id="leftbar">
+            <img id="logo" src="133907090-3ec2b0ed-390e-4fd2-9c00-f34f9b104c29.png">
+            <ul id="leftbar_links">
+                <li><a href="#">Gestión</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+    <form>
+        <label for="ID">
+            ID Producto &NonBreakingSpace;
+            <input name="ID"/>
+        </label>
+        <br>
+        <br>
+        <label for="Descripción">
+            Descripción &NonBreakingSpace;
+            <input name="Descripción" placeholder="¿Qué producto vas a ingresar?" type="text" required autofocus/>
+        </label>
+        <br>
+        <br>
+        <label for="Precio">
+            Precio &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
+            &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
+            <input name="Precio" placeholder="0" type="number" required/>
+        </label> &NonBreakingSpace; &NonBreakingSpace; 
+        <label>
+        Status &NonBreakingSpace;
+        <select name="estado" id="estado">
+            <option value="" selected></option>
+            <option value="">Disponible</option>
+            <option value="">No disponible</option>
+            </select>
+        </label>
+        <br>
+        <br>
+        <button type="submit">Guardar</button>
+        <button type="button">Ver</button>
+        <section>
+            <img src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
+        </section>
+        <div>
+            <ul>
+                <li>
+                <span><input type="checkbox"></span>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <button type="button">Buscar</button>
+        </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>ID Producto</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td><input type="checkbox" name="" id=""></td>
+                    </tr>
+                </tbody>
+            </table>
+                    <div>
+                        Mostrar &NonBreakingSpace;
+                        <select name="num entradas" id="num entradas">
+                            <option value="15">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="15">15</option> 
+                        </select>
+                        entradas
+                    </div>
+                    <div>
+                        <ul>
+                            <li><span>1</span></li>
+                            <li><button>2</button></li>
+                            <li><button>3</button></li>
+                            <li><button>4</button></li>
+                            <li><button>...</button></li>
+                            <li><button>9</button></li>
+                            <li><button>10</button></li>
+                        </ul>
+                    </div>
+        </div>
+
+
+    </form>
+    </main>
+</body>
+</html>
