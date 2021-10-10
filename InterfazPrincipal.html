@@ -42,8 +42,8 @@
             Precio &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
             &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
             <input name="Precio" placeholder="0" type="number" required/>
-        </label> &NonBreakingSpace; &NonBreakingSpace; 
-        <label class="Datos">
+        </label>
+        <label class="CampoStatus">
         Status &NonBreakingSpace;
         <select name="estado" id="estado">
             <option value="" selected></option>
@@ -53,9 +53,9 @@
         </label>
         <br>
         <br>
-        <button type="submit">Guardar</button>
-        <button type="button">Ver</button>
-        <section class="Foto">
+        <button class="BotonesRegistro" type="submit">Guardar</button>&NonBreakingSpace;
+        <button class="BotonVer" type="button">Ver</button>
+        <section>
             <img src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
         </section>
         <div>
@@ -66,15 +66,15 @@
             </ul>
         </div>
         <div>
-            <input type="text" name="" id="">
+            <input class="CampoBuscar" type="text" name="" id="">
         </div>
         <div>
-            <button type="button">Buscar</button>
+            <button class="BotonBuscar" type="button">Buscar</button>
         </div>
             <table>
                 <thead class="tabla">
                     <tr>
-                        <th></th>
+                        <th class="ItemsTabla"></th>
                         <th>ID Producto</th>
                         <th>Descripción</th>
                         <th>Precio</th>
@@ -82,7 +82,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="check">
                         <td><input type="checkbox" name="" id=""></td>
                         <td><input type="checkbox" name="" id=""></td>
                         <td><input type="checkbox" name="" id=""></td>
@@ -91,7 +91,7 @@
                     </tr>
                 </tbody>
             </table>
-                    <div>
+                    <div class="LeyendaMostrar">
                         Mostrar &NonBreakingSpace;
                         <select name="num entradas" id="num entradas">
                             <option value="15">5</option>
