@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+/* Nav Bar Styles ------------------------------------------------------------------*/
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+/* topbar settings */
+nav {
+  position: fixed;
+  width: 2200px;
+  height: 60px;
+  background-color: #fbfafa;
+  border-bottom: 1px solid rgba(97, 97, 97, 0.1);
+}
+
+.navlinks {
+  float: right;
+  margin-right: 30%;
+  cursor: pointer;
+}
+
+.navlinks li {
+  display: inline-block;
+  line-height: 60px;
+  padding: 0px 25px 0px 25px;
+}
+
+nav a {
+  color: #47525E;
+  letter-spacing: 0px;
+  font-family: 'Lato',sans-serif;
+  font-size: 18px;
+  font-weight: Regular;
+}
+
+nav li:hover {
+  background-color: rgba(73, 72, 72, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/* leftbar settings */
+#leftbar {
+  background-color: #fbfafa;
+  border-right: 1px solid rgba(97, 97, 97, 0.1);
+  position: fixed;
+  width: 200px;
+  height: 900%;
+  padding: 15px 0px;
+}
+
+#logo {
+  padding-right: 13px;
+  padding-left: 5px;
+  padding-bottom: 12px;
+}
+
+#leftbar li {
+  border-bottom: 1px solid rgba(97, 97, 97, 0.1);
+  border-top: 1px solid rgba(97, 97, 97, 0.1);
+  font-family: 'Lato',sans-serif;
+  font-size: 18px;
+  padding: 35px 79px 30px 58px;
+  font-weight: regular;
+}
+
+#leftbar li:hover {
+  background-color: rgba(73, 72, 72, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#leftbar_links a {
+  color: #47525E;
+}
+
+/* Cuerpo Central main */
+
+.cuerpo_central {
+  width: 89.54vw;
+  height: 93vh;
+  position: absolute;
+  left: 201px;
+  top: 62px;
+  overflow: hidden;
+}
+
+body {
+  background-color: white;
+}
+
+/* Index Ventas Style -------------------------------------------------------------*/
+
+.cuerpo_central__Ventas-index-titulo {
+  position: absolute;
+  width: 223px;
+  height: 84px;
+  left: 42.4%;
+  top: 156px;
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 84px;
+}
+
+.cuerpo_central__opciones {
+  position: absolute;
+  left: 30%;
+  top: 256px;
+  height: 450px;
+  width: 650px;
+}
+
+.cuerpo_central__opciones div {
+  background: green;
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 24px;
+  line-height: 42px;
+  text-align: center;
+  padding-top: 80px;
+  height: 350px;
+  border-radius: 21px;
+  width: 320px;
+  float: left;
+  margin: 2px;
+  background: rgba(117, 231, 149, 0.12);
+}
+
+.Button_grande{
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  border: none;
+  padding: 15px 60px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  background: #FBFAFA;
+  border-radius: 56px;
+  cursor: pointer;
+}
+
+a {
+  color: #47525E;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.cuerpo_central__opciones button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+.Buscador_index_Ventas {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  height: 0px !important;
+  width: 280px !important;
+  padding-top: 60px !important;
+  border: none;
+  background: #FBFAFA !important;
+  border-radius: 56px;
+  font-size: 200px;
+}
+
+.Buscador_index_Ventas input {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  border: none;
+  border-radius: 56px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.Buscador_index_Ventas input:focus {
+  outline: none;
+}
+
+.Buscador_index_Ventas button {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 56px;
+  border: none;
+  background: #FBFAFA;
+}
+
+.Buscador_index_Ventas img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Tabla Styles --------------------------------------------------------------------- */
+
+.cuerpo_central__Ventas-tabla-titulo {
+  position: relative;
+  font-family: 'Roboto',sans-serif;
+  font-size: 63px;
+  top: 10px;
+  left: 20px;
+  opacity: .35;
+} 
+
+.tabla th {
+  font-family: 'Roboto',sans-serif;
+  background: white;
+  border-radius: 7px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.tabla td {
+  font-family: 'Roboto',sans-serif;
+  background-color: white;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+
+.campo {
+  outline: none;
+}
+
+.tabla {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  height: 750px;
+  width: 1260px;
+  background: #FBFAFA;
+  border-radius: 50px;
+}
+
+.tabla table {
+  position: relative;
+  left: .05%;
+  border-collapse: separate;
+  border-spacing: 45px 20px;
+}
+
+.Buscador_Tabla_Ventas {
+  position: absolute;
+  top: 3%;
+  left: 62%;
+  height: 0px;
+  width: 280px;
+  padding-top: 60px;
+  border: none;
+  background: #FBFAFA;
+  border-radius: 56px;
+  font-size: 200px;
+}
+
+.Buscador_Tabla_Ventas input {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  border: none;
+  border-radius: 56px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+.Buscador_Tabla_Ventas input:focus {
+  outline: none;
+}
+
+.Buscador_Tabla_Ventas button {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  padding: 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 56px;
+  border: none;
+  background: #FBFAFA;
+}
+
+.Buscador_Tabla_Ventas img {
+  height: 40px;
+  width: 40px;
+}
+
+.Buscador_Tabla_Ventas button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+#tabla__estado_selector {
+  border: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#tabla__estado_selector option {
+  border-radius: 15px;
+}
+
+.Guardar-Popup {
+  border-radius: 40px;
+  top: 10%;
+  position: absolute;
+  height: 750px;
+  width: 300px;
+  left: 79%;
+  background: #FBFAFA;
+}
+
+.Guardar-Popup__titulo {
+  position: relative;
+  top: 5%;
+  font-family: 'Roboto',sans-serif;
+  text-align: center;
+}
+
+.Guardar-Popup__button {
+  position: relative;
+  top: 10%;
+  left: 15%;
+  border: none;
+  padding: 15px 60px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  background: white;
+  border-radius: 56px;
+}
+
+.Guardar-Popup__button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+a {
+  color: #47525E;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.Guardar-Popup img {
+  position: relative;
+  top: 6%;
+  left: 25%;
+  width: 150px;
+  height: 150px;
+}
+
+/* Detalles style ------------------------------------------------------------------ */
+
+.detalles {
+  position: absolute;
+  height: 770px;
+  width: 1620px;
+  background: #FBFAFA;
+  top: 11%;
+  left: 1%;
+  border-radius: 40px;
+}
+
+.cuerpo_central__detalles-titulo {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  font-size: 64px;
+  font-family: 'Roboto',sans-serif;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.cuerpo_central__detalles-tabla {
+  position: absolute;
+  top: 10%;
+  left: -1.2%;
+  border-collapse: separate;
+  border-spacing: 40px 30px;
+}
+
+.cuerpo_central__detalles-tabla th {
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+}
+
+.cuerpo_central__detalles-tabla td {
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
