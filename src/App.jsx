@@ -1,8 +1,14 @@
+
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import './styles/stylegu.css';
+import UserdataAD from './pages/UserdataAD';
+import UserdataUS from './pages/UserdataUS';
+import UserdataUSedit from './pages/UserdataUSedit';
+import Layout2 from './layouts/Layout2';
 import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
@@ -12,6 +18,19 @@ import Index from 'pages/Index';
 function App() {
   return (
     <Router>
+      <Layout2>
+                <Switch>
+                    <Route path='/userdataad'>
+                        <UserdataAD/>
+                    </Route>
+                    <Route path='/userdataus'>
+                        <UserdataUS/>
+                    </Route>
+                    <Route path='/userdatausedit'>
+                        <UserdataUSedit/>
+                    </Route>
+                </Switch>
+      </Layout2>
       <Switch>
       <Route path='/index' exact>
             <Index />
@@ -40,3 +59,4 @@ function App() {
 }  
         
 export default App;
+
