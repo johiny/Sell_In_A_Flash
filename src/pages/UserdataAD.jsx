@@ -1,45 +1,14 @@
-import logo from './logo.svg';
-import './styles/App.css';
-
-function App() {
-  return (
-    <div className="App">
-        <header class="wrapper">
-            <nav>
-                <ul class="navlinks">
-                    <li>
-                        <a href="#">
-                            Inicio
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Info Ventas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            Estado Ventas 
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div id="leftbar">
-                <img id="logo" src="logo.png"/>
-                <ul id="leftbar_links">
-                    <li><a href="#">Gestión</a></li>
-                </ul>
-            </div>
-        </header>
-        <main id="maingu" >
-            <div>
+import imagenn from "../media/nn.jpg";
+function UserdataAD(){
+    return(
+        <>
+            <div name = "buscarID">
                 <label>
                     ID de usuario
                 </label>
                 <input name="id" type="search" list="usuarios"/>
 
-            </div>
-            
+            </div>            
             <button class="mainguButton" type="button">
                 Buscar ID
             </button>
@@ -47,7 +16,7 @@ function App() {
                 <legend>
                     Foto
                 </legend>
-                <img src="./nn.jpg" height="500px"/>
+                <img src={imagenn} height="500px"/>
             </fieldset>
             <table class="tabus1" cellpadding="50" cellspacing="20">
                 <tr>
@@ -96,17 +65,13 @@ function App() {
                     </tr>
                 </tbody>
             </table>
-            <div>
+            <div name = "botonActualizar">
                 <a href="http://google.com"><button class="mainguButton" type="submit">
                     Actualizar Datos
                 </button></a>
             </div>
-        </main>
-        <footer>
-        </footer>
+        </>
+    )
+};
 
-    </div>
-  );
-}
-
-export default App;
+export default UserdataAD;
