@@ -1,8 +1,8 @@
-import './styles/App.css';
+import './styles/stylegu.css';
 import UserdataAD from './pages/UserdataAD';
 import UserdataUS from './pages/UserdataUS';
 import UserdataUSedit from './pages/UserdataUSedit';
-import Layout from './layouts/Layout';
+import Layout2 from './layouts/Layout2';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-            <Layout>
+            <Layout2>
                 <Switch>
                     <Route path='/userdataad'>
                         <UserdataAD/>
@@ -26,7 +26,7 @@ function App() {
                         <UserdataUSedit/>
                     </Route>
                 </Switch>
-            </Layout>
+            </Layout2>
         </Router>
 
         <footer>

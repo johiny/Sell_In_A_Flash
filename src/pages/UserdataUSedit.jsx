@@ -15,7 +15,7 @@ function UserdataUSedit(){
             <button class="mainguButton" type="button">
                 Buscar ID
             </button>
-            <fieldset  height="230px">
+            <fieldset class="fieldsetgu" height="230px">
                 <legend>
                     Foto
                 </legend>

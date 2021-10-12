@@ -4,12 +4,13 @@ function UserdataUS(){
     return(
         <>
             <div>
-                <fieldset id="usuario">
+                <fieldset class="fieldsetgu" id="usuario">
                     <legend>ID de usuario</legend>
-                        <div id="foto1">
-                                <img  src={imagenn} height="400px"/>
-                        </div>
                         <div id="informacion1">
+                            <div id="foto1">
+                                <img  src={imagenn} height="400px"/>
+                            </div>
+                        
                             <table cellpadding="50" cellspacing="20">
                                 <tr>
                                     <td>ID</td> <td>1152418441</td>
@@ -35,15 +36,12 @@ function UserdataUS(){
                                 <tr>
                                     <td>Contraseña</td><td>*********</td>
                                 </tr>
-
-
-
                             </table>
                         </div>
                 </fieldset>
             </div>
             <div>
-                <a href="./gestionDeUsuarios3.html">
+                <a href="/userdatausedit">
                     <button class="mainguButton" type="button" >
                         Actualizar datos
                     </button>
