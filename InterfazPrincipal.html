@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Estilos/EstiloInterfazPrincipal.css">
+    <link rel="stylesheet" href="./Estilos/topbarstyle.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             </ul>    
         </nav>
         <div id="leftbar">
-            <img id="logo" src="133907090-3ec2b0ed-390e-4fd2-9c00-f34f9b104c29.png">
+            <img id="logo" src="Imagen/logo.png">
             <ul id="leftbar_links">
                 <li><a href="#">Gestión</a></li>
             </ul>
@@ -26,37 +27,43 @@
     </header>
     <main>
     <form>
-        <label class="Datos" for="ID">
+        <div class="Datos">
+        <label for="ID">
             ID Producto &NonBreakingSpace;
-            <input name="ID"/>
+            <input class="CamposInput" name="ID"/>
         </label>
         <br>
         <br>
-        <label class="Datos" for="Descripción">
-            Descripción &NonBreakingSpace;
+        <label class="CampoDescrip" for="Descripción">
+            Descripción &NonBreakingSpace; &NonBreakingSpace;
             <input class="cajatexto" name="Descripción" type="text" required/>
         </label>
         <br>
         <br>
-        <label class="Datos" for="Precio">
-            Precio &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
+        <label class="CampoPrecio" for="Precio">
+            Precio &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
             &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
-            <input name="Precio" placeholder="0" type="number" required/>
+            <input name="Precio" type="number" required/>
         </label>
         <label class="CampoStatus">
-        Status &NonBreakingSpace;
-        <select name="estado" id="estado">
+        Status &NonBreakingSpace; &NonBreakingSpace;
+        <select class="CamposInput" name="estado" id="estado">
             <option value="" selected></option>
             <option value="">Disponible</option>
             <option value="">No disponible</option>
             </select>
         </label>
+            </div>
         <br>
         <br>
-        <button class="BotonesRegistro" type="submit">Guardar</button>&NonBreakingSpace;
+        <!--<div>
+            <input class= "Subirfoto" type="file" name="imagensubida" accept="image/png, .jpeg, .jpg, image/gif">
+            <input class= "Subirfoto2" type="submit" value="Subir Imágen">
+        </div>-->
+        <button class="BotonesRegistro" type="submit">Guardar</button>&NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace; &NonBreakingSpace;
         <button class="BotonVer" type="button">Ver</button>
         <section>
-            <img src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
+            <img class="imagProducto" src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
         </section>
         <div>
             <ul>
@@ -71,10 +78,10 @@
         <div>
             <button class="BotonBuscar" type="button">Buscar</button>
         </div>
-            <table>
+            <table class="contenido">
                 <thead class="tabla">
                     <tr>
-                        <th class="ItemsTabla"></th>
+                        <th type="checkbox"></th>
                         <th>ID Producto</th>
                         <th>Descripción</th>
                         <th>Precio</th>
@@ -82,20 +89,48 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="check">
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><input type="checkbox" name="" id=""></td>
-                        <td><input type="checkbox" name="" id=""></td>
+                    <tr>
+                        <th class="check"><input type="checkbox" name="" id=""></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th class="check"><input type="checkbox" name="" id=""></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th class="check"><input type="checkbox" name="" id=""></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th class="check"><input type="checkbox" name="" id=""></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th class="check"><input type="checkbox" name="" id=""></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
             </table>
                     <div class="LeyendaMostrar">
                         Mostrar &NonBreakingSpace;
                         <select name="num entradas" id="num entradas">
-                            <option value="15">5</option>
-                            <option value="10" selected>10</option>
+                            <option value="15" selected>5</option>
+                            <option value="10">10</option>
                             <option value="15">15</option> 
                         </select>
                         entradas
