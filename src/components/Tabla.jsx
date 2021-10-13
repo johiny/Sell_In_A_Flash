@@ -30,8 +30,9 @@ const Tabla = ({ventasbackend,setSaveChanges,setShowmodal}) => {
                     <td contenteditable class="campo">{venta.Cliente}</td>
                     <td contenteditable class="campo">{venta.Encargado}</td>
                     <td contenteditable class="campo">{venta.Valor_Total}</td>
-                    <td><select onChange={() => setSaveChanges(true), () => setShowmodal(true)} name="estado" id="tabla__estado_selector" class="campo">
-                        <option selected="selected" value ={venta.Estado} selected disabled hidden>{venta.Estado}</option>
+                    <td><select onChange={() => { setSaveChanges(true)
+                        setShowmodal(true)}} name="estado" id="tabla__estado_selector" class="campo">
+                        <option defaultvalue ={venta.Estado} selected disabled hidden>{venta.Estado}</option>
                         <option value="Proceso">En Proceso</option>
                         <option value="Cancelada">Cancelada</option>
                         <option value="Entregada">Entregada</option>
