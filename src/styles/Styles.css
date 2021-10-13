@@ -347,6 +347,7 @@ a:visited {
   font-size: 24px;
   background: white;
   border-radius: 56px;
+  cursor: pointer;
 }
 
 .Guardar-Popup__button:hover {

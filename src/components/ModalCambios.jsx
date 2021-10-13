@@ -1,26 +1,23 @@
 import React from 'react';
-import { useState } from "react"
 import checkmark from "media/check-mark.svg"
 
-const ModalCambios = (props) => {
-const [savechanges , setSaveChanges] = useState(true);
-
+const ModalCambios = ({setSaveChanges, savechanges}) => {
 return (
 <>
- {savechanges ? (<GuardarCambios/>) : (<CambiosGuardados/>)}
+ {savechanges ? (<GuardarCambios setSaveChanges={setSaveChanges}/>) : (<CambiosGuardados/>)}
  </>
 )
 }
 
 
-const GuardarCambios = () => {
+const GuardarCambios = ({setSaveChanges}) => {
     
      return (
         <div class="Guardar-Popup" id="guardar-popup">
         <h2 class="Guardar-Popup__titulo">
         Has hecho cambios<br></br>¿Quieres guardarlos?
         </h2>
-        <button class="Guardar-Popup__button">
+        <button onClick={ () => setSaveChanges(false)} class="Guardar-Popup__button">
             Guardar
         </button>
     </div>
