@@ -7,7 +7,7 @@ import {
 import 'styles/stylegu.css';
 import UserdataAD from 'pages/InterfazGestionUsuarios/UserdataAD';
 import UserdataUS from 'pages/InterfazGestionUsuarios/UserdataUS';
-import UserdataUSedit from '/pages/InterfazGestionUsuarios/UserdataUSedit';
+import UserdataUSedit from 'pages/InterfazGestionUsuarios/UserdataUSedit';
 import Layout2 from 'layouts/Layout2';
 import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
@@ -34,7 +34,7 @@ function App() {
       </Switch>
       </Layout2>
       </Route>
-        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Venta/Table", "Index"]} >
+        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Venta/Table", "/Index"]} >
           <Layout>
           <Switch>
             <Route path="/Maestro-Ventas/DetallesVenta">
@@ -46,7 +46,7 @@ function App() {
             <Route path ="/Maestro-Ventas">
               <IndexVentas/>
             </Route>
-            <Route path='/Index'>
+            <Route path='/Index' exact>
               <Index />
             </Route>
           </Switch>

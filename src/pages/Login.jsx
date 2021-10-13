@@ -16,7 +16,7 @@ function Login(){
                     <div className="posicion">
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                         <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
-                        <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/index'/>
+                        <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/Index'/>
                         <Boton mensaje={<i class="fab fa-google"></i>} Snombre='Entrar Con Google' className='boton-generico'/>   
                         <div>
                             <a href="" className="enlace">¿ Recuperar Contraseña ?</a>
