@@ -4,7 +4,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import 'styles/stylegu.css';
 import UserdataAD from 'pages/InterfazGestionUsuarios/UserdataAD';
 import UserdataUS from 'pages/InterfazGestionUsuarios/UserdataUS';
 import UserdataUSedit from 'pages/InterfazGestionUsuarios/UserdataUSedit';
@@ -46,7 +45,7 @@ function App() {
             <Route path ="/Maestro-Ventas">
               <IndexVentas/>
             </Route>
-            <Route path='/Index' exact>
+            <Route path='/Index'>
               <Index />
             </Route>
           </Switch>
