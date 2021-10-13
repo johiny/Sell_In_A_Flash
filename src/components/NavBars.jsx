@@ -1,4 +1,4 @@
-import Logo from 'media/Logo.png';
+import Logo from 'media/logo.png';
 import {NavLink,Link} from "react-router-dom";
 const NavBars = () => {
     return(

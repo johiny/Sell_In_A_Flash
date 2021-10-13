@@ -1,13 +1,16 @@
 import VentaRow from "components/VentaRow.jsx"
 import CheckMark from "media/check-mark.svg"
-const Tabla = () => {
+import { useEffect, useState } from "react/cjs/react.development"
+const Tabla = ({ventasbackend,modal}) => {
+
+    useEffect(()=> {
+        console.log(ventasbackend)
+    },[ventasbackend])
     return(
         <>
-        <div class="tabla">
+        <div className="tabla">
             <table id="tabla">
-                <colgroup>
-                    <col span="6"></col>
-                </colgroup>    
+                <thead>   
                     <tr>
                         <th id="tabla__id">ID</th>
                         <th id="tabla__date">Fecha</th>
@@ -17,22 +20,35 @@ const Tabla = () => {
                         <th id="tabla__valor-total">Valor Total</th>
                         <th id="tabla__estado">Estado</th>
                     </tr>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
-                <VentaRow Fecha = "24/03/2009" Cantidad="30" Cliente ="198567845" Encargado ="Jose Antonio" Valor_Total="400000" Estado="Entregada"/>
+                </thead>
+                <tbody>    
+                {ventasbackend.map((venta) => {
+                    return (
+                    <tr>
+                    <td>{venta.ID}</td>
+                    <td contenteditable class="campo">{venta.Fecha}</td>
+                    <td contenteditable class="campo">{venta.Cantidad}</td>
+                    <td contenteditable class="campo">{venta.Cliente}</td>
+                    <td contenteditable class="campo">{venta.Encargado}</td>
+                    <td contenteditable class="campo">{venta.Valor_Total}</td>
+                    <td><select name="estado" id="tabla__estado_selector" class="campo">
+                        <option selected="selected" value ={venta.Estado} selected disabled hidden>{venta.Estado}</option>
+                        <option value="Proceso">En Proceso</option>
+                        <option value="Cancelada">Cancelada</option>
+                        <option value="Entregada">Entregada</option>
+                    </select></td>
+                    </tr>
+                    )
+                })}
+                </tbody>
             </table>
         </div>
-        <div class="Guardar-Popup" id="guardar-popup">
-        <h2 class="Guardar-Popup__titulo">
+        <div className="Guardar-Popup" id="guardar-popup">
+        <h2 className="Guardar-Popup__titulo">
     Has hecho cambios<br></br>
     ¿Quieres guardarlos?
 </h2>
-<button class="Guardar-Popup__button">
+<button className="Guardar-Popup__button">
     Guardar
 </button>
         </div>
