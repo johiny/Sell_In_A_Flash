@@ -1,4 +1,4 @@
-import imagenn from "../media/nn.jpg";
+import imagenn from "media/nn.jpg";
 function UserdataAD(){
     return(
         <>

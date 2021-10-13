@@ -4,11 +4,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import '/styles/stylegu.css';
-import UserdataAD from '/pages/InterfazGestionUsuarios/UserdataAD';
-import UserdataUS from '/pages/UserdataUS';
-import UserdataUSedit from './pages/UserdataUSedit';
-import Layout2 from './layouts/Layout2';
+import 'styles/stylegu.css';
+import UserdataAD from 'pages/InterfazGestionUsuarios/UserdataAD';
+import UserdataUS from 'pages/InterfazGestionUsuarios/UserdataUS';
+import UserdataUSedit from '/pages/InterfazGestionUsuarios/UserdataUSedit';
+import Layout2 from 'layouts/Layout2';
 import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
