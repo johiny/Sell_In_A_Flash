@@ -11,6 +11,7 @@ import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
+import NuevaVenta from "pages/Maestro-Ventas/NuevaVenta"
 import Login from 'pages/Login';
 import Index from 'pages/Index';
 function App() {
@@ -32,11 +33,14 @@ function App() {
       </Switch>
       </Layout2>
       </Route>
-        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Venta/Table", "/Index"]} >
+        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table", "/Index"]} >
           <Layout>
           <Switch>
             <Route path="/Maestro-Ventas/DetallesVenta">
               <DetallesVenta/>
+            </Route>
+            <Route path ="/Maestro-Ventas/NuevaVenta">
+            <NuevaVenta/>
             </Route>
             <Route path="/Maestro-Ventas/Table">
             <Table/>

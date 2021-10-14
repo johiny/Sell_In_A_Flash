@@ -25,11 +25,11 @@ const Tabla = ({ventasbackend,setSaveChanges,setShowmodal}) => {
                     return (
                     <tr>
                     <td>{venta.ID}</td>
-                    <td contenteditable class="campo">{venta.Fecha}</td>
-                    <td contenteditable class="campo">{venta.Cantidad}</td>
-                    <td contenteditable class="campo">{venta.Cliente}</td>
-                    <td contenteditable class="campo">{venta.Encargado}</td>
-                    <td contenteditable class="campo">{venta.Valor_Total}</td>
+                    <td contenteditable="true" class="campo">{venta.Fecha}</td>
+                    <td contenteditable="true" class="campo">{venta.Cantidad}</td>
+                    <td contenteditable="true" class="campo">{venta.Cliente}</td>
+                    <td contenteditable="true" class="campo">{venta.Encargado}</td>
+                    <td contenteditable="true" class="campo">{venta.Valor_Total}</td>
                     <td><select onChange={() => { setSaveChanges(true)
                         setShowmodal(true)}} name="estado" id="tabla__estado_selector" class="campo">
                         <option defaultvalue ={venta.Estado} selected disabled hidden>{venta.Estado}</option>
