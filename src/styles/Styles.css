@@ -67,9 +67,10 @@ nav li:hover {
 #leftbar li {
   border-bottom: 1px solid rgba(97, 97, 97, 0.1);
   border-top: 1px solid rgba(97, 97, 97, 0.1);
-  font-family: 'Lato',sans-serif;
+  font-family: 'Roboto',sans-serif;
   font-size: 18px;
   font-weight: regular;
+  width: 100%;
 }
 .Logout_logo {
   width: 6%;
@@ -118,10 +119,10 @@ body {
 
 .cuerpo_central__opciones {
   position: absolute;
-  left: 30%;
+  left: 20.5%;
   top: 256px;
   height: 450px;
-  width: 650px;
+  width: 1050px;
 }
 
 .cuerpo_central__opciones div {
@@ -142,9 +143,9 @@ body {
 }
 
 .Button_grande{
-  position: absolute;
-  top: 50%;
-  left: 11%;
+  position: relative;
+  top: 7%;
+  left: 0%;
   border: none;
   padding: 15px 60px;
   font-family: 'Roboto',sans-serif;
@@ -154,22 +155,15 @@ body {
   cursor: pointer;
 }
 
-a {
-  color: #47525E;
-}
-
-a:visited {
-  text-decoration: none;
-}
 
 .cuerpo_central__opciones button:hover {
   background-color: rgba(148, 148, 148, 0.2);
 }
 
 .Buscador_index_Ventas {
-  position: absolute;
-  top: 50%;
-  left: 53%;
+  position: relative;
+  top: 7%;
+  left: 6%;
   height: 0px !important;
   width: 280px !important;
   padding-top: 60px !important;
@@ -203,6 +197,7 @@ a:visited {
   border-radius: 56px;
   border: none;
   background: #FBFAFA;
+  cursor: pointer;
 }
 
 .Buscador_index_Ventas img {

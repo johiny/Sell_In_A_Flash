@@ -16,7 +16,7 @@ const NavBars = () => {
             <Link to="/index"><img id="logo" src={Logo} alt="logo SF"></img></Link>
             <ul id="leftbar_links">
                 <li>Gestión Productos</li>
-                <li>Gestión Ventas</li>
+                <NavLink to="/Maestro-Ventas"><li>Gestión Ventas</li></NavLink>
                 <li>Gestión Usuarios</li>
             </ul>
         </div>
