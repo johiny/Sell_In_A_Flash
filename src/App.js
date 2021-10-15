@@ -1,13 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './Imagen/logo.png';
+import './Styles/App.css';
+import './Styles/App2.css';
 
 function App() {
   return (
     <div className="App">
-    <header class="wrapper">
+    <header className="wrapper">
     <main>
       <nav>
-        <ul class="navlinks">
+        <ul className="navlinks">
           <li><a href="#">Inicio</a></li>
           <li><a href="#">Info Ventas</a></li>
           <li><a href="#">Estado Ventas </a></li>
@@ -25,26 +26,26 @@ function App() {
     </header>
     <section></section>
       <form>
-        <div class="Datos">
+        <div className="Datos">
           <label for="ID">
             ID Producto
-              <input class="CamposInput" name="ID"/>
+              <input className="CamposInput" name="ID"/>
           </label>
           <br></br>
           <br></br>
-          <label class="CampoDescrip" for="Descripción">
+          <label className="CampoDescrip" for="Descripción">
             Descripción
-              <input class="cajatexto" name="Descripción" type="text" required/>
+              <input className="cajatexto" name="Descripción" type="text" required/>
           </label>
           <br></br>
           <br></br>
-          <label class="CampoPrecio" for="Precio">
+          <label className="CampoPrecio" for="Precio">
             Precio
               <input name="Precio" type="number" required/>
           </label>
-          <label class="CampoStatus">
+          <label className="CampoStatus">
             Status
-              <select class="CamposInput" name="estado" id="estado">
+              <select className="CamposInput" name="estado" id="estado">
                 <option value="" selected></option>
                 <option value="">Disponible</option>
                 <option value="">No disponible</option>
@@ -54,11 +55,11 @@ function App() {
         <br></br>
         <br></br>
         <div>
-          <button class="BotonesRegistro" type="submit">Guardar</button>
-          <button class="BotonVer" type="button">Ver</button>
+          <button className="BotonesRegistro" type="submit">Guardar</button>
+          <button className="BotonVer" type="button">Ver</button>
         </div>
         <section>
-            <img class="imagProducto" src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
+            <img className="imagProducto" src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
         </section>
         <div>
             <ul>
@@ -68,13 +69,13 @@ function App() {
             </ul>
         </div>
         <div>
-            <input class="CampoBuscar" type="text" name="" id=""/>
+            <input className="CampoBuscar" type="text" name="" id=""/>
         </div>
         <div>
-            <button class="BotonBuscar" type="button">Buscar</button>
+            <button className="BotonBuscar" type="button">Buscar</button>
         </div>
-          <table class="contenido">
-              <thead class="tabla">
+          <table className="contenido">
+              <thead className="tabla">
                   <tr>
                     <th type="checkbox"></th>
                     <th>ID Producto</th>
@@ -85,35 +86,35 @@ function App() {
                 </thead>
                 <tbody>
                     <tr>
-                      <th class="check"><input type="checkbox" name="" id=""/></th>
+                      <th className="check"><input type="checkbox" name="" id=""/></th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th class="check"><input type="checkbox" name="" id=""/></th>
+                        <th className="check"><input type="checkbox" name="" id=""/></th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th class="check"><input type="checkbox" name="" id=""/></th>
+                        <th className="check"><input type="checkbox" name="" id=""/></th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th class="check"><input type="checkbox" name="" id=""/></th>
+                        <th className="check"><input type="checkbox" name="" id=""/></th>
                         <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th class="check"><input type="checkbox" name="" id=""/></th>
+                        <th className="check"><input type="checkbox" name="" id=""/></th>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -121,8 +122,8 @@ function App() {
                     </tr>
                 </tbody>
             </table>
-                    <div class="LeyendaMostrar">
-                        Mostrar &NonBreakingSpace;
+                    <div className="LeyendaMostrar">
+                        Mostrar
                         <select name="num entradas" id="num entradas">
                             <option value="15" selected>5</option>
                             <option value="10">10</option>
@@ -131,7 +132,7 @@ function App() {
                         entradas
                     </div>
                     <div>
-                        <ul class="pages">
+                        <ul className="pages">
                             <li><span>1</span></li>
                             <li><button>2</button></li>
                             <li><button>3</button></li>
