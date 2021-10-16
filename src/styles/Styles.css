@@ -227,6 +227,17 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.22);
 }
 
+.tabla th:nth-child(8) {
+  font-family: none;
+  background: none;
+  border-radius: none;
+  padding-left: none;
+  padding-right: none;
+  padding-top: none;
+  padding-bottom: none;
+  border: none;
+}
+
 .tabla td {
   font-family: 'Roboto',sans-serif;
   background-color: white;
@@ -235,6 +246,37 @@ body {
   padding-bottom: 5px;
   border: 1px solid rgba(0, 0, 0, 0.22);
   text-align: center;
+}
+
+.tabla input {
+  font-size: 110%; 
+  font-family: 'Roboto',sans-serif;
+  border:none;
+  text-align: center;
+  height: 30px;
+  background: none;
+  width: 100%;
+}
+
+.tabla td:nth-child(8) {
+  font-family: none;
+  background-color: none;
+  border-radius: none;
+  padding-top: none;
+  padding-bottom: none;
+  border: none;
+  text-align: none;
+}
+
+.tabla td:nth-child(8):hover {
+
+  background-color: rgba(148, 148, 148, 0.2);
+  cursor: pointer;
+}
+
+.tabla__trashcan{
+  height: 10%;
+  width: 40%;
 }
 
 
@@ -253,7 +295,7 @@ body {
 }
 
 .tabla tbody tr:hover {
-  outline: solid 2px rgba(0, 0, 0, 0.22);
+  outline: solid 2px rgba(148, 148, 148, 0.2);
   border-radius: 50px;
 } 
 
@@ -261,7 +303,7 @@ body {
   position: relative;
   left: .05%;
   border-collapse: separate;
-  border-spacing: 45px 20px;
+  border-spacing: 35px 20px;
 }
 
 .Buscador_Tabla_Ventas {

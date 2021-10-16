@@ -1,6 +1,8 @@
 import VentaRow from "components/VentaRow.jsx"
 import CheckMark from "media/check-mark.svg"
+import { nanoid } from "nanoid"
 import { useEffect, useState } from "react/cjs/react.development"
+import trashcan from "media/delete.png"
 const Tabla = ({ventasbackend,setSaveChanges,setShowmodal}) => {
 
     useEffect(()=> {
@@ -18,25 +20,13 @@ const Tabla = ({ventasbackend,setSaveChanges,setShowmodal}) => {
                         <th id="tabla__encargado">Encargado</th>
                         <th id="tabla__valor-total">Valor Total</th>
                         <th id="tabla__estado">Estado</th>
+                        <th id="tabla__delete"></th>
                     </tr>
                 </thead>
                 <tbody>    
                 {ventasbackend.map((venta) => {
                     return (
-                    <tr>
-                    <td>{venta.ID}</td>
-                    <td contentEditable="true" className="campo">{venta.Fecha}</td>
-                    <td contentEditable="true" className="campo">{venta.Cantidad}</td>
-                    <td contentEditable="true" className="campo">{venta.Cliente}</td>
-                    <td contentEditable="true" className="campo">{venta.Encargado}</td>
-                    <td contentEditable="true" className="campo">{venta.Valor_Total}</td>
-                    <td><select defaultValue ={venta.Estado} onChange={() => { setSaveChanges(true)
-                        setShowmodal(true)}} name="estado" id="tabla__estado_selector" className="campo">
-                        <option value="Proceso">En Proceso</option>
-                        <option value="Cancelada">Cancelada</option>
-                        <option value="Entregada">Entregada</option>
-                    </select></td>
-                    </tr>
+                    <VentaRow key={nanoid()} setSaveChanges={setSaveChanges} setShowmodal={setShowmodal} venta={venta} ico={trashcan}/>
                     )
                 })}
                 </tbody>
