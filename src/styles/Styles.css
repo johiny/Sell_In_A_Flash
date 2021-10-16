@@ -252,6 +252,11 @@ body {
   border-radius: 50px;
 }
 
+.tabla tbody tr:hover {
+  outline: solid 2px rgba(0, 0, 0, 0.22);
+  border-radius: 50px;
+} 
+
 .tabla table {
   position: relative;
   left: .05%;
