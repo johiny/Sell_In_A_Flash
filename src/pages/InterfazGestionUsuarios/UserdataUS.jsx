@@ -1,4 +1,5 @@
 import imagenn from "media/nn.jpg";
+import 'styles/stylegu.css';
 
 function UserdataUS(){
     return(
@@ -41,7 +42,7 @@ function UserdataUS(){
                 </fieldset>
             </div>
             <div>
-                <a href="/userdatausedit">
+                <a href="/InterfazGestionUsuarios/Usuarios/editar">
                     <button class="mainguButton" type="button" >
                         Actualizar datos
                     </button>

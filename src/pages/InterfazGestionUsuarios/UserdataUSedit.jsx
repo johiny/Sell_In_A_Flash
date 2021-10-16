@@ -1,20 +1,31 @@
+import Inputs from "components/inputs";
 import imagenn from "media/nn.jpg";
+import 'styles/stylegu.css';
+import React, { useEffect, useState} from "react";
+
 
 function UserdataUSedit(){
-    return(
-        <>
-        
-            <div>
-                <label>
-                    ID de usuario
-                </label>
-                <input name="id" type="search" list="usuarios"/>
+    const [idnum, setIdnum] = useState('');
+    const [nombre, setNombre] = useState('');
+    const [apellidos, setApellidos] = useState('');
+    const [correo, setCorreo] = useState('');
+    const [telefono, setTelefono] = useState('');
 
-            </div>
-            
-            <button class="mainguButton" type="button">
-                Buscar ID
-            </button>
+    const [newPw1, setNewPw1] = useState('');
+    const [newPw2, setNewPw2] = useState('');
+    const [newPwValid, setNewPwValid] = useState(false)
+    useEffect(() => {
+        if (newPw1 == newPw2 && newPw1.lenght > 7){
+            <span>la contraseña es valida</span>
+            setNewPwValid(true);
+        } else {
+            <span>verifique la contraseña, deben ser iguales y tener al menos 8 caracteres</span>
+            setNewPwValid(false);
+        }
+    }, [newPw1,newPw2]);
+
+    return(
+        <>        
             <fieldset class="fieldsetgu" height="230px">
                 <legend>
                     Foto
@@ -23,7 +34,7 @@ function UserdataUSedit(){
             </fieldset>
             <table class="tabus1" cellspacing="20">
                 <tr>
-                    <th > Id. (Cédula) </th>
+                    <th > Id. (Cédula) </th> 
                     <th > Nombres </th>
                     <th > Apellidos </th>
                     <th > Correo </th>
@@ -45,15 +56,13 @@ function UserdataUSedit(){
                         
                     </tr>
                     <tr>
-                        <td><input type="number" name="cedula" placeholder="Cédula..."/></td>
-                        <td><input type="text" name="nombre" placeholder="Nombres..."/></td>
-                        <td><input type="text" name="apellidos" placeholder="Apellidos..."/></td>
-                        <td><input type="text" name="correo" placeholder="Correo..."/></td>
-                        <td><input type="text" name="telefono" placeholder="Teléfono..."/></td>
-                        <td><input type="password" name="password" placeholder="Contraseña nueva..."/></td>
-                        <td><input type="password" name="password" placeholder="Verificar contraseña..."/></td>
-                        
-
+                        <td><input onChange={(e) => {setIdnum(e.target.value);}} nombre='ID Usuario' icono='' type='text'/></td>
+                        <td><input onChange={(e) => {setNombre(e.target.value);}} placeholder='Nombre' icono='' type='text'/></td>
+                        <td><input onChange={(e) => {setApellidos(e.target.value);}} placeholder='Apellidos' icono='' type='text'/></td>
+                        <td><input onChange={(e) => {setCorreo(e.target.value);}} placeholder='Correo' icono='' type='email'/></td>
+                        <td><input onChange={(e) => {setTelefono(e.target.value);}} placeholder='Telefono' icono='' type='number'/></td>
+                        <td><inputs onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva' icono='' tipo='password'/></td>
+                        <td><inputs onChange={(e) => {setNewPw2(e.target.value);}} placeholder='Verificar contraseña' icono='' type='password'/></td>                                    
                     </tr>
                 </tbody>
             </table>
