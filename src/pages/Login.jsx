@@ -1,9 +1,14 @@
+import BotonCs from "components/BotonCs";
 import BotonGg from "components/BotonGg";
 import Inputs from "components/inputs";
 import Boton from "components/BotonJ";
 import logo from "media/logo.png"
+import { useAuth0 } from "@auth0/auth0-react";
 import "styles/estilos.css"
 function Login(){
+
+    const {isAuthenticated} = useAuth0();
+
     return (
         <div className="body_login">
             <header>
@@ -17,7 +22,7 @@ function Login(){
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                         <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
                         <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/index'/>  
-                        <BotonGg/>
+                        {isAuthenticated ? <BotonCs/> : <BotonGg/>}
                         <div>
                             <a href="" className="enlace">¿ Recuperar Contraseña ?</a>
                         </div>
