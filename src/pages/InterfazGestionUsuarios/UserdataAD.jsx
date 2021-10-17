@@ -1,5 +1,6 @@
 import imagenn from "media/nn.jpg";
-import Inputsgu from "components/inputsgu";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import 'styles/stylegu.css';
 import React, { useEffect, useState } from "react";
 
@@ -8,12 +9,18 @@ import React, { useEffect, useState } from "react";
 const UserdataAD = () =>{
     
     const [idnum, setIdnum] = useState('');
-    const [nombre, setNombre] = useState('');
+    const [nombre, setNombre] = useState('nn');
     const [apellidos, setApellidos] = useState('');
     const [correo, setCorreo] = useState('');
     const [telefono, setTelefono] = useState('');
     const [cargo, setCargo] = useState('');
     const [rol, setRol] = useState('');
+    const [estado, setEstado] = useState('');
+
+    const enviarAlBackendgu = () => console.log('Id: ',idnum, ' nombre: ', nombre, ' apellidos: ', apellidos, ' correo: ', correo, ' telefono: ', telefono, ' cargo: ', cargo, ' rol: ', rol, ' estado: ', estado );
+    toast.success(`datos de usuario con ID: ${idnum} actualizados`);
+    
+    
     
     return(
         <>
@@ -55,7 +62,7 @@ const UserdataAD = () =>{
                             <td >jeorozcob@gmail.com</td>
                             <td >3007041800</td>
                             <td >Secretario</td>
-                            <td >Usuario</td>
+                            <td >Ejecutivo</td>
                             <td >Autorizado</td>
                         </tr>
                         <tr>
@@ -66,7 +73,7 @@ const UserdataAD = () =>{
                             <td><input onChange={(e) => {setTelefono(e.target.value);}} placeholder='Telefono' icono='' type='number'/></td>
                             <td><input onChange={(e) => {setCargo(e.target.value);}} placeholder='Cargo' icono='' type='text'/></td>
                             
-                            <td><select onChange={(e) => {setRol(e.target.value);}} type="text" name="rol" placeholder="Rol del sistema">
+                            <td><select value={rol} onChange={(e) => {setRol(e.target.value);}} type="text" name="rol" placeholder="Rol del sistema">
                                 <option value="vendedor">Vendedor</option> 
                                 <option value="administrador">Administrador</option>
                                 <option value="ejecutivo">Ejecutivo</option> 
@@ -74,7 +81,7 @@ const UserdataAD = () =>{
                                 <option value="director">Director</option> 
                                 <option value="gerente comercial">Gerente comercial</option>
                             </select></td>
-                            <td><select type="text" name="estado" placeholder="Estado...">
+                            <td><select value={estado} onChange={(e) => {setEstado(e.target.value);}} type="text" name="estado" placeholder="Estado...">
                                 <option value="pendiente">Pendiente</option> 
                                 <option value="autorizado">Autorizado</option>
                                 <option value="no_autorizado">No autorizado</option> 
@@ -85,9 +92,12 @@ const UserdataAD = () =>{
                 </table>
             </div>
             <div className = "botonActualizar">
-                <a href="http://google.com"><button className="mainguButton" type="submit">
-                    Actualizar Datos
-                </button></a>
+                <button 
+                onClick={() => {enviarAlBackendgu();
+                alert('usuario actualizado')}} className="mainguButton" type="submit" >
+                    Actualizar Datos    
+                </button>
+                
             </div>
         </>
     )
