@@ -5,7 +5,19 @@ import trashcan from "media/delete.png"
 import pencil from "media/pencil.svg"
 import cross from "media/cancel.svg"
 import save from "media/save.svg"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const VentaRow = (props) => {
+    const modal = () => {toast.success('✔️Venta Guardada!', {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        })};
     const [editVenta,setEditVenta] = useState({
         fecha: props.venta.Fecha,
         cantidad: props.venta.Cantidad,
@@ -19,6 +31,7 @@ const VentaRow = (props) => {
     const editSubmit = () => {
         console.log(editVenta)
         setEditActivate(false)
+        modal();
     } 
     
 
