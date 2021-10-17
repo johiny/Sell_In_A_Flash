@@ -1,25 +1,40 @@
 import imagenn from "media/nn.jpg";
-function UserdataAD(){
+import Inputsgu from "components/inputsgu";
+import 'styles/stylegu.css';
+import React, { useEffect, useState } from "react";
+
+
+
+const UserdataAD = () =>{
+    
+    const [idnum, setIdnum] = useState('');
+    const [nombre, setNombre] = useState('');
+    const [apellidos, setApellidos] = useState('');
+    const [correo, setCorreo] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [rol, setRol] = useState('');
+    
     return(
         <>
-            <div class = "buscarID">
-                <label>
-                    ID de usuario
-                </label>
-                <input name="id" type="search"/>   
-            </div>        
-                <button class="mainguButton" type="button">
+            <form className = "buscarID">
+
+            <input onChange={(e) => {setIdnum(e.target.value);}} nombre='ID Usuario' icono='' type='text'/>
+            <button className ="mainguButton" type="button">
                     Buscar ID
-                </button>
+            </button>      
+            </form>
+
+                
             
-            <fieldset class="fieldsetgu" height="230px">
+            <fieldset className="fieldsetgu" height="230px">
                 <legend>
                     Foto
                 </legend>
                 <img src={imagenn} height="500px"/>
             </fieldset>
-            <div class="tabladedatos">
-                <table class="tabus1" cellpadding="50" cellspacing="20">
+            <div className="tabladedatos">
+                <table className = "tabus1" cellpadding="50" cellspacing="20">
                     <tr>
                         <th > Id. (Cédula) </th>
                         <th > Nombres </th>
@@ -27,11 +42,12 @@ function UserdataAD(){
                         <th > Correo </th>
                         <th > Teléfono </th>
                         <th > Cargo </th>
-                        <th > Roll </th>
+                        <th > Rol </th>
                         <th > Estado </th>
 
                     </tr>
                     <tbody>
+                      
                         <tr>
                             <td >1152443922</td>
                             <td >Juan Esteban </td>
@@ -43,19 +59,20 @@ function UserdataAD(){
                             <td >Autorizado</td>
                         </tr>
                         <tr>
-                            <td><input type="number" name="cedula" placeholder="Cédula..."/></td>
-                            <td><input type="text" name="nombre" placeholder="Nombres..."/></td>
-                            <td><input type="text" name="apellidos" placeholder="Apellidos..."/></td>
-                            <td><input type="text" name="correo" placeholder="Correo..."/></td>
-                            <td><input type="text" name="telefono" placeholder="Teléfono..."/></td>
-                            <td><input type="text" name="cargo" placeholder="Cargo..."/></td>
-                            <td><select type="text" name="rol" placeholder="Rol...">
+                            <td>{idnum}</td>
+                            <td><input onChange={(e) => {setNombre(e.target.value);}} placeholder='Nombre' icono='' type='text'/></td>
+                            <td><input onChange={(e) => {setApellidos(e.target.value);}} placeholder='Apellidos' icono='' type='text'/></td>
+                            <td><input onChange={(e) => {setCorreo(e.target.value);}} placeholder='Correo' icono='' type='email'/></td>
+                            <td><input onChange={(e) => {setTelefono(e.target.value);}} placeholder='Telefono' icono='' type='number'/></td>
+                            <td><input onChange={(e) => {setCargo(e.target.value);}} placeholder='Cargo' icono='' type='text'/></td>
+                            
+                            <td><select onChange={(e) => {setRol(e.target.value);}} type="text" name="rol" placeholder="Rol del sistema">
                                 <option value="vendedor">Vendedor</option> 
                                 <option value="administrador">Administrador</option>
                                 <option value="ejecutivo">Ejecutivo</option> 
                                 <option value="operario">Operario</option>
                                 <option value="director">Director</option> 
-                                <option value=" gerente comercial">Gerente comercial</option>
+                                <option value="gerente comercial">Gerente comercial</option>
                             </select></td>
                             <td><select type="text" name="estado" placeholder="Estado...">
                                 <option value="pendiente">Pendiente</option> 
@@ -67,8 +84,8 @@ function UserdataAD(){
                     </tbody>
                 </table>
             </div>
-            <div class = "botonActualizar">
-                <a href="http://google.com"><button class="mainguButton" type="submit">
+            <div className = "botonActualizar">
+                <a href="http://google.com"><button className="mainguButton" type="submit">
                     Actualizar Datos
                 </button></a>
             </div>

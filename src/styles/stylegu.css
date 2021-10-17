@@ -103,11 +103,28 @@ nav li:hover {
 }
 
 .buscarID{
-  justify-content: center;
-  align-items: center;
   padding-top: 5%;
+  justify-content: center;
+  margin-left: 50%;
+
+}
+.mainguButton{
+  margin-top: 30px;
+  background-color: rgba(245, 245, 245, 0.37);
+  border: 2px solid rgba(15, 13, 13, 0.103);
+  border-radius: 5px; 
+  color: rgb(131, 131, 119); 
+  padding: 12px 25px;
+  font-weight: bolder;
+  cursor: pointer;
 }
 
+.mainguButton:hover{
+  box-shadow: 3px 3px rgb(95, 95, 87);
+  background-color: rgba(146, 146, 146, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
 .tabladedatos{
   align-items: center;
   display: flex;
@@ -123,31 +140,10 @@ nav li:hover {
   text-align: center;
 }
 
-
-
 #informacion1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.mainguButton{
-  margin-top: 40px;
-  background-color: rgba(245, 245, 245, 0.37);
-  border: 2px solid rgba(15, 13, 13, 0.103);
-  border-radius: 5px; 
-  color: rgb(131, 131, 119); 
-  padding: 12px 25px;
-  font-weight: bolder;
-  cursor: pointer;
-  margin-left: 50%;
-}
-
-.mainguButton:hover{
-  box-shadow: 3px 3px rgb(95, 95, 87);
-  background-color: rgba(146, 146, 146, 0.1);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 .fieldsetgu{
@@ -155,7 +151,6 @@ nav li:hover {
  
   justify-content: center;
   display: flex;
-  
 }
 
 .inputgu{
@@ -165,4 +160,5 @@ nav li:hover {
 .botonActualizar{
   justify-content: center;
   align-items: center;
+  margin-left: 50%;
 }
