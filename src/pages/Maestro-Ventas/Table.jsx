@@ -5,7 +5,6 @@ import ModalCambios from "components/ModalCambios";
 import ventas from "Ventas_test.json"
 const TableIndex = () => {
     const [listaVentas, setListaVentas] = useState([]);
-    const [savechanges,setSaveChanges] = useState(false);
     
     useEffect(() => {
         setListaVentas(ventas)
