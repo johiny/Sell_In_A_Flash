@@ -4,7 +4,7 @@ const Buscador = (props) => {
     return(
         <div className={props.estilo} id="Buscador">
             <input type="search" placeholder="Buscar"></input>
-            <button><a href="google.com"><img src={Find} alt="lupa_gris_pequeña"></img></a></button>
+            <button><img src={Find} alt="lupa_gris_pequeña"></img></button>
             </div>
     )
 }
