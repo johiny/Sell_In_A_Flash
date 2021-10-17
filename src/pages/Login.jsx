@@ -7,7 +7,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "styles/estilos.css"
 function Login(){
 
-    const {isAuthenticated} = useAuth0();
+    const {isAuthenticated, isLoading} = useAuth0();
+    
+    if (isLoading) return <h1>Loading...</h1>
 
     return (
         <div className="body_login">
