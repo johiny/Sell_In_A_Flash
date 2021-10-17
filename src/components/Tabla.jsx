@@ -1,13 +1,12 @@
 import VentaRow from "components/VentaRow.jsx"
 import CheckMark from "media/check-mark.svg"
 import { useEffect, useState } from "react/cjs/react.development"
-const Tabla = ({ventasbackend,modal}) => {
+const Tabla = ({ventasbackend,setSaveChanges,setShowmodal}) => {
 
     useEffect(()=> {
         console.log(ventasbackend)
     },[ventasbackend])
     return(
-        <>
         <div className="tabla">
             <table id="tabla">
                 <thead>   
@@ -31,8 +30,9 @@ const Tabla = ({ventasbackend,modal}) => {
                     <td contenteditable class="campo">{venta.Cliente}</td>
                     <td contenteditable class="campo">{venta.Encargado}</td>
                     <td contenteditable class="campo">{venta.Valor_Total}</td>
-                    <td><select name="estado" id="tabla__estado_selector" class="campo">
-                        <option selected="selected" value ={venta.Estado} selected disabled hidden>{venta.Estado}</option>
+                    <td><select onChange={() => { setSaveChanges(true)
+                        setShowmodal(true)}} name="estado" id="tabla__estado_selector" class="campo">
+                        <option defaultvalue ={venta.Estado} selected disabled hidden>{venta.Estado}</option>
                         <option value="Proceso">En Proceso</option>
                         <option value="Cancelada">Cancelada</option>
                         <option value="Entregada">Entregada</option>
@@ -42,18 +42,8 @@ const Tabla = ({ventasbackend,modal}) => {
                 })}
                 </tbody>
             </table>
-        </div>
-        <div className="Guardar-Popup" id="guardar-popup">
-        <h2 className="Guardar-Popup__titulo">
-    Has hecho cambios<br></br>
-    ¿Quieres guardarlos?
-</h2>
-<button className="Guardar-Popup__button">
-    Guardar
-</button>
-        </div>
-        </>
-    )
-}
+            </div>
+    )    
+}    
 
 export default Tabla;

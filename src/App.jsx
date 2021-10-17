@@ -1,4 +1,3 @@
-
 import {
   BrowserRouter as Router,
   Switch,
@@ -48,7 +47,7 @@ function App() {
             <Route path ="/Maestro-Ventas">
               <IndexVentas/>
             </Route>
-            <Route path='/Index' exact>
+            <Route path='/Index'>
               <Index />
             </Route>
           </Switch>
