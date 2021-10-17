@@ -7,12 +7,19 @@ import React, { useEffect, useState } from "react";
 
 const UserdataAD = () =>{
     
+    const [idnum, setIdnum] = useState('');
+    const [nombre, setNombre] = useState('');
+    const [apellidos, setApellidos] = useState('');
+    const [correo, setCorreo] = useState('');
+    const [telefono, setTelefono] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [rol, setRol] = useState('');
     
     return(
         <>
             <form className = "buscarID">
 
-                <Inputsgu nombre='ID Usuario' icono='' tipo='text'/>
+            <input onChange={(e) => {setIdnum(e.target.value);}} nombre='ID Usuario' icono='' type='text'/>
             <button className ="mainguButton" type="button">
                     Buscar ID
             </button>      
@@ -35,11 +42,12 @@ const UserdataAD = () =>{
                         <th > Correo </th>
                         <th > Teléfono </th>
                         <th > Cargo </th>
-                        <th > Roll </th>
+                        <th > Rol </th>
                         <th > Estado </th>
 
                     </tr>
                     <tbody>
+                      
                         <tr>
                             <td >1152443922</td>
                             <td >Juan Esteban </td>
@@ -51,13 +59,14 @@ const UserdataAD = () =>{
                             <td >Autorizado</td>
                         </tr>
                         <tr>
-                            <td><Inputsgu nombre='ID Usuario' icono='' tipo='text' /></td>
-                            <td><Inputsgu nombre='Nombre' icono='' tipo='text'/></td>
-                            <td><Inputsgu nombre='Apellidos' icono='' tipo='text'/></td>
-                            <td><Inputsgu nombre='Correo' icono='' tipo='email'/></td>
-                            <td><Inputsgu nombre='Telefono' icono='' tipo='number'/></td>
-                            <td><Inputsgu nombre='Cargo' icono='' tipo='text'/></td>
-                            <td><select type="text" name="rol" placeholder="Rol del sistema">
+                            <td>{idnum}</td>
+                            <td><input onChange={(e) => {setNombre(e.target.value);}} placeholder='Nombre' icono='' type='text'/></td>
+                            <td><input onChange={(e) => {setApellidos(e.target.value);}} placeholder='Apellidos' icono='' type='text'/></td>
+                            <td><input onChange={(e) => {setCorreo(e.target.value);}} placeholder='Correo' icono='' type='email'/></td>
+                            <td><input onChange={(e) => {setTelefono(e.target.value);}} placeholder='Telefono' icono='' type='number'/></td>
+                            <td><input onChange={(e) => {setCargo(e.target.value);}} placeholder='Cargo' icono='' type='text'/></td>
+                            
+                            <td><select onChange={(e) => {setRol(e.target.value);}} type="text" name="rol" placeholder="Rol del sistema">
                                 <option value="vendedor">Vendedor</option> 
                                 <option value="administrador">Administrador</option>
                                 <option value="ejecutivo">Ejecutivo</option> 
