@@ -276,6 +276,17 @@ body {
   border-radius: 5px;
 }
 
+.guardar_cambios {
+  max-width:min-content;
+  margin-right: 7px;
+}
+
+.guardar_cambios:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .tabla img {
   margin-right: 7px;
 }

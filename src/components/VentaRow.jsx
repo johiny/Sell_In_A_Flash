@@ -4,17 +4,12 @@ import { useEffect } from "react/cjs/react.development";
 import trashcan from "media/delete.png"
 import pencil from "media/pencil.svg"
 import cross from "media/cancel.svg"
+import save from "media/save.svg"
 const VentaRow = (props) => {
 
-    const [editActivate,setEditActivate] = useState(false);
-
+    const [editActivate,setEditActivate] = useState(props.cambioguardado);
     
 
-    const edittrigger = () => {
-
-        setEditActivate(!editActivate)
-        console.log(editActivate)
-    }
 
     return(
 <tr>
@@ -42,12 +37,9 @@ const VentaRow = (props) => {
     </select></td> :
     <td>{props.venta.Estado}</td>}
 
-    <td><div>
-    <img className="tabla__trashcan" src={editActivate ? cross : pencil} onClick={ () => edittrigger()}></img>
-    <img className="tabla__trashcan" src={trashcan}></img>
-    </div></td>
-    
-</tr>
+    {editActivate ? <td><input type="image" form="tabla-form" className="guardar_cambios"  src={save}></input><img onClick={() => setEditActivate(!editActivate)} className="tabla__trashcan" src={cross}></img></td>:
+    <td><img onClick={() => setEditActivate(!editActivate)} className="tabla__trashcan" src={pencil}></img><img className="tabla__trashcan" src={trashcan}></img></td>}
+   </tr>
     )
 }
 

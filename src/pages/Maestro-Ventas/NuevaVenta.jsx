@@ -17,7 +17,7 @@ const NuevaVenta = () => {
             ventanueva[key] = value;
         })
         setSaveChanges(false)
-        setVentas([...ventas,ventanueva])
+        //enviar al backend
         console.log(ventanueva)
         
     }
