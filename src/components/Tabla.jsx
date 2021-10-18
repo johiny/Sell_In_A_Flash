@@ -20,11 +20,11 @@ const Tabla = ({ventasbackend}) => {
                     <tr>
                         <th id="tabla__id">ID</th>
                         <th id="tabla__date">Fecha</th>
-                        <th id="tabla__cantidad">Cantidad</th>
                         <th id="tabla__cliente">Cliente</th>
                         <th id="tabla__encargado">Encargado</th>
                         <th id="tabla__valor-total">Valor Total</th>
                         <th id="tabla__estado">Estado</th>
+                        <th id="tabla__productos">Productos</th>
                         <th id="tabla__delete"></th>
                     </tr>
                 </thead>

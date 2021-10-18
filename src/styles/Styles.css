@@ -95,7 +95,7 @@ nav li:hover {
   position: absolute;
   left: 201px;
   top: 62px;
-  overflow: hidden;
+  overflow:hidden
 }
 
 body {
@@ -260,6 +260,16 @@ body {
 }
 
 .tabla td:nth-child(8) {
+  background-color: #FBFAFA;
+  border-radius: 20px;
+  padding-top: none;
+  padding-bottom: none;
+  border: none;
+  text-align: none;
+}
+
+
+.tabla td:nth-child(7) {
   font-family: none;
   background-color: none;
   border-radius: none;
@@ -276,12 +286,14 @@ body {
   border-radius: 5px;
 }
 
-.guardar_cambios {
-  max-width:min-content;
-  margin-right: 7px;
+.guardar_cambios img {
+  display: inline-table;
+  margin-top: 7px;
+  height: 30px;
+  width: 30px;
 }
 
-.guardar_cambios:hover {
+.guardar_cambios img:hover {
   background-color: rgba(148, 148, 148, 0.2);
   cursor: pointer;
   border-radius: 5px;
@@ -291,25 +303,23 @@ body {
   margin-right: 7px;
 }
 
-.tabla__trashcan{
-  height: 10%;
-  width: 40%;
-}
 
 
 .campo {
   outline: none;
 }
 
+
 .tabla {
   position: absolute;
-  left: 5%;
+  left: 0%;
   top: 10%;
   height: 750px;
-  width: 1260px;
+  width: 100%;
   background: #FBFAFA;
   border-radius: 50px;
 }
+
 
 .tabla tbody tr:hover {
   outline: solid 2px rgba(148, 148, 148, 0.2);
@@ -321,6 +331,8 @@ body {
   left: .05%;
   border-collapse: separate;
   border-spacing: 35px 20px;
+  width: 100%;
+  table-layout: auto
 }
 
 .Buscador_Tabla_Ventas {
