@@ -1,4 +1,6 @@
-import logo from './Imagen/logo.png';
+
+import logo from './Imagenes/logo.png';
+import SinFoto from './Imagenes/SinFoto.png';
 import './Styles/App.css';
 import './Styles/App2.css';
 
@@ -16,7 +18,7 @@ function App() {
       </nav>
     <div id="leftbar">
       <div>
-        <img id="logo" src="Imagen/logo.png"/>
+        <img src={logo} alt='Imagen' className='logo'/>
       </div>  
         <ul id="leftbar_links">
           <li><a href="#">Gestión</a></li>
@@ -26,45 +28,39 @@ function App() {
     </header>
     <section></section>
       <form>
-        <div className="Datos">
-          <label for="ID">
+        <div>
+          <label className="Etiquetas" for="ID">
             ID Producto
               <input className="CamposInput" name="ID"/>
           </label>
-          <br></br>
-          <br></br>
-          <label className="CampoDescrip" for="Descripción">
-            Descripción
-              <input className="cajatexto" name="Descripción" type="text" required/>
-          </label>
-          <br></br>
-          <br></br>
-          <label className="CampoPrecio" for="Precio">
+          <label className="Etiquetas" for="Precio">
             Precio
-              <input name="Precio" type="number" required/>
+              <input className="CamposInput" name="Precio" type="number" required/>
           </label>
-          <label className="CampoStatus">
+          <label className="Etiquetas" for="Status">
             Status
-              <select className="CamposInput" name="estado" id="estado">
+              <select className="CamposInput" name="estado" id="estado" required>
                 <option value="" selected></option>
                 <option value="">Disponible</option>
                 <option value="">No disponible</option>
               </select>
           </label>
+          <label className="Etiquetas" for="Descripción">
+            Descripción
+              <textarea className="CamposInput CampoDescrip" name="Descripción" type="text" required/>
+          </label>
         </div>
-        <br></br>
-        <br></br>
         <div>
           <button className="BotonesRegistro" type="submit">Guardar</button>
           <button className="BotonVer" type="button">Ver</button>
         </div>
         <section>
-            <img className="imagProducto" src="./Imagen/producto-sin-imagen-600x600.jpg" alt="Imágen Producto"/>
+          <img className="FotoProducto" src={SinFoto} alt='Imagen Producto'/>
         </section>
         <div>
             <ul>
               <li>
-                <span><input type="checkbox"/></span>
+                <span></span>
               </li>
             </ul>
         </div>
@@ -77,7 +73,7 @@ function App() {
           <table className="contenido">
               <thead className="tabla">
                   <tr>
-                    <th type="checkbox"></th>
+                    <th></th>
                     <th>ID Producto</th>
                     <th>Descripción</th>
                     <th>Precio</th>

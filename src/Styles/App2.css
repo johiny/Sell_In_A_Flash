@@ -1,67 +1,55 @@
-.Datos{
-    display: flex;
-    flex-direction: column;
-    margin-top: 150px;
-    margin-left: 300px;
+.Etiquetas{
+    position: relative;
+    left: 350px;
+    top: 90px;
     font-family: 'Lato',sans-serif;
     font-size: 20px;
     color: rgb(90, 88, 88);
 }
 
-.CampoStatus{
+.FotoProducto{
+    position: relative;
+    float: left;
+    left: 810px;
+    bottom: 160px;
+    opacity: 40%;
+    background-color: rgb(66, 233, 177);
+}
+
+.CamposInput{
     display: flex;
-    margin-left: 310px;
-    margin-top: -32px;
-    font-family: 'Lato',sans-serif;
+    flex-direction: row;
+    left: 100px;
+    top: 5px;
     padding: 3px;
+    width: 10%;
+    font-family: 'Lato',sans-serif;
+    font-size: 15px;
+    color: rgb(90, 88, 88);
 }
 
 .CampoDescrip{
-    display: flex;
-    margin-left: -3.5px;
-    margin-top: -30px;
     font-family: 'Lato',sans-serif;
-    padding: 3px;
-}
-
-.CampoPrecio{
-    display: flex;
-    margin-left: -3px;
-    margin-top: -30px;
-    font-family: 'Lato',sans-serif;
-    padding: 3px;
-}
-.CamposInput{
-    width: 120px;
-    padding: 3px;
+    width: 300px;
+    height: 70px;
     font-size: 15px;
-    font-family: 'Lato',sans-serif;
-
-    
+    color: rgb(90, 88, 88);
 }
-section{
-    margin-left: auto;
-    height: 100%;
-    margin-right: 410px;
-    width: 50px;
-    margin-top: -310px;
-}
-
 
 .BotonesRegistro{
-    margin-top: -10px;
-    margin-left: 415px;
-    margin-right: 20px;
+    position: fixed;
+    bottom: 250px;
+    left: 350px;
     padding: 3px;
     width: 80px;
     font-size: 15px;
     box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
-
-
 }
 
 .BotonVer{
-    margin-left: -44px;
+    position: fixed;
+    left: 450px;
+    bottom: 250px;
     padding: 3px;
     width: 80px;
     font-family: 'Lato',sans-serif;
@@ -71,10 +59,9 @@ section{
 }
 
 .BotonBuscar{
-    display: block;
-    margin-right: 300px;
-    margin-left: 1120px;
-    margin-top: -27px;
+    position: fixed;
+    bottom: 250px;
+    right: 130px;
     width: 80px;
     padding: 3px;
     font-family: 'Lato',sans-serif;
@@ -84,65 +71,70 @@ section{
 }
 
 .CampoBuscar{
-    display: block;
-    margin-left: 910px;
-    margin-top: 15px;
-    margin-bottom: -25px;
+    position: fixed;
+    bottom: 250px;
+    right: 215px;
     padding: 3px;
+    width: 10%;
     font-size: 15px;
+    color: rgb(90, 88, 88);
     }
 
 .contenido{
-    margin-top: 15px;
-    margin-left: 300px;
+    position: absolute;
+    bottom: 70px;
+    left: 308px;
     font-size: 18px;
     font-family: 'Lato',sans-serif;
     width: 68%;
 }
 
 .contenido td{
-    border: solid black 1px;
+    border: solid rgb(184, 184, 184) 1px;
     box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
     width: 25%;
     margin-top: 100px;
+    padding: 10px;
 }
 
 .contenido thead tr{
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-bottom: 300px;
-    background-color: rgb(0, 0, 0);
-    padding: 20px;
+    position: relative;
+    bottom: 5px;
+    background-color: rgb(129, 129, 129);
     text-align: center;
     color: white;
-
+    width: 68%;
 }
 
 .check{
     display: flex;
-    margin-top: 12px;
-    margin-left: 5px;
-    margin-right: 5px;
+    position: relative;
+    bottom: -5px;
+    left: -5px;
+    border: solid rgb(184, 184, 184) -15px;
     box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
 
 }
-.cajatexto{
-    width: 305px;
-    height: 80px;
-}
 
 .LeyendaMostrar{
-    display: flex;
-    margin-top: 10px;
-    margin-left: 325px;
-    font-family: 'Lato',sans-serif;
+   display: inline-block;
+   position: fixed;
+   left: 325px;
+   bottom: 30px;
+   font-family: 'Lato',sans-serif;
+   font-size: 20px;
+   color: rgb(90, 88, 88);
+  
 }
 
 .pages{
-   display: flex;
-   margin-top: -50px;
-   margin-bottom: 50px;
-   margin-left: 1095px ;
-   padding: 30px;
-   font-family: 'Lato',sans-serif;  
+   position: fixed;
+   right: 134px;
+   bottom: 30px;
+   color: rgb(90, 88, 88);
+}
+
+.pages li{
+    float: left;
+    padding: 2px;
 }
