@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import React, { Component } from 'react';
 import Select, {StylesConfig} from 'react-select';
 import ProductosBD from "Productos_test.json"
+import Vendedores from "Vendedores_test.json"
 
 const VentaRow = (props) => {
 
@@ -23,6 +24,8 @@ const VentaRow = (props) => {
             });
             setListaCompletaProductos(productos)
     },[]);
+
+    //carga los productos de cada venta
     useEffect(() => {
         const productos = props.venta.Productos.map((element) => {
              return ({value : {id : element.id, nombre : element.nombre, precio : element.precio, cantidad: element.cantidad}, label:`${element.nombre} - $${element.precio} ud.${element.cantidad}`})
