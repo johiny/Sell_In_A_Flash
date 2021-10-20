@@ -106,8 +106,12 @@ nav li:hover {
   padding-top: 5%;
   justify-content: center;
   margin-left: 50%;
-
+  flex-direction: column;
 }
+
+
+
+
 .mainguButton{
   margin-top: 30px;
   background-color: rgba(245, 245, 245, 0.37);
@@ -131,14 +135,29 @@ nav li:hover {
   background-color: #fbfafa;
   justify-content: center;
 }
+.tabus1{
+  padding-top: 50px
+}
 
 .tabus1 th{
   width: 250px;
+  
 }
 
 .tabus1 td{
   text-align: center;
+  padding-top: 15px;
 }
+
+.tabus1 input{
+  padding: 3px;
+  border-radius: 5px;
+ }
+
+.tabus1 select{
+  padding: 3px;
+  border-radius: 5px;
+ }
 
 #informacion1 {
   display: flex;
@@ -148,7 +167,6 @@ nav li:hover {
 
 .fieldsetgu{
   margin-top: 5%;
- 
   justify-content: center;
   display: flex;
 }
