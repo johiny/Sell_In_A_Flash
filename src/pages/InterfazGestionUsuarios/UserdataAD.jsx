@@ -30,7 +30,7 @@ const UserdataAD = () =>{
     return(
         <>
             <form 
-            className = "buscarID ">               
+            className = "buscarID bg-gray-500">               
                 <input 
                 onChange={(e) => {setIdnum(e.target.value);}} 
                 name='ID-Usuario'  
