@@ -3,6 +3,8 @@ import logo from './Imagenes/logo.png';
 import SinFoto from './Imagenes/SinFoto.png';
 import './Styles/App.css';
 import './Styles/App2.css';
+import DatosInput from './Componentes/DatosFormulario';
+import BotonesRegistro from './Componentes/Botones';
 
 function App() {
   return (
