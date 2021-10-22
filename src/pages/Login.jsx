@@ -23,8 +23,7 @@ function Login(){
                     <div className="posicion">
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                         <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
-                        {isAuthenticated ? <Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/> : <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/index'/>}
-                          
+                        {isAuthenticated ? <Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/> : <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/index'/>
                         {isAuthenticated ? <BotonCs/> : <BotonGg/>}
                         <div>
                             <a href="" className="enlace">¿ Recuperar Contraseña ?</a>
