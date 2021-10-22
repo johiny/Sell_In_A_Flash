@@ -3,9 +3,34 @@ import Tabla from "components/Tabla";
 import { useEffect,useState } from "react";
 import ModalCambios from "components/ModalCambios";
 import ventas from "Ventas_test.json"
+import { obtenerVentas } from "utils/api";
 import { ToastContainer } from "react-toastify";
+import axios from "axios";
 const TableIndex = () => {
-    const [listaVentas, setListaVentas] = useState(ventas);
+
+const [listaVentas, setListaVentas] = useState([]);
+const [ejecutarConsulta, setEjecutarConsulta] = useState(true);
+// traer ventas desde la base de datos a traves del backend
+const fetchVentas = async () => {
+    await obtenerVentas(
+        (response) => {
+            console.log("ventas obtenidas exitosamente")
+            setListaVentas(response.data)
+            console.log(response.data)
+            setEjecutarConsulta(false)
+        },
+        (error) => {
+            console.error("error terrible:",error)
+        }
+    )
+}
+useEffect(() => {
+        if(ejecutarConsulta){
+        fetchVentas();
+        setEjecutarConsulta(false);
+        }
+},[ejecutarConsulta])
+
     const [listaFiltrada,setListaFiltrada] = useState(listaVentas);
     const [busqueda,setBusqueda] = useState("");
 
