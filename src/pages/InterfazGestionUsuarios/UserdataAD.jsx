@@ -29,27 +29,56 @@ const UserdataAD = () =>{
     
     return(
         <>
+            <div className="centrarBoton">
             <form 
-            className = "buscarID bg-gray-500">               
+            className = "buscarID">               
                 <input 
                 onChange={(e) => {setIdnum(e.target.value);}} 
                 name='ID-Usuario'  
-                type='text'/>
-                <button 
-                className ="mainguButton" 
-                type="submit">
-                        Buscar ID
-                </button>                
-            </form>
-            <fieldset 
-            className="fieldsetgu" 
-            height="230px">
-                <legend>
-                    Foto
-                </legend>
-                <img 
-                src={imagenn} 
-                height="500px"/>
+                type='text'
+                required
+                placeholder='Ingresar ID de usuario'/>
+            
+                
+                    <button 
+                    className ="mainguButton" 
+                    type="submit">
+                            Buscar ID
+                    </button>                
+                </form>
+            </div>
+            <fieldset className="fieldsetgu">
+                    <legend>ID de usuario</legend>
+                        <div id="informacion1">
+                            <div id="foto1">
+                                <img  src={imagenn} height="400px"/>
+                            </div>
+
+                            <table cellpadding="50" cellspacing="20">
+                                <tr>
+                                    <td><h3>ID</h3></td> <td>{idnum}</td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Nombres</h3></td><td>{nombre}</td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Apellidos</h3></td><td>{apellidos}</td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Correo</h3></td><td>{correo}</td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Teléfono</h3></td><td>{telefono}</td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Cargo</h3></td><td>{cargo}</td>
+                                </tr>
+                                <tr>
+                                    <td><h3>Rol</h3></td><td>{rol}</td>
+                                </tr>
+                               
+                            </table>
+                        </div>
             </fieldset>
             <div 
             className="tabladedatos">

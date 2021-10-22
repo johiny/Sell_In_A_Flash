@@ -1,25 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
 }
 
-#maingu{
-    color: #47525E;
-    letter-spacing: 0px;
-    font-family: 'Lato',sans-serif;
-    font-size: 18px;
-    font-weight: Regular;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 80px;
-}
+
 
 body {
   background-color: white;
@@ -102,23 +89,36 @@ nav li:hover {
   color: #47525E;
 }
 
-.buscarID{
-  padding-top: 5%;
+.centrarBoton{
   justify-content: center;
-  margin-left: 50%;
+  width: 100%;
+
+}
+
+.buscarID{
+  margin-top: 50px;
+  justify-content:center;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  columns: 2;
   flex-direction: column;
 }
 
-
+.buscarID input{
+  padding: 3px;
+  border-radius: 5px;
+}
 
 
 .mainguButton{
   margin-top: 30px;
+  padding: 12px 25px;
   background-color: rgba(245, 245, 245, 0.37);
   border: 2px solid rgba(15, 13, 13, 0.103);
   border-radius: 5px; 
   color: rgb(131, 131, 119); 
-  padding: 12px 25px;
   font-weight: bolder;
   cursor: pointer;
 }
@@ -136,7 +136,9 @@ nav li:hover {
   justify-content: center;
 }
 .tabus1{
-  padding-top: 50px
+  padding-top: 50px;
+  justify-content: space-evenly;
+  text-align: center;
 }
 
 .tabus1 th{
@@ -145,8 +147,7 @@ nav li:hover {
 }
 
 .tabus1 td{
-  text-align: center;
-  padding-top: 15px;
+  padding-top: 35px;
 }
 
 .tabus1 input{
@@ -159,16 +160,23 @@ nav li:hover {
   border-radius: 5px;
  }
 
+ .passwordRequerido {
+   justify-content: center;
+   text-align: center;
+   margin-top: 30px;
+
+ }
+
 #informacion1 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  position: relative ;
 }
 
 .fieldsetgu{
   margin-top: 5%;
-  justify-content: center;
-  display: flex;
+
 }
 
 .inputgu{
@@ -177,6 +185,7 @@ nav li:hover {
 
 .botonActualizar{
   justify-content: center;
-  align-items: center;
-  margin-left: 50%;
+  display: flex;
+  text-align: center;
+  width: 100%;
 }

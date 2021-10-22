@@ -1,19 +1,18 @@
-import Header from "components/Header";
+import NavBars from "components/NavBars";
 import React from "react";
 
 import "styles/stylegu.css"
 
 
 
-const Layout2 = ({ children }) => {
+const Layout2 = ({children}) => {
     return (
-        <div className = 'mainContainer'>
-        <Header/>
-            <main>
-                {children}
-            </main>
-        </div>
-    );
-};
+        <>
+        <NavBars/>
+        <main className="cuerpo_central">{children}</main>
+        <footer></footer>
+        </>
+    )
+}
 
 export default Layout2;
