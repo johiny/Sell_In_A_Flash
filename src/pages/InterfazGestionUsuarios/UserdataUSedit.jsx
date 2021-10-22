@@ -2,7 +2,7 @@ import Inputs from "components/inputs";
 import imagenn from "media/nn.jpg";
 import 'styles/stylegu.css';
 import React, { useEffect, useState} from "react";
-
+import { ToastContainer, toast } from "react-toastify";
 
 function UserdataUSedit(){
     const [idnum, setIdnum] = useState('');
@@ -10,6 +10,7 @@ function UserdataUSedit(){
     const [apellidos, setApellidos] = useState('');
     const [correo, setCorreo] = useState('');
     const [telefono, setTelefono] = useState('');
+    const [actDatos, setActDatos] = useState(false)
 
     const [newPw1, setNewPw1] = useState('');
     const [newPw2, setNewPw2] = useState('');
@@ -24,6 +25,15 @@ function UserdataUSedit(){
         }
     }, [newPw1,newPw2]);
 
+    const enviarAlBackendgu = () => {console.log('Id: ',idnum, ' nombre: ', nombre, ' apellidos: ', apellidos, ' correo: ', correo, ' telefono: ', telefono);
+    toast.success(`datos de usuario actualizados`);}
+    
+    const listaUsuarios = [
+        {
+
+        }
+    ];
+
     return(
         <>        
             <fieldset class="fieldsetgu" height="230px">
@@ -32,49 +42,69 @@ function UserdataUSedit(){
                 </legend>
                 <img src={imagenn} height="500px"/>
             </fieldset>
-            <table class="tabus1" cellspacing="20">
-                <tr>
-                    <th > Id. (Cédula) </th> 
-                    <th > Nombres </th>
-                    <th > Apellidos </th>
-                    <th > Correo </th>
-                    <th > Teléfono </th>
-                    <th > Cargo </th>
-                    <th > Roll </th>
-                    
-
-                </tr>
+            <form className="tabus1" cellspacing="20">
                 <tbody>
+                    {
+                        actDatos ? (
+                            <>
                     <tr>
-                        <td >1152443922</td>
-                        <td >Juan Esteban </td>
-                        <td >Orozco Botero</td>
-                        <td >jeorozcob@gmail.com</td>
-                        <td >3007041800</td>
-                        <td >Password</td>
+                        <th > Id. (Cédula) </th> 
+                        <th > Nombres </th>
+                        <th > Apellidos </th>
+                        <th > Correo </th>
+                        <th > Teléfono </th>
+                        <th > Cargo </th>
+                        <th > Roll </th>
+                    </tr>
+
+                    <tr>
+                        <td >{idnum}</td>
+                        <td >{nombre} </td>
+                        <td >{apellidos}</td>
+                        <td >{correo}</td>
+                        <td >{telefono}</td>
+                        <td >Secretario</td>
                         <td >Confirmar Password</td>
                         
                     </tr>
+                    </>
+                        ) : (
+                            <>
                     <tr>
-                        <td><input onChange={(e) => {setIdnum(e.target.value);}} nombre='ID Usuario' icono='' type='text'/></td>
-                        <td><input onChange={(e) => {setNombre(e.target.value);}} placeholder='Nombre' icono='' type='text'/></td>
-                        <td><input onChange={(e) => {setApellidos(e.target.value);}} placeholder='Apellidos' icono='' type='text'/></td>
-                        <td><input onChange={(e) => {setCorreo(e.target.value);}} placeholder='Correo' icono='' type='email'/></td>
-                        <td><input onChange={(e) => {setTelefono(e.target.value);}} placeholder='Telefono' icono='' type='number'/></td>
-                        <td><inputs onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva' icono='' tipo='password'/></td>
-                        <td><inputs onChange={(e) => {setNewPw2(e.target.value);}} placeholder='Verificar contraseña' icono='' type='password'/></td>                                    
+                        <th > Id. (Cédula) </th> 
+                        <th > Nombres </th>
+                        <th > Apellidos </th>
+                        <th > Correo </th>
+                        <th > Teléfono </th>
+                        <th > Contraseña nueva </th>
+                        <th > Verificar contraseña </th>
                     </tr>
+                    <tr>
+                        <td><input disabled onChange={(e) => {setIdnum(e.target.value);}} default={idnum} nombre='ID Usuario' icono='' type='text'/></td>
+                        <td><input onChange={(e) => {setNombre(e.target.value);}} default={nombre} placeholder='Nombre' icono='' type='text'/></td>
+                        <td><input onChange={(e) => {setApellidos(e.target.value);}} default={apellidos} placeholder='Apellidos' icono='' type='text'/></td>
+                        <td><input onChange={(e) => {setCorreo(e.target.value);}} default={correo} placeholder='Correo' icono='' type='email'/></td>
+                        <td><input onChange={(e) => {setTelefono(e.target.value);}} default={telefono} placeholder='Telefono' icono='' type='number'/></td>
+                        <td><input onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva' icono='' tipo='password'/></td>
+                        <td><input onChange={(e) => {setNewPw2(e.target.value);}} placeholder='Verificar contraseña' icono='' type='password'/></td>                                    
+                    </tr>
+                    </>    )
+                    }
                 </tbody>
-            </table>
+            </form>
             <div>
                 <div><form>
-                    <label for="contraseña">
-
-                    </label>
                 </form></div>
-                <a href="http://google.com"><button class="mainguButton" type="submit">
-                    Actualizar Datos
-                </button></a>
+            <div className = "botonActualizar">
+                <button 
+                onClick={() => {enviarAlBackendgu();
+                    setActDatos(!actDatos)}}
+                className="mainguButton" 
+                type="submit" >
+                    Actualizar Datos  
+                </button>
+                <ToastContainer position= 'bottom-center' autoClose = {5000}/>
+            </div>
             </div>
     
 
