@@ -44,6 +44,9 @@ const UserdataAD = () =>{
             <fieldset 
             className="fieldsetgu" 
             height="230px">
+                <legend>
+                    Foto
+                </legend>
                 <img 
                 src={imagenn} 
                 height="500px"/>
@@ -99,7 +102,8 @@ const UserdataAD = () =>{
                             onChange={(e) => {setNombre(e.target.value);}} 
                             placeholder='Nombre' 
                             name='nombre' 
-                            type='text'/></td>
+                            type='text'/>
+                            </td>
                             <td><input 
                             onChange={(e) => {setApellidos(e.target.value);}} 
                             placeholder='Apellidos' 

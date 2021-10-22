@@ -64,7 +64,7 @@ function UserdataUSedit(){
                         <td >{correo}</td>
                         <td >{telefono}</td>
                         <td >Secretario</td>
-                        <td >Confirmar Password</td>
+                        <td >Autorizado</td>
                         
                     </tr>
                     </>
@@ -80,12 +80,12 @@ function UserdataUSedit(){
                         <th > Verificar contraseña </th>
                     </tr>
                     <tr>
-                        <td><input disabled onChange={(e) => {setIdnum(e.target.value);}} default={idnum} nombre='ID Usuario' icono='' type='text'/></td>
+                        <td><input disabled onChange={(e) => {setIdnum(e.target.value);}} default={idnum} name='ID Usuario' icono='' type='text'/></td>
                         <td><input onChange={(e) => {setNombre(e.target.value);}} default={nombre} placeholder='Nombre' icono='' type='text'/></td>
                         <td><input onChange={(e) => {setApellidos(e.target.value);}} default={apellidos} placeholder='Apellidos' icono='' type='text'/></td>
                         <td><input onChange={(e) => {setCorreo(e.target.value);}} default={correo} placeholder='Correo' icono='' type='email'/></td>
                         <td><input onChange={(e) => {setTelefono(e.target.value);}} default={telefono} placeholder='Telefono' icono='' type='number'/></td>
-                        <td><input onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva' icono='' tipo='password'/></td>
+                        <td><input onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva' icono='' type='password'/></td>
                         <td><input onChange={(e) => {setNewPw2(e.target.value);}} placeholder='Verificar contraseña' icono='' type='password'/></td>                                    
                     </tr>
                     </>    )
