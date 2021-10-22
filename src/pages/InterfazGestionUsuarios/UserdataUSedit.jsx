@@ -72,78 +72,77 @@ function UserdataUSedit(){
                             </table>
                         </div>
             </fieldset>
-            <form className="tabus1">
-                    {
-                        actDatos ? (
-                            <>
-                            <tbody>
-                    <tr>
-                        <th > Id. (Cédula) </th> 
-                        <th > Nombres </th>
-                        <th > Apellidos </th>
-                        <th > Correo </th>
-                        <th > Teléfono </th>
-                        <th > Cargo </th>
-                        <th > Roll </th>
-                    </tr>
+            <div className="tabladedatos">
+                <form className="tabus1">
+                        {
+                            actDatos ? (
+                                <>
+                                <tbody>
+                        <tr>
+                            <th > Id. (Cédula) </th> 
+                            <th > Nombres </th>
+                            <th > Apellidos </th>
+                            <th > Correo </th>
+                            <th > Teléfono </th>
+                            <th > Cargo </th>
+                            <th > Roll </th>
+                        </tr>
 
-                    <tr>
-                        <td >{idnum}</td>
-                        <td >{nombre} </td>
-                        <td >{apellidos}</td>
-                        <td >{correo}</td>
-                        <td >{telefono}</td>
-                        <td >Secretario</td>
-                        <td >Autorizado</td>
-                        
-                    </tr>
-                    </tbody>
-                    </>
-                        ) : (
-                            <>
-                            <tbody>
-                    <tr>
-                        <th > Id. (Cédula) </th> 
-                        <th > Nombres </th>
-                        <th > Apellidos </th>
-                        <th > Correo </th>
-                        <th > Teléfono </th>
-                        <th > Contraseña nueva </th>
-                        <th > Verificar contraseña </th>
-                    </tr>
-                    <tr>
-                        <td><input disabled onChange={(e) => {setIdnum(e.target.value);}} default={idnum} name='ID Usuario' type='text'/></td>
-                        <td><input onChange={(e) => {setNombre(e.target.value);}} default={nombre} placeholder='Nombre' type='text'/></td>
-                        <td><input onChange={(e) => {setApellidos(e.target.value);}} default={apellidos} placeholder='Apellidos' type='text'/></td>
-                        <td><input onChange={(e) => {setCorreo(e.target.value);}} default={correo} placeholder='Correo' type='email'/></td>
-                        <td><input onChange={(e) => {setTelefono(e.target.value);}} default={telefono} placeholder='Telefono' icono='' type='number'/></td>
-                        <td><input onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva'  type='password'/></td>
-                        <td><input onChange={(e) => {setNewPw2(e.target.value);}} placeholder='Verificar contraseña' type='password'/></td>                                    
-                    </tr>
+                        <tr>
+                            <td >{idnum}</td>
+                            <td >{nombre} </td>
+                            <td >{apellidos}</td>
+                            <td >{correo}</td>
+                            <td >{telefono}</td>
+                            <td >Secretario</td>
+                            <td >Autorizado</td>
+                            
+                        </tr>
                         </tbody>
-                    <div className="passwordRequerido">
-                        <div>
-                       <h3>Constraseña actual (requerido): </h3> <input onChange={(e) => {setActPw(e.target.value);}} placeholder='Contraseña Actual' required type='password'/>
+                        </>
+                            ) : (
+                                <>
+                                <tbody>
+                        <tr>
+                            <th > Id. (Cédula) </th> 
+                            <th > Nombres </th>
+                            <th > Apellidos </th>
+                            <th > Correo </th>
+                            <th > Teléfono </th>
+                            <th > Contraseña nueva </th>
+                            <th > Verificar contraseña </th>
+                        </tr>
+                        <tr>
+                            <td><input disabled onChange={(e) => {setIdnum(e.target.value);}} default={idnum} name='ID Usuario' type='text'/></td>
+                            <td><input onChange={(e) => {setNombre(e.target.value);}} default={nombre} placeholder='Nombre' type='text'/></td>
+                            <td><input onChange={(e) => {setApellidos(e.target.value);}} default={apellidos} placeholder='Apellidos' type='text'/></td>
+                            <td><input onChange={(e) => {setCorreo(e.target.value);}} default={correo} placeholder='Correo' type='email'/></td>
+                            <td><input onChange={(e) => {setTelefono(e.target.value);}} default={telefono} placeholder='Telefono' icono='' type='number'/></td>
+                            <td><input onChange={(e) => {setNewPw1(e.target.value);}} placeholder='Contraseña nueva'  type='password'/></td>
+                            <td><input onChange={(e) => {setNewPw2(e.target.value);}} placeholder='Verificar contraseña' type='password'/></td>                                    
+                        </tr>
+                            </tbody>
+                        <div className="passwordRequerido">
+                            <div>
+                        <h3>Constraseña actual (requerido): </h3> <input onChange={(e) => {setActPw(e.target.value);}} placeholder='Contraseña Actual' required type='password'/>
+                            </div>
                         </div>
-                    </div>
 
-                    </>)
-                    }
-                
-            </form>
-            <div>
-                <div><form>
-                </form></div>
-            <div className = "botonActualizar">               
-                    <button 
-                    onClick={() => {enviarAlBackendgu();
-                        setActDatos(!actDatos)}}
-                    className="mainguButton" 
-                    type="submit" >
-                        Actualizar Datos  
-                    </button>
-                    <ToastContainer position= 'bottom-center' autoClose = {5000}/>                
+                        </>)
+                        }                    
+                    <div className = "botonActualizar">               
+                            <button 
+                            onClick={() => {enviarAlBackendgu();
+                                setActDatos(!actDatos)}}
+                            className="mainguButton" 
+                            type="submit" >
+                                Actualizar Datos  
+                            </button>
+                            <ToastContainer position= 'bottom-center' autoClose = {5000}/>                
+                    </div>
+                </form>
             </div>
+            <div>
             </div>
     
 

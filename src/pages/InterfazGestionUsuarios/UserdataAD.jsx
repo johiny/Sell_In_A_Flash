@@ -30,21 +30,21 @@ const UserdataAD = () =>{
     return(
         <>
             <div className="centrarBoton">
-            <form 
-            className = "buscarID">               
-                <input 
-                onChange={(e) => {setIdnum(e.target.value);}} 
-                name='ID-Usuario'  
-                type='text'
-                required
-                placeholder='Ingresar ID de usuario'/>
-            
+                <form 
+                className = "buscarID">               
+                    <input 
+                    onChange={(e) => {setIdnum(e.target.value);}} 
+                    name='ID-Usuario'  
+                    type='text'
+                    required
+                    placeholder='Ingresar ID de usuario'/>
                 
-                    <button 
-                    className ="mainguButton" 
-                    type="submit">
-                            Buscar ID
-                    </button>                
+                    
+                        <button 
+                        className ="mainguButton" 
+                        type="submit">
+                                Buscar ID
+                        </button>                
                 </form>
             </div>
             <fieldset className="fieldsetgu">
@@ -205,8 +205,6 @@ const UserdataAD = () =>{
 
                         </tr>
                     </tbody>
-                </form>
-            </div>
             <div className = "botonActualizar">
                 <button 
                 onClick={() => {enviarAlBackendgu();
@@ -216,6 +214,8 @@ const UserdataAD = () =>{
                     Actualizar Datos    
                 </button>
                 <ToastContainer position= 'bottom-center' autoClose = {5000}/>
+            </div>
+                </form>
             </div>
         </>
     )
