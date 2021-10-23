@@ -7,7 +7,7 @@ import ProductosBD from "Productos_test.json"
 
 const NuevaVenta = () => {    
     const [showmodal, setShowmodal] = useState(false);
-    const [savechanges,setSaveChanges] = useState(true);
+    const [savechanges,setSaveChanges] = useState(false);
     const [ventas,setVentas] = useState(database)
     const [productosAgregados,setProductosAgregados] = useState([])
 
@@ -37,6 +37,7 @@ const NuevaVenta = () => {
         formdata.forEach((value,key) => {
             ventanueva[key] = value;
         })
+        ventanueva["productos"] = productosAgregados;
         setSaveChanges(false)
         //enviar al backend
         console.log(ventanueva)
