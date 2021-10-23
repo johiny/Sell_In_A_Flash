@@ -1,10 +1,10 @@
 import React from 'react'
 
-const CampoDescrip = () => {
+const CampoDescrip = ({Etiqueta}) => {
     return (
         <div>
             <label className="Etiquetas" for="Descripción">
-            Descripción
+            {Etiqueta}
               <textarea className="CamposInput CampoDescrip" name="Descripción" type="text" required/>
           </label>
         </div>

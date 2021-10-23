@@ -1,17 +1,14 @@
 import React from 'react'
 
-const DatosFormulario = () => {
+const DatosFormulario = ({Etiqueta}) => {
   return (
     <div>
-    <form>
-        <label className="Etiquetas" for="ID">
+    <li className='Etiquetas'>
+        <label for="ID">
           {Etiqueta}
           <input className="CamposInput" name="ID"/>
         </label>
-    </form>
-    <section>
-        <img className="FotoProducto" src={SinFoto} alt='Imagen Producto'/>
-    </section>
+    </li>
     </div>
   )
 }

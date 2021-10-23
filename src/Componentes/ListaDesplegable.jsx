@@ -1,10 +1,10 @@
 import React from 'react'
 
-const ListaDesplegable = () => {
+const ListaDesplegable = ({Etiqueta}) => {
     return (
         <div>
             <label className="Etiquetas" for="Status">
-            Status
+            {Etiqueta}
               <select className="CamposInput" name="estado" id="estado" required>
                 <option value="" selected></option>
                 <option value="">Disponible</option>

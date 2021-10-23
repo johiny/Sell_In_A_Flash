@@ -1,3 +1,5 @@
+import logo from '../Imagenes/logo.png';
+
 const NavBars = () => {
     return (
         <div>

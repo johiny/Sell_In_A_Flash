@@ -1,16 +1,16 @@
 import React from 'react'
 
-const Tabla = () => {
+const Tabla = ({Campo1, Campo2, Campo3, Campo4 }) => {
     return (
         <div>
             <table className="contenido">
               <thead className="tabla">
                   <tr>
                     <th></th>
-                    <th>ID Producto</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
-                    <th>Status</th>
+                    <th>{Campo1}</th>
+                    <th>{Campo2}</th>
+                    <th>{Campo3}</th>
+                    <th>{Campo4}</th>
                   </tr>
                 </thead>
                 <tbody>
