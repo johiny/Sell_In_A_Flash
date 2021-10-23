@@ -10,12 +10,14 @@ const NuevaVenta = () => {
     const [savechanges,setSaveChanges] = useState(false);
     const [ventas,setVentas] = useState(database)
     const [productosAgregados,setProductosAgregados] = useState([])
+    const [encargado,setEncargado] = useState("")
+    const [preciototal,setPrecioTotal] = useState(0)
 
     // carga los vendedores
-    const [vendedores,setVendedores] = useState("")
+    const [vendedores,setVendedores] = useState(null)
     useEffect(() => {
         const vendedores = databaseVendedores.map((element) => {
-            return ({value : element.id, label:`${element.nombre} / ${element.id}`})
+            return ({value : element, label:`${element.nombre} / ${element.id}`})
             });
             setVendedores(vendedores)
     },[])
@@ -38,6 +40,8 @@ const NuevaVenta = () => {
             ventanueva[key] = value;
         })
         ventanueva["productos"] = productosAgregados;
+        ventanueva["encargado"] = encargado;
+        ventanueva["precio_total"] =preciototal;
         setSaveChanges(false)
         //enviar al backend
         console.log(ventanueva)
@@ -57,7 +61,7 @@ const NuevaVenta = () => {
         <h1 className="cuerpo_central__Ventas-tabla-titulo">Nueva Venta</h1>
         <div className="tabla__nuevaventa">
         <h1 className="TituloNuevaVenta">Ingrese los datos de la venta</h1>
-        <FormularioJ productosAgregados={productosAgregados} setProductosAgregados={setProductosAgregados} productos={productos} vendedores={vendedores}  id="form-venta" form={form} submitto={submitto} estilo="FormularioNuevaVenta" campo1="Fecha Venta" campo2="Seleccione un producto" 
+        <FormularioJ setPrecioTotal={setPrecioTotal} productosAgregados={productosAgregados} setProductosAgregados={setProductosAgregados} productos={productos} vendedores={vendedores} setEncargado={setEncargado}  id="form-venta" form={form} submitto={submitto} estilo="FormularioNuevaVenta" campo1="Fecha Venta" campo2="Seleccione un producto" 
         campo3="Nombre Cliente" campo4="Nombre Encargado" campo5="Valor Total" 
         campo6="Estado"  setShowmodal={setShowmodal} setSaveChanges={setSaveChanges}/>
         </div>
