@@ -9,9 +9,10 @@ const NuevaVenta = () => {
     const [showmodal, setShowmodal] = useState(false);
     const [savechanges,setSaveChanges] = useState(true);
     const [ventas,setVentas] = useState(database)
+    const [productosAgregados,setProductosAgregados] = useState([])
 
     // carga los vendedores
-    const [vendedores,setVendedores] = useState(null)
+    const [vendedores,setVendedores] = useState("")
     useEffect(() => {
         const vendedores = databaseVendedores.map((element) => {
             return ({value : element.id, label:`${element.nombre} / ${element.id}`})
@@ -23,7 +24,7 @@ const NuevaVenta = () => {
     const [productos, setProductos] = useState(null)
     useEffect (() => {
         const productos = ProductosBD.map((element) => {
-            return ({value : element.nombre, label:`${element.nombre} - $${element.precio}`})
+            return ({value : element, label:`${element.nombre} - $${element.precio}`})
             });
             setProductos(productos)
         },[])
@@ -46,12 +47,16 @@ const NuevaVenta = () => {
         console.log(ventas)
     },[ventas]);
 
+    useEffect(() => {
+        console.log(productosAgregados)
+    },[productosAgregados]) 
+
     return(
         <>
         <h1 className="cuerpo_central__Ventas-tabla-titulo">Nueva Venta</h1>
         <div className="tabla__nuevaventa">
         <h1 className="TituloNuevaVenta">Ingrese los datos de la venta</h1>
-        <FormularioJ productos={productos} vendedores={vendedores}  id="form-venta" form={form} submitto={submitto} estilo="FormularioNuevaVenta" campo1="Fecha Venta" campo2="Seleccione un producto" 
+        <FormularioJ productosAgregados={productosAgregados} setProductosAgregados={setProductosAgregados} productos={productos} vendedores={vendedores}  id="form-venta" form={form} submitto={submitto} estilo="FormularioNuevaVenta" campo1="Fecha Venta" campo2="Seleccione un producto" 
         campo3="Nombre Cliente" campo4="Nombre Encargado" campo5="Valor Total" 
         campo6="Estado"  setShowmodal={setShowmodal} setSaveChanges={setSaveChanges}/>
         </div>
