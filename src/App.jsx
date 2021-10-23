@@ -29,7 +29,7 @@ function App() {
         <Route path='/InterfazGestionUsuarios/Usuarios'>
           <UserdataUS/>
         </Route>
-        <Route path='/InterfazGestionUsuarios/UsuariosEditar'>
+        <Route path='/InterfazGestionUsuarios/Usuarios/editar'>
           <UserdataUSedit/>
         </Route>
       </Switch>
