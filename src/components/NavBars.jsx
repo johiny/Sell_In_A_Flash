@@ -15,7 +15,7 @@ const NavBars = () => {
         <div id="leftbar">
             <Link to="/index"><img id="logo" src={Logo} alt="logo SF"></img></Link>
             <ul id="leftbar_links">
-            <Link to="/InterfazGestionUsuarios/Administrador"><li>Gestión</li></Link>
+            <Link to="/InterfazGestionUsuarios/Administrador"><li className="far fa-address-card">Gestión</li></Link>
             </ul>
         </div>
     </header>

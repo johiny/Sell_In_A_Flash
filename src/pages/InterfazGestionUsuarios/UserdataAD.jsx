@@ -2,24 +2,36 @@ import imagenn from "media/nn.jpg";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/stylegu.css';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 
 
 const UserdataAD = () =>{
     
-    const [idnum, setIdnum] = useState('');
-    const [nombre, setNombre] = useState('nn');
-    const [apellidos, setApellidos] = useState('');
-    const [correo, setCorreo] = useState('');
-    const [telefono, setTelefono] = useState('');
-    const [cargo, setCargo] = useState('');
-    const [rol, setRol] = useState('');
-    const [estado, setEstado] = useState('');
+    const [idnum, setIdnum] = useState('000000');
+    const [nombre, setNombre] = useState('Nombres');
+    const [apellidos, setApellidos] = useState('Apellidos');
+    const [correo, setCorreo] = useState('correo@mail.com');
+    const [telefono, setTelefono] = useState('00000000');
+    const [cargo, setCargo] = useState('Cargo');
+    const [rol, setRol] = useState('Rol');
+    const [estado, setEstado] = useState('Autorizado');
+    
+    const formAdmingu = useRef(null);
+
+//    const enviarAlBackendgu = () => {console.log('Id: ',idnum, ' nombre: ', nombre, ' apellidos: ', apellidos, ' correo: ', correo, ' telefono: ', telefono, ' cargo: ', cargo, ' rol: ', rol, ' estado: ', estado );
+//    toast.success(`datos de usuario con ID: ${idnum} actualizados`);}
+
+    const submitFormAdmingu = (e) => {
+        e.preventDefault();
+        const fd = new FormData(formAdmingu.current);
+        fd.forEach((value,key) => {
+            console.log(key, value)
+        });
+        console.log("datos del form enviados");
+    }
 
 
-    const enviarAlBackendgu = () => {console.log('Id: ',idnum, ' nombre: ', nombre, ' apellidos: ', apellidos, ' correo: ', correo, ' telefono: ', telefono, ' cargo: ', cargo, ' rol: ', rol, ' estado: ', estado );
-    toast.success(`datos de usuario con ID: ${idnum} actualizados`);}
     
     const listaUsuarios = [
         {
@@ -27,6 +39,7 @@ const UserdataAD = () =>{
         }
     ];
     
+
     return(
         <>
             <div className="centrarBoton">
@@ -85,7 +98,9 @@ const UserdataAD = () =>{
                 <form 
                 className = "tabus1" 
                 cellpadding="50" 
-                cellspacing="20">
+                cellspacing="20"
+                ref={formAdmingu}
+                onSubmit={submitFormAdmingu}>
                     <tr>
                         <th > Id. (Cédula) </th>
                         <th > Nombres </th>
@@ -104,61 +119,62 @@ const UserdataAD = () =>{
                                 {idnum}                
                             </td>                            
                             <td >
-                                Juan Esteban 
+                                {nombre} 
                             </td>
                             <td >
-                                Orozco Botero
+                                {apellidos}
                             </td>
                             <td >
-                                jeorozcob@gmail.com
+                                {correo}
                             </td>
                             <td >
-                                3007041800
+                                {telefono}
                             </td>
                             <td >
-                                Secretario
+                                {cargo}
                             </td>
                             <td >
-                                Ejecutivo
+                                {rol}
                             </td>
                             <td >
-                                Autorizado
+                                {estado}
                             </td>
                         </tr>
                         <tr>
                             <td>{idnum}</td>
                             <td><input 
-                            onChange={(e) => {setNombre(e.target.value);}} 
+                             
                             placeholder='Nombre' 
                             name='nombre' 
                             type='text'/>
                             </td>
                             <td><input 
-                            onChange={(e) => {setApellidos(e.target.value);}} 
+                            
                             placeholder='Apellidos' 
                             name='apellidos' 
                             type='text'/></td>
                             <td><input 
-                            onChange={(e) => {setCorreo(e.target.value);}} 
+                             
                             placeholder='Correo' 
                             name='correo' 
                             type='email'/></td>
                             <td><input 
-                            onChange={(e) => {setTelefono(e.target.value);}} 
+                             
                             placeholder='Telefono' 
                             name='telefono' 
                             type='number'/></td>
                             <td><input 
-                            onChange={(e) => {setCargo(e.target.value);}} 
+                            
                             placeholder='Cargo' 
                             name='cargo' 
                             type='text'/></td>                            
                             <td><select 
                             value={rol} 
-                            onChange={(e) => {setRol(e.target.value);}}                             
+                                                         
                             type="text"                             
                             name="rol"                             
                             placeholder="Rol del sistema">
+                                
                                 <option 
                                 value="vendedor">
                                     Vendedor
@@ -184,7 +200,7 @@ const UserdataAD = () =>{
                             </select></td>
                             <td><select 
                             value={estado} 
-                            onChange={(e) => {setEstado(e.target.value);}} 
+                             
                             type="text" 
                             name="estado" 
                             placeholder="Estado...">
@@ -205,16 +221,15 @@ const UserdataAD = () =>{
 
                         </tr>
                     </tbody>
-            <div className = "botonActualizar">
-                <button 
-                onClick={() => {enviarAlBackendgu();
-                prompt(`Colocar password actual `)}} 
-                className="mainguButton" 
-                type="submit" >
-                    Actualizar Datos    
-                </button>
-                <ToastContainer position= 'bottom-center' autoClose = {5000}/>
-            </div>
+                    <div className = "botonActualizar">
+                        <button 
+//                        onClick={() => {enviarAlBackendgu();}} 
+                        className="mainguButton" 
+                        type="submit" >
+                            Actualizar Datos    
+                        </button>
+                        <ToastContainer position= 'bottom-center' autoClose = {2000}/>
+                    </div>
                 </form>
             </div>
         </>
