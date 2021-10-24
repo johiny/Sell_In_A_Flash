@@ -20,17 +20,17 @@ function App() {
   return (
  <Router>   
   <Switch>
-    <Route path ={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/InterfazGestionUsuarios/Usuarios/editar"]}>
+    <Route path ={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/InterfazGestionUsuarios/Usuarios/Editar"]}>
       <Layout2>
       <Switch>
-        <Route path='/InterfazGestionUsuarios/Administrador'>
-          <UserdataAD/>
+        <Route path='/InterfazGestionUsuarios/Usuarios/Editar'>
+          <UserdataUSedit/>
         </Route>
         <Route path='/InterfazGestionUsuarios/Usuarios'>
           <UserdataUS/>
         </Route>
-        <Route path='/InterfazGestionUsuarios/Usuarios/editar'>
-          <UserdataUSedit/>
+        <Route path='/InterfazGestionUsuarios/Administrador'>
+          <UserdataAD/>
         </Route>
       </Switch>
       </Layout2>
