@@ -74,7 +74,7 @@ const FormularioJ = (props) => {
 export default FormularioJ;
 
 
-const Minicard = (props) => {
+export const Minicard = (props) => {
 
     return(
         <div className="minicard">

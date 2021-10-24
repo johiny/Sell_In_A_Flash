@@ -271,14 +271,9 @@ body {
 }
 
 
-.tabla td:nth-child(7) {
-  font-family: none;
-  background-color: none;
-  border-radius: none;
-  padding-top: none;
-  padding-bottom: none;
-  border: none;
-  text-align: none;
+.tabla td:nth-child(7):hover {
+  cursor: pointer;
+  background-color:rgba(148, 148, 148, 0.2);
 }
 
 .tabla img:hover {
@@ -319,12 +314,11 @@ body {
   width: 100%;
   background: #FBFAFA;
   border-radius: 50px;
-  zoom: 90%;
 }
 
 
 .tabla tbody tr:hover {
-  outline: solid 2px rgba(148, 148, 148, 0.2);
+  outline: solid 2px rgba(148, 148, 148, 0.6);
   border-radius: 50px;
 }
 
@@ -398,6 +392,8 @@ body {
 
 #tabla__estado_selector option {
   border-radius: 15px;
+  border:0;
+  margin: 0;
 }
 
 .Guardar-Popup {

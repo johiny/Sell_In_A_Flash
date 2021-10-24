@@ -8,30 +8,24 @@ import save from "media/save.svg"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { Component } from 'react';
-import Select, {StylesConfig} from 'react-select';
 import ProductosBD from "Productos_test.json"
 import Vendedores from "Vendedores_test.json"
+import {Modal} from "@material-ui/core"
+import { makeStyles } from "@material-ui/styles";
+import { Minicard } from "./FormularioJ";
+import { nanoid } from "nanoid";
 
 const VentaRow = (props) => {
 
     const [listaproductos,setListaProductos] = useState(null); // productos en cada venta
     const [listacompletaproductos,setListaCompletaProductos] = useState(null); // productos totales de la empresa
-
-    
-    useEffect (() => {
-        const productos = ProductosBD.map((element) => {
-            return ({value : {id : element.id, nombre : element.nombre, precio : element.precio, cantidad: element.cantidad}, label:`${element.nombre} - $${element.precio} ud.${element.cantidad}`})
-            });
-            setListaCompletaProductos(productos)
-    },[]);
+    const [modalProductos,setModalProductos] = useState(false);
+    const interruptorModal = () => {
+        setModalProductos(!modalProductos)
+    }
+    // carga todos los productos
 
     //carga los productos de cada venta
-    useEffect(() => {
-        const productos = props.venta.productos.map((element) => {
-             return ({value : {id : element.id, nombre : element.nombre, precio : element.precio, cantidad: element.cantidad}, label:`${element.nombre} - $${element.precio} ud.${element.cantidad}`})
-             });
-             setListaProductos(productos)
-    },[]);
 
     const modal = () => {toast.success('✔️Venta Guardada!', {
         position: "bottom-right",
@@ -86,8 +80,8 @@ const VentaRow = (props) => {
 
 
     {/* posiblidad de editar productos y su cantidad?? */}
-    {editActivate ? <td><Select isMulti options={listacompletaproductos} value={listaproductos} onChange={e => setEditVenta({...editVenta, Productos: e.target.value})}/></td> : 
-    <td><Select isClearable={false} isMulti styles="backgroundColor: 'gray'" value={listaproductos}/></td>}
+    <td onClick={interruptorModal}>Ver Productos</td>
+    <ModalProductos productos={props.venta.productos} modalProductos={modalProductos} interruptorModal={interruptorModal}/>
 
 
 
@@ -95,6 +89,44 @@ const VentaRow = (props) => {
     <td><div className="guardar_cambios"><img onClick={() => setEditActivate(!editActivate)}  src={pencil}></img><img src={trashcan}></img></div></td>}
    </tr>
     )
-}
+};
 
+const ModalProductos = (props) => {
+
+    const listStyles = makeStyles({
+        modal:{
+            position: "absolute",
+            width: "1000px",
+            height: "700px",
+            backgroundColor: "white",
+            border: "1px solid rgba(97, 97, 97, 0.1)",
+            left: "28%",
+            top: "10%",
+            border: "none",
+            outline: "none",
+            borderRadius: "20px"
+        }
+    });
+
+    const modalstyles = listStyles();
+    const body =(
+    <div className={modalstyles.modal}>
+        <div align="center">
+            <h2>Productos de esta venta</h2>
+            <div className="minicards_container">
+            {props.productos.map((producto) => {
+                return(
+                <Minicard key={nanoid()} producto={producto}/>
+                )
+            })}
+            </div>
+        </div>
+    </div>
+    )
+    return(
+        <Modal open ={props.modalProductos} onClose={props.interruptorModal}>
+            {body}      
+        </Modal>
+    )
+}
 export default VentaRow;
