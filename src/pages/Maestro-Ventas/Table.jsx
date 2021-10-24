@@ -40,7 +40,7 @@ useEffect(() => {
             return JSON.stringify(elemento).toLowerCase().includes(busqueda.toLowerCase());
                 })
         )
-    },[busqueda])
+    },[busqueda,listaVentas])
     
     useEffect(() => {
         console.log(listaVentas)

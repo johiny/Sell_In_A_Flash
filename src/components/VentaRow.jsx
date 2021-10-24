@@ -27,7 +27,7 @@ const VentaRow = (props) => {
 
     //carga los productos de cada venta
     useEffect(() => {
-        const productos = props.venta.Productos.map((element) => {
+        const productos = props.venta.productos.map((element) => {
              return ({value : {id : element.id, nombre : element.nombre, precio : element.precio, cantidad: element.cantidad}, label:`${element.nombre} - $${element.precio} ud.${element.cantidad}`})
              });
              setListaProductos(productos)
@@ -43,13 +43,13 @@ const VentaRow = (props) => {
         progress: undefined,
         })};
     const [editVenta,setEditVenta] = useState({
-        fecha: props.venta.Fecha,
-        cantidad: props.venta.Cantidad,
-        cliente : props.venta.Cliente,
-        encargado : props.venta.Encargado,
-        valor_total : props.venta.Valor_Total,
+        fecha: props.venta.fecha_venta,
+        cantidad: props.venta.cantidad,
+        cliente : `${props.venta.nombre_cliente}/${props.venta.documento_cliente}`,
+        encargado : `${props.venta.encargado.nombre}/${props.venta.encargado.id}`,
+        valor_total : props.venta.precio_total,
         estado : props.venta.estado,
-        productos : props.venta.Productos
+        productos : props.venta.productos
     })
     const [editActivate,setEditActivate] = useState(false);
 
@@ -66,23 +66,23 @@ const VentaRow = (props) => {
     <td><Link to={`/Maestro-Ventas/${props.venta.ID}`}>1</Link></td>
 
     {editActivate ? <td className="campo"><input name="fecha" value={editVenta.fecha} onChange={e=>setEditVenta({...editVenta,fecha : e.target.value})}></input></td> : 
-    <td className="campo">{props.venta.Fecha}</td>}
+    <td className="campo">{props.venta.fecha_venta}</td>}
 
     {editActivate ? <td className="campo"><input name="cliente" value={editVenta.cliente} onChange={e=>setEditVenta({...editVenta,cliente : e.target.value})}></input></td> :
-    <td className="campo">{props.venta.Cliente}</td>}
+    <td className="campo">{`${props.venta.nombre_cliente}/${props.venta.documento_cliente}`}</td>}
 
     {editActivate ? <td className="campo"><input name="encargado" value={editVenta.encargado} onChange={e=>setEditVenta({...editVenta,encargado : e.target.value})}></input></td> :
-    <td className="campo">{props.venta.Encargado}</td>}
+    <td className="campo">{`${props.venta.encargado.nombre}/${props.venta.encargado.id}`}</td>}
 
-    {editActivate ? <td className="campo"><input name="valor_total" value={editVenta.valor_total} onChange={e=>setEditVenta({...editVenta,valor_total : e.target.value})}></input></td> :
-    <td className="campo">{props.venta.Valor_Total}</td>}
+    {editActivate ? <td className="campo"><input name="valor_total" value={editVenta.precio_total} onChange={e=>setEditVenta({...editVenta,valor_total : e.target.value})}></input></td> :
+    <td className="campo">{props.venta.precio_total}</td>}
 
     {editActivate ? <td><select value={editVenta.estado} name="estado" id="tabla__estado_selector" className="campo" onChange={e=>setEditVenta({...editVenta, estado: e.target.value})}>
                         <option value="Proceso">En Proceso</option>
                         <option value="Cancelada">Cancelada</option>
                         <option value="Entregada">Entregada</option>
     </select></td> :
-    <td>{props.venta.Estado}</td>}
+    <td>{props.venta.estado}</td>}
 
 
     {/* posiblidad de editar productos y su cantidad?? */}

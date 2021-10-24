@@ -3,7 +3,10 @@ import { useEffect, useState, useRef } from "react";
 import ModalNuevaVenta from "components/ModalNuevaVenta"
 import database from "Ventas_test.json"
 import databaseVendedores from "Vendedores_test.json"
-import ProductosBD from "Productos_test.json" 
+import ProductosBD from "Productos_test.json"
+import { enviarVenta } from "utils/api"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const NuevaVenta = () => {    
     const [showmodal, setShowmodal] = useState(false);
@@ -30,9 +33,11 @@ const NuevaVenta = () => {
             });
             setProductos(productos)
         },[])
-
+        // referencia del formulario
     const form = useRef(null);
-    const submitto = (e) => {
+
+    // une toda la data de los campos y la envia al backend
+    const submitto = async (e) => {
         e.preventDefault();
         const ventanueva = {};
         const formdata = new FormData(form.current);
@@ -41,13 +46,28 @@ const NuevaVenta = () => {
         })
         ventanueva["productos"] = productosAgregados;
         ventanueva["encargado"] = encargado;
-        ventanueva["precio_total"] =preciototal;
-        setSaveChanges(false)
+        ventanueva["precio_total"] = preciototal;
         //enviar al backend
-        console.log(ventanueva)
+        await enviarVenta(ventanueva,   
+            (response) => {
+                setSaveChanges(false);
+                setProductosAgregados([]);
+            },
+            (error) => {
+                console.error(error);
+                toast.error('No se pudo guardar la venta', {
+                    position: "bottom-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                });
+            });
         
     }
-    // borrar esto es solo para ver si se estan guardando la venta
+    // borrar esto es solo para ver si se esta guardando la venta
     useEffect(() => {
         console.log(ventas)
     },[ventas]);
@@ -67,8 +87,9 @@ const NuevaVenta = () => {
         </div>
         {showmodal && 
         <ModalNuevaVenta
-        savechanges={savechanges} setSaveChanges={setSaveChanges} setShowmodal={setShowmodal} form={form}/>
+         savechanges={savechanges} setSaveChanges={setSaveChanges} setShowmodal={setShowmodal} form={form}/>
         }
+        <ToastContainer/>
         </>
     )
 }

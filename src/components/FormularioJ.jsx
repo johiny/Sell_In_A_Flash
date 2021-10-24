@@ -3,9 +3,14 @@ import Select from "react-select"
 import { nanoid } from "nanoid"
 const FormularioJ = (props) => {
 
-    const [producto,setProducto] = useState("")
-    const [cantidad,setCantidad] = useState("")
+    
+    const [producto,setProducto] = useState(null)
+    const [cantidad,setCantidad] = useState(null)
 
+    useEffect(() =>{
+        setProducto(null)
+    },[props.clear])
+    
     const producthandler = (value) => {
         const productoescogido = value.value
         setProducto(productoescogido)
@@ -31,11 +36,11 @@ const FormularioJ = (props) => {
             <div className="formulario_nuevaventa_productosfields">
             <div className="formulario_nuevaventa_productos">
             <label htmlFor={props.campo2}>{props.campo2}</label>
-                <Select required onChange={producthandler} options={props.productos}/>
+                <Select defaultValue={producto} form={props.form}  required onChange={producthandler} options={props.productos}/>
             </div>
             <div className="formulario_nuevaventa_cantidad">    
             <label htmlFor="canitdad">Cantidad</label>
-                <input type="number" min="1" max="500" required onChange={(e) => setCantidad(e.target.value)} onInput={changehandler}></input>
+                <input type="number" min="1" max="500" required value={cantidad} onChange={(e) => setCantidad(e.target.value)} onInput={changehandler}></input>
             </div>
             <button className="formulario_nuevaventa_productos_boton" type="button" onClick={() => {props.setProductosAgregados([...props.productosAgregados,{producto,cantidad}])}}>+</button>
             </div>
