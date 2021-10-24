@@ -242,14 +242,16 @@ body {
   font-family: 'Roboto',sans-serif;
   background-color: white;
   border-radius: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   border: 1px solid rgba(0, 0, 0, 0.22);
   text-align: center;
+  display: table-cell;
+  
 }
 
 .tabla input {
-  font-size: 110%; 
+  font-size: 100%; 
   font-family: 'Roboto',sans-serif;
   border:none;
   text-align: center;
@@ -314,23 +316,27 @@ body {
   position: absolute;
   left: 0%;
   top: 10%;
-  height: 750px;
   width: 100%;
   background: #FBFAFA;
   border-radius: 50px;
+  zoom: 90%;
 }
 
 
 .tabla tbody tr:hover {
   outline: solid 2px rgba(148, 148, 148, 0.2);
   border-radius: 50px;
-} 
+}
+
+.tabla tbody tr {
+  height: 0;
+}
 
 .tabla table {
   position: relative;
   left: .05%;
   border-collapse: separate;
-  border-spacing: 35px 20px;
+  border-spacing: 20px 20px;
   width: 100%;
   table-layout: auto
 }
@@ -338,7 +344,7 @@ body {
 .Buscador_Tabla_Ventas {
   position: absolute;
   top: 3%;
-  left: 62%;
+  left: 82.5%;
   height: 0px;
   width: 280px;
   padding-top: 60px;

@@ -47,7 +47,7 @@ const VentaRow = (props) => {
         cantidad: props.venta.cantidad,
         cliente : `${props.venta.nombre_cliente}/${props.venta.documento_cliente}`,
         encargado : `${props.venta.encargado.nombre}/${props.venta.encargado.id}`,
-        valor_total : props.venta.precio_total,
+        precio_total : props.venta.precio_total,
         estado : props.venta.estado,
         productos : props.venta.productos
     })
