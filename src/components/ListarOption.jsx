@@ -1,4 +1,5 @@
 import BotonJ from "components/BotonJ.jsx"
+
 const ListarOption = () =>{
     return(
         <div className="cuerpo_central__opciones-caja1">
