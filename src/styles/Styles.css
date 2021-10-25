@@ -639,7 +639,7 @@ background-color: white;
 }
 
 .formulario_nuevaventa_productos_boton:hover {
-  background-color: rgba(148, 148, 148, 0.2);;
+  background-color: rgba(148, 148, 148, 0.2);
   cursor: pointer;
 }
 
@@ -651,6 +651,37 @@ background-color: white;
 .formulario_nuevaventa_cantidad label {
   position: relative;
   left: 2px;
+}
+
+.tabla__confirm_modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto',sans-serif;
+}
+
+.tabla__confirm_modal-titulo {
+  margin: 20px;
+}
+
+.tabla__confirm_modal-id {
+  margin-bottom: 15px;
+  font-size: larger;
+}
+
+.tabla__confirm_modal-botones button {
+  margin: 20px;
+  padding: 10px;
+  font-size: 24px;
+  background: white;
+  border-radius: 56px;
+  cursor: pointer;
+  border:none;
+}
+
+.tabla__confirm_modal-botones button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
 }
 
 

@@ -15,13 +15,18 @@ import { makeStyles } from "@material-ui/styles";
 import { Minicard } from "./FormularioJ";
 import { nanoid } from "nanoid";
 import Select from "react-select"
+import { editarVenta, borrarVenta } from "utils/api";
 
 const VentaRow = (props) => {
 
     const [listacompletaproductos,setListaCompletaProductos] = useState(null); // productos totales de la empresa
     const [modalProductos,setModalProductos] = useState(false);
+    const [modalConfirm,setModalConfirm] = useState(false)
     const interruptorModal = () => {
         setModalProductos(!modalProductos)
+    }
+    const interruptorModalConfirm = () => {
+        setModalConfirm(!modalConfirm)
     }
     // carga los vendedores
     const [vendedores,setVendedores] = useState(null)
@@ -36,7 +41,7 @@ const VentaRow = (props) => {
         setEditVenta({...editVenta, encargado : encargadoactual})
     }
 
-    const modal = () => {toast.success('✔️Venta Guardada!', {
+    const modal = (message,type) => {type(message, {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -46,7 +51,8 @@ const VentaRow = (props) => {
         progress: undefined,
         })};
     const [editVenta,setEditVenta] = useState({
-        fecha: props.venta.fecha_venta,
+        _id : props.venta._id,
+        fecha_venta: props.venta.fecha_venta,
         nombre_cliente : props.venta.nombre_cliente,
         documento_cliente: props.venta.documento_cliente,
         encargado : props.venta.encargado,
@@ -56,20 +62,39 @@ const VentaRow = (props) => {
     })
     const [editActivate,setEditActivate] = useState(false);
 
-    const editSubmit = () => {
-        console.log(editVenta)
-        setEditActivate(false)
-        modal();
-    } 
+    const editSubmit = async () => {
+        await editarVenta(editVenta,
+            (response) =>{
+            setEditActivate(false)
+            modal('✔️Venta Guardada!',toast.success);
+            props.setEjecutarConsulta(true);
+        },(error) => {
+            modal('❌ La Venta NO se guardo correctamente',toast.error);
+            props.setEjecutarConsulta(true);
+        }) 
+    };
+    
+    const deleteSubmit = async () => {
+        const id = { _id : editVenta._id} 
+        await borrarVenta(id,
+            (response) => {
+                interruptorModalConfirm();
+                modal('✔️Venta Borrada con exito!',toast.success);
+                props.setEjecutarConsulta(true);
+            },
+            (error) => {
+                modal('❌ La Venta NO se pudo borrar',toast.error);
+            })
+    }
     
 
 
     return(
 <tr>
-    <td><Link to={`/Maestro-Ventas/${props.venta._id}`}>{props.venta._id}</Link></td>
+    <td><Link to={`/Maestro-Ventas/${props.venta._id}`}>{props.venta._id.slice(18)}</Link></td>
 
-    {editActivate ? <td className="campo"><input name="fecha" value={editVenta.fecha} onChange={e=>setEditVenta({...editVenta,fecha : e.target.value})}></input></td> : 
-    <td className="campo">{editVenta.fecha}</td>}
+    {editActivate ? <td className="campo"><input name="fecha" value={editVenta.fecha_venta} onChange={e=>setEditVenta({...editVenta,fecha_venta : e.target.value})}></input></td> : 
+    <td className="campo">{editVenta.fecha_venta}</td>}
 
     {editActivate ? <td><input name="nombre_cliente" value={editVenta.nombre_cliente} onChange={e=>setEditVenta({...editVenta,nombre_cliente : e.target.value})}></input>
     <input name="documento_cliente" value={editVenta.documento_cliente} onChange={e=>setEditVenta({...editVenta,documento_cliente : e.target.value})}></input></td> :
@@ -97,7 +122,8 @@ const VentaRow = (props) => {
 
 
     {editActivate ? <td><div className="guardar_cambios"><img src={save} onClick={editSubmit}></img><img onClick={() => setEditActivate(!editActivate)} src={cross}></img></div></td>:
-    <td><div className="guardar_cambios"><img onClick={() => setEditActivate(!editActivate)}  src={pencil}></img><img src={trashcan}></img></div></td>}
+    <td><div className="guardar_cambios"><img onClick={() => setEditActivate(!editActivate)}  src={pencil}></img><img onClick={interruptorModalConfirm} src={trashcan}></img></div></td>}
+    <ModalConfirm modalConfirm={modalConfirm} interruptorModalConfirm={interruptorModalConfirm} id={props.venta._id} deleteSubmit={deleteSubmit}/>
    </tr>
     )
 };
@@ -136,6 +162,42 @@ const ModalProductos = (props) => {
     )
     return(
         <Modal open ={props.modalProductos} onClose={props.interruptorModal}>
+            {body}      
+        </Modal>
+    )
+}
+
+const ModalConfirm = (props) => {
+    const confirmStyles = makeStyles({
+        modal:{
+            position: "absolute",
+            width: "400px",
+            height: "200px",
+            backgroundColor: "white",
+            border: "1px solid rgba(97, 97, 97, 0.1)",
+            left: "42%",
+            top: "30%",
+            border: "none",
+            outline: "none",
+            borderRadius: "20px"
+        }
+    });
+
+    const modalstyles = confirmStyles();
+    const body =(
+    <div className={modalstyles.modal}>
+        <div className="tabla__confirm_modal">
+            <h2 className="tabla__confirm_modal-titulo">¿Quieres borrar la venta?</h2>
+            <h4 className="tabla__confirm_modal-id">ID:{props.id.slice(18)}</h4>
+            <div className="tabla__confirm_modal-botones">
+            <button onClick={props.deleteSubmit}>Confirmar</button><button onClick={props.interruptorModalConfirm}>Cancelar</button>
+            </div>
+        </div>
+    </div>
+    )
+
+    return (
+        <Modal open ={props.modalConfirm} onClose={props.interruptorModalConfirm}>
             {body}      
         </Modal>
     )

@@ -3,7 +3,7 @@ import CheckMark from "media/check-mark.svg"
 import { nanoid } from "nanoid"
 import { useEffect, useState, useRef } from "react/cjs/react.development"
 import trashcan from "media/delete.png"
-const Tabla = ({ventasbackend}) => {
+const Tabla = ({ventasbackend,setEjecutarConsulta}) => {
     
 
     useEffect(()=> {
@@ -31,7 +31,7 @@ const Tabla = ({ventasbackend}) => {
                 <tbody>    
                 {ventasbackend.map((venta) => {
                     return (
-                    <VentaRow tabla={tabla} key={nanoid()} venta={venta} ico={trashcan}/>
+                    <VentaRow tabla={tabla} key={nanoid()} venta={venta} ico={trashcan} setEjecutarConsulta={setEjecutarConsulta}/>
                     )
                 })}
                 </tbody>

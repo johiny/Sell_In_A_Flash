@@ -51,7 +51,7 @@ useEffect(() => {
         <>
         <h1 className="cuerpo_central__Ventas-tabla-titulo">Ventas</h1>
         <Buscador busqueda={busqueda} setBusqueda={setBusqueda} estilo="Buscador_Tabla_Ventas"/>
-        <Tabla ventasbackend={listaFiltrada}/>
+        <Tabla ventasbackend={listaFiltrada} setEjecutarConsulta={setEjecutarConsulta}/>
         <ToastContainer position="bottom-right"
             autoClose={5000}
             hideProgressBar={false}
