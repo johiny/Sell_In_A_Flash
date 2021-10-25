@@ -257,8 +257,11 @@ body {
   text-align: center;
   height: 30px;
   background: none;
-  width: 100%;
-  outline: none;
+  width: 45%;
+  border-bottom: 1px solid rgba(148, 148, 148, 0.6);
+  margin-bottom: -1px;
+  display: inline-flex;
+  flex-direction: row;
 }
 
 .tabla td:nth-child(8) {
@@ -270,7 +273,9 @@ body {
   text-align: none;
 }
 
-
+.tabla__select_vendedores td{
+  border: none;
+}
 .tabla td:nth-child(7):hover {
   cursor: pointer;
   background-color:rgba(148, 148, 148, 0.2);
@@ -383,7 +388,7 @@ body {
   background-color: rgba(148, 148, 148, 0.2);
 }
 
-#tabla__estado_selector {
+.tabla_selector {
   border: none;
   font-family: 'Roboto',sans-serif;
   font-weight: bold;

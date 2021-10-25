@@ -14,18 +14,27 @@ import {Modal} from "@material-ui/core"
 import { makeStyles } from "@material-ui/styles";
 import { Minicard } from "./FormularioJ";
 import { nanoid } from "nanoid";
+import Select from "react-select"
 
 const VentaRow = (props) => {
 
-    const [listaproductos,setListaProductos] = useState(null); // productos en cada venta
     const [listacompletaproductos,setListaCompletaProductos] = useState(null); // productos totales de la empresa
     const [modalProductos,setModalProductos] = useState(false);
     const interruptorModal = () => {
         setModalProductos(!modalProductos)
     }
-    // carga todos los productos
-
-    //carga los productos de cada venta
+    // carga los vendedores
+    const [vendedores,setVendedores] = useState(null)
+    useEffect(() => {
+        const vendedores = Vendedores.map((element) => {
+            return ({value : element, label:`${element.nombre} / ${element.id}`})
+            });
+            setVendedores(vendedores)
+    },[]); 
+    const encargadohandler = (value) => {
+        const encargadoactual = value.value
+        setEditVenta({...editVenta, encargado : encargadoactual})
+    }
 
     const modal = () => {toast.success('✔️Venta Guardada!', {
         position: "bottom-right",
@@ -38,9 +47,9 @@ const VentaRow = (props) => {
         })};
     const [editVenta,setEditVenta] = useState({
         fecha: props.venta.fecha_venta,
-        cantidad: props.venta.cantidad,
-        cliente : `${props.venta.nombre_cliente}/${props.venta.documento_cliente}`,
-        encargado : `${props.venta.encargado.nombre}/${props.venta.encargado.id}`,
+        nombre_cliente : props.venta.nombre_cliente,
+        documento_cliente: props.venta.documento_cliente,
+        encargado : props.venta.encargado,
         precio_total : props.venta.precio_total,
         estado : props.venta.estado,
         productos : props.venta.productos
@@ -57,31 +66,33 @@ const VentaRow = (props) => {
 
     return(
 <tr>
-    <td><Link to={`/Maestro-Ventas/${props.venta.ID}`}>1</Link></td>
+    <td><Link to={`/Maestro-Ventas/${props.venta._id}`}>{props.venta._id}</Link></td>
 
     {editActivate ? <td className="campo"><input name="fecha" value={editVenta.fecha} onChange={e=>setEditVenta({...editVenta,fecha : e.target.value})}></input></td> : 
-    <td className="campo">{props.venta.fecha_venta}</td>}
+    <td className="campo">{editVenta.fecha}</td>}
 
-    {editActivate ? <td className="campo"><input name="cliente" value={editVenta.cliente} onChange={e=>setEditVenta({...editVenta,cliente : e.target.value})}></input></td> :
-    <td className="campo">{`${props.venta.nombre_cliente}/${props.venta.documento_cliente}`}</td>}
+    {editActivate ? <td><input name="nombre_cliente" value={editVenta.nombre_cliente} onChange={e=>setEditVenta({...editVenta,nombre_cliente : e.target.value})}></input>
+    <input name="documento_cliente" value={editVenta.documento_cliente} onChange={e=>setEditVenta({...editVenta,documento_cliente : e.target.value})}></input></td> :
+    <td className="campo">{`${editVenta.nombre_cliente}/${editVenta.documento_cliente}`}</td>}
 
-    {editActivate ? <td className="campo"><input name="encargado" value={editVenta.encargado} onChange={e=>setEditVenta({...editVenta,encargado : e.target.value})}></input></td> :
-    <td className="campo">{`${props.venta.encargado.nombre}/${props.venta.encargado.id}`}</td>}
+    {editActivate ? <td className="tabla__select_vendedores"><Select options={vendedores} onChange={encargadohandler} />
+        </td> :
+    <td className="campo">{`${editVenta.encargado.nombre}/${editVenta.encargado.id}`}</td>}
 
-    {editActivate ? <td className="campo"><input name="valor_total" value={editVenta.precio_total} onChange={e=>setEditVenta({...editVenta,valor_total : e.target.value})}></input></td> :
-    <td className="campo">{props.venta.precio_total}</td>}
+    {editActivate ? <td className="campo"><input name="valor_total" value={editVenta.precio_total} onChange={e=>setEditVenta({...editVenta,precio_total : e.target.value})}></input></td> :
+    <td className="campo">{editVenta.precio_total}</td>}
 
-    {editActivate ? <td><select value={editVenta.estado} name="estado" id="tabla__estado_selector" className="campo" onChange={e=>setEditVenta({...editVenta, estado: e.target.value})}>
-                        <option value="Proceso">En Proceso</option>
+    {editActivate ? <td><select value={editVenta.estado} name="estado" className="tabla_selector" onChange={e=>setEditVenta({...editVenta, estado: e.target.value})}>
+                        <option value="En Proceso">En Proceso</option>
                         <option value="Cancelada">Cancelada</option>
                         <option value="Entregada">Entregada</option>
     </select></td> :
-    <td>{props.venta.estado}</td>}
+    <td>{editVenta.estado}</td>}
 
 
     {/* posiblidad de editar productos y su cantidad?? */}
     <td onClick={interruptorModal}>Ver Productos</td>
-    <ModalProductos productos={props.venta.productos} modalProductos={modalProductos} interruptorModal={interruptorModal}/>
+    <ModalProductos productos={editVenta.productos} modalProductos={modalProductos} interruptorModal={interruptorModal}/>
 
 
 

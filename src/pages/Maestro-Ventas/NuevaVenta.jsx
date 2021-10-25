@@ -23,7 +23,7 @@ const NuevaVenta = () => {
             return ({value : element, label:`${element.nombre} / ${element.id}`})
             });
             setVendedores(vendedores)
-    },[])
+    },[]);
 
     // carga los productos
     const [productos, setProductos] = useState(null)
