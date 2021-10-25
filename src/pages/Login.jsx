@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import BotonCs from "components/BotonCs";
 import BotonGg from "components/BotonGg";
 import Inputs from "components/inputs";
@@ -18,15 +19,19 @@ function Login(){
             </header>
                 <form className="formulario">
                     <div>
-                        <h1 className="titulo_login">Sell In A Flash</h1>
+                        <h1 className="titulo_login">Inicio de sesión</h1>
                     </div>
-                    <div className="posicion">
+                    <div className="">
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                         <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
-                        {isAuthenticated ? <Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/> : <Boton mensaje='Entrar' className='boton-generico boton-entrar' link='/index'/>}
+                        <div className="posicion">
+                        {isAuthenticated ? <Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/> : <Boton mensaje='Inicia sesión' className='boton-generico boton-entrar' link='/index'/>}
+                        <div className="enlace">
+                            <Link to='/'>¿Recuperar Contraseña?</Link>
+                            <Link to='/Registro'>Registrate</Link>
+                        </div>
+                        <div>--------------------  O  --------------------</div>
                         {isAuthenticated ? <BotonCs/> : <BotonGg/>}
-                        <div>
-                            <a href="" className="enlace">¿ Recuperar Contraseña ?</a>
                         </div>
                     </div>
                 </form>
