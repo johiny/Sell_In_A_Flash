@@ -6,7 +6,7 @@ const BotonGg = () => {
     const {loginWithRedirect} = useAuth0();
     return (
         <div>
-            <button onClick={() => loginWithRedirect()} className='boton-generico' ><i class="fab fa-google"></i> Entrar Con Google</button>
+            <button onClick={() => loginWithRedirect()} className='boton-generico' ><i class="fab fa-google"></i> Continuar con Google</button>
         </div>
     );
 }

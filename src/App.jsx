@@ -14,6 +14,7 @@ import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
 import Login from 'pages/Login';
 import Index from 'pages/Index';
+import Registrar from "pages/Registrar";
 
 
 function App() {
@@ -53,6 +54,9 @@ function App() {
           </Switch>
           </Layout>
           </Route>
+          <Route path='/Registro'>
+            <Registrar />
+          </Route>    
       <Route path='/'>
             <Login />
           </Route>
