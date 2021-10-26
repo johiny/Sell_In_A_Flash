@@ -31,7 +31,6 @@ body {
   margin: 20px;
   font-weight: bold;
   font-size: 45px;
-  text-shadow: 2px 4px 4px rgb(37, 36, 36);
 }
 
 .posicion {
@@ -99,13 +98,7 @@ body {
   background-color: rgb(6, 95, 40);
 }
 
-.enlace {
- display: flex;
- justify-content: space-between;
- color: rgb(2, 2, 97);
- font-weight: 500;
-  
-}
+
 .sidebar{
   border: solid 1px;
   position: fixed;
@@ -156,4 +149,27 @@ body {
 
 .fondo {
   background-color: white;
+}
+
+.inputsRe {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+ 
+}
+
+p{
+ width: 0px;
+ 
+ font-weight: 500;
+ color: rgb(68, 67, 67);
+
+}
+
+.enlace {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(2, 2, 97);
+  font-weight: 500;
+   
 }
