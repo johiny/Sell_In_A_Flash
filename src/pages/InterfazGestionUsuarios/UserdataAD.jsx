@@ -3,11 +3,12 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/stylegu.css';
 import React, { useEffect, useState, useRef } from "react";
-
+import { obtenerUsuarios, borrarUsuario, editarUsuario} from "utils/api";
 
 
 const UserdataAD = () =>{
     
+    const [usurarios, setUsurarios] = useState([]);
     const [idnum, setIdnum] = useState('000000');
     const [nombre, setNombre] = useState('Nombres');
     const [apellidos, setApellidos] = useState('Apellidos');
@@ -16,11 +17,34 @@ const UserdataAD = () =>{
     const [cargo, setCargo] = useState('Cargo');
     const [rol, setRol] = useState('Rol');
     const [estado, setEstado] = useState('Autorizado');
+    const [ejecutarConsulta, setEjecutarConsulta] = useState(true);
+    const [loading, setLoading] = useState(false);
+
+  
     
     const formAdmingu = useRef(null);
 
-//    const enviarAlBackendgu = () => {console.log('Id: ',idnum, ' nombre: ', nombre, ' apellidos: ', apellidos, ' correo: ', correo, ' telefono: ', telefono, ' cargo: ', cargo, ' rol: ', rol, ' estado: ', estado );
-//    toast.success(`datos de usuario con ID: ${idnum} actualizados`);}
+    useEffect(() => {
+        const fetchUsuarios = async () => {
+          setLoading(true);
+          await obtenerUsuarios(
+            (response) => {
+              console.log('la respuesta que se recibio fue', response);
+              setUsuarios(response.data);
+              setEjecutarConsulta(false);
+              setLoading(false);
+            },
+            (error) => {
+              console.error('Salio un error:', error);
+              setLoading(false);
+            }
+          );
+        };
+        console.log('consulta', ejecutarConsulta, usurarios);
+        if (ejecutarConsulta) {
+            fetchUsuarios();
+        }
+      }, [ejecutarConsulta]);
 
     const submitFormAdmingu = (e) => {
         e.preventDefault();
@@ -55,7 +79,8 @@ const UserdataAD = () =>{
                     
                         <button 
                         className ="mainguButton" 
-                        type="submit">
+                        type="submit"
+                        onSubmit={setEjecutarConsulta(true)}>
                                 Buscar ID
                         </button>                
                 </form>
