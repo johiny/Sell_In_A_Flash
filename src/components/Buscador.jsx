@@ -3,7 +3,7 @@ import Find from 'media/Find_icon.svg';
 const Buscador = (props) => {
     return(
         <div className={props.estilo} id="Buscador">
-            <input type="search" placeholder="Buscar"></input>
+            <input value={props.busqueda} type="search" placeholder="Buscar" onChange={(e) => props.setBusqueda(e.target.value)}></input>
             <button><img src={Find} alt="lupa_gris_pequeña"></img></button>
             </div>
     )

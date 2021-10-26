@@ -6,7 +6,18 @@
     "Cliente" :198567845,
     "Encargado":"Jose Antonio",
     "Valor_Total":400000,
-    "Estado":"Entregada"
+    "Estado":"Entregada",
+    "Productos":  [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "pera",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
+    
     },
     {
     "ID":2,
@@ -15,7 +26,17 @@
     "Cliente" :13567845,
     "Encargado":"Mario",
     "Valor_Total":85000,
-    "Estado":"Cancelada"
+    "Estado":"Cancelada",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 7},
+        {"id": 2,
+            "nombre": "mora",
+            "precio": 2000,
+            "cantidad": 2}
+    ]
     },
     {
     "ID":3,
@@ -24,7 +45,17 @@
     "Cliente" :7630373047,
     "Encargado":"Jose Miguel",
     "Valor_Total":130000,
-    "Estado":"Entregada"
+    "Estado":"Entregada",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "piña",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
     },
     {
     "ID":4,
@@ -33,7 +64,17 @@
     "Cliente" :18363378,
     "Encargado":"Mario",
     "Valor_Total":230000,
-    "Estado":"En Proceso"
+    "Estado":"En Proceso",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "pera",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
     },
     {
     "ID":5,
@@ -42,7 +83,17 @@
     "Cliente" :289463098,
     "Encargado":"Maria Ordoñez",
     "Valor_Total":780000,
-    "Estado":"Cancelada"
+    "Estado":"Cancelada",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "pera",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
     },
     {
     "ID":6,
@@ -51,7 +102,17 @@
     "Cliente" :18363378,
     "Encargado":"Jose Antonio",
     "Valor_Total":430000,
-    "Estado":"Entregada"
+    "Estado":"Entregada",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "pera",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
     },
     {
     "ID":7,
@@ -60,7 +121,17 @@
     "Cliente" :927492739,
     "Encargado":"Mario",
     "Valor_Total":34000,
-    "Estado":"En Proceso"
+    "Estado":"En Proceso",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "pera",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
     },
     {
     "ID":8,
@@ -69,7 +140,17 @@
     "Cliente" :198567845,
     "Encargado":"Jose Miguel",
     "Valor_Total":1000000,
-    "Estado":"Cancelada"
+    "Estado":"Cancelada",
+    "Productos": [
+        {"id": 1,
+        "nombre": "manzana",
+        "precio": 1000,
+        "cantidad": 4},
+        {"id": 2,
+            "nombre": "pera",
+            "precio": 2000,
+            "cantidad": 4}
+    ]
     }
 ]
 

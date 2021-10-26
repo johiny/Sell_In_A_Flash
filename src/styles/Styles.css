@@ -24,7 +24,7 @@ nav {
 
 .navlinks {
   float: right;
-  margin-right: 30%;
+  margin-right: 0%;
   cursor: pointer;
 }
 
@@ -67,10 +67,14 @@ nav li:hover {
 #leftbar li {
   border-bottom: 1px solid rgba(97, 97, 97, 0.1);
   border-top: 1px solid rgba(97, 97, 97, 0.1);
-  font-family: 'Lato',sans-serif;
+  font-family: 'Roboto',sans-serif;
   font-size: 18px;
-  padding: 35px 79px 30px 58px;
   font-weight: regular;
+  width: 100%;
+}
+.Logout_logo {
+  width: 6%;
+  display: inline-block;
 }
 
 #leftbar li:hover {
@@ -91,7 +95,7 @@ nav li:hover {
   position: absolute;
   left: 201px;
   top: 62px;
-  overflow: hidden;
+  overflow:hidden
 }
 
 body {
@@ -115,10 +119,10 @@ body {
 
 .cuerpo_central__opciones {
   position: absolute;
-  left: 30%;
+  left: 20.5%;
   top: 256px;
   height: 450px;
-  width: 650px;
+  width: 1050px;
 }
 
 .cuerpo_central__opciones div {
@@ -139,9 +143,9 @@ body {
 }
 
 .Button_grande{
-  position: absolute;
-  top: 50%;
-  left: 11%;
+  position: relative;
+  top: 7%;
+  left: 0%;
   border: none;
   padding: 15px 60px;
   font-family: 'Roboto',sans-serif;
@@ -151,22 +155,15 @@ body {
   cursor: pointer;
 }
 
-a {
-  color: #47525E;
-}
-
-a:visited {
-  text-decoration: none;
-}
 
 .cuerpo_central__opciones button:hover {
   background-color: rgba(148, 148, 148, 0.2);
 }
 
 .Buscador_index_Ventas {
-  position: absolute;
-  top: 50%;
-  left: 53%;
+  position: relative;
+  top: 7%;
+  left: 6%;
   height: 0px !important;
   width: 280px !important;
   padding-top: 60px !important;
@@ -200,6 +197,7 @@ a:visited {
   border-radius: 56px;
   border: none;
   background: #FBFAFA;
+  cursor: pointer;
 }
 
 .Buscador_index_Ventas img {
@@ -229,42 +227,123 @@ a:visited {
   border: 1px solid rgba(0, 0, 0, 0.22);
 }
 
+.tabla th:nth-child(8) {
+  font-family: none;
+  background: none;
+  border-radius: none;
+  padding-left: none;
+  padding-right: none;
+  padding-top: none;
+  padding-bottom: none;
+  border: none;
+}
+
 .tabla td {
   font-family: 'Roboto',sans-serif;
   background-color: white;
   border-radius: 20px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   border: 1px solid rgba(0, 0, 0, 0.22);
   text-align: center;
+  display: table-cell;
+  
 }
+
+.tabla input {
+  font-size: 100%; 
+  font-family: 'Roboto',sans-serif;
+  border:none;
+  text-align: center;
+  height: 30px;
+  background: none;
+  width: 45%;
+  border-bottom: 1px solid rgba(148, 148, 148, 0.6);
+  margin-bottom: -1px;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.tabla td:nth-child(8) {
+  background-color: #FBFAFA;
+  border-radius: 20px;
+  padding-top: none;
+  padding-bottom: none;
+  border: none;
+  text-align: none;
+}
+
+.tabla__select_vendedores td{
+  border: none;
+}
+.tabla td:nth-child(7):hover {
+  cursor: pointer;
+  background-color:rgba(148, 148, 148, 0.2);
+}
+
+.tabla img:hover {
+
+  background-color: rgba(148, 148, 148, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.guardar_cambios img {
+  display: inline-table;
+  margin-top: 7px;
+  height: 30px;
+  width: 30px;
+}
+
+.guardar_cambios img:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tabla img {
+  margin-right: 7px;
+}
+
 
 
 .campo {
   outline: none;
 }
 
+
 .tabla {
   position: absolute;
-  left: 5%;
+  left: 0%;
   top: 10%;
-  height: 750px;
-  width: 1260px;
+  width: 100%;
   background: #FBFAFA;
   border-radius: 50px;
+}
+
+
+.tabla tbody tr:hover {
+  outline: solid 2px rgba(148, 148, 148, 0.6);
+  border-radius: 50px;
+}
+
+.tabla tbody tr {
+  height: 0;
 }
 
 .tabla table {
   position: relative;
   left: .05%;
   border-collapse: separate;
-  border-spacing: 45px 20px;
+  border-spacing: 20px 20px;
+  width: 100%;
+  table-layout: auto
 }
 
 .Buscador_Tabla_Ventas {
   position: absolute;
   top: 3%;
-  left: 62%;
+  left: 82.5%;
   height: 0px;
   width: 280px;
   padding-top: 60px;
@@ -309,7 +388,7 @@ a:visited {
   background-color: rgba(148, 148, 148, 0.2);
 }
 
-#tabla__estado_selector {
+.tabla_selector {
   border: none;
   font-family: 'Roboto',sans-serif;
   font-weight: bold;
@@ -318,6 +397,8 @@ a:visited {
 
 #tabla__estado_selector option {
   border-radius: 15px;
+  border:0;
+  margin: 0;
 }
 
 .Guardar-Popup {
@@ -326,7 +407,7 @@ a:visited {
   position: absolute;
   height: 750px;
   width: 300px;
-  left: 79%;
+  left: 80%;
   background: #FBFAFA;
 }
 
@@ -407,5 +488,223 @@ a:visited {
 .cuerpo_central__detalles-tabla td {
   font-family: 'Roboto',sans-serif;
   font-size: 24px;
+  text-align: center;
+}
+
+/* Registro Ventas Styles ------------------------------------------------------------*/
+
+
+.TituloNuevaVenta {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+  font-size: 64px;
+  font-family: 'Roboto',sans-serif;
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.products_BOX {
+  position: relative;
+  background-color:white;
+  height: 70%;
+  width: 55%;
+  left: 10%;
+  top: 20%;
+  border-radius: 10%;
+  border: solid 2px grey;
+}
+
+.products_BOX h1 {
+  position: relative;
+  top: 4%;
+  left: 2%;
+  font-size: 48px;
+  font-family: 'Roboto',sans-serif;
+  color: rgba(0, 0, 0, 0.35);
+}
+.FormularioNuevaVenta {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 20%;
+  max-width: 50%;
+  left: 0%;
+}
+
+.FormularioNuevaVenta input {
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  border: solid 1px rgba(0, 0, 0, 0.22);
+}
+
+.FormularioNuevaVenta select {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+.FormularioNuevaVenta label {
+font-family: 'Roboto',sans-serif;
+font-weight: 700;
+justify-content: left;
+align-items: left;
+display: flex;
+}
+
+.ModalNuevaVenta_button {
+  position: relative;
+  top: 7%;
+  left: 7%;
+  border: none;
+  padding: 15px 60px;
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  background: white;
+  border-radius: 56px;
+  cursor: pointer;
+}
+
+.ModalNuevaVenta_button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+.tabla__nuevaventa {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: 2%;
+  top: 1%;
+  height: 750px;
+  width: 77%;
+  background: #FBFAFA;
+  border-radius: 50px;
+}
+
+.formulario_nuevaventa_productosfields {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.formulario_nuevaventa_clientes {
+  display: flex;
+  flex-direction: row;
+}
+
+.formulario_nuevaventa_clientes label {
+  position: relative;
+  left: 8px;
+}
+
+.formulario_nuevaventa_productos {
+  width: 80%;
+  margin-right: 10px;
+}
+
+.formulario_nuevaventa_cantidad {
+  width: 0%;
+  margin-right: 10px;
+}
+
+.formulario_nuevaventa_cliente {
+
+  width: 100%;
+  margin-right : 10px;
+}
+
+.formulario_nuevaventa_cliente input {
+
+  width: 100%;
+}
+
+.formulario_nuevaventa_productos_boton {
+  position: relative;
+  top: 14px;
+  left: 22%;
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 45px;
+  max-height:20px;
+  text-align: justify;
+  font-size: 40px;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 100%;
+  border: none;
+background-color: white;
+}
+
+.formulario_nuevaventa_productos_boton:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+  cursor: pointer;
+}
+
+.formulario_nuevaventa_cantidad input {
+  margin: 2px;
+  border-radius: 5%;
+}
+
+.formulario_nuevaventa_cantidad label {
+  position: relative;
+  left: 2px;
+}
+
+.tabla__confirm_modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto',sans-serif;
+}
+
+.tabla__confirm_modal-titulo {
+  margin: 20px;
+}
+
+.tabla__confirm_modal-id {
+  margin-bottom: 15px;
+  font-size: larger;
+}
+
+.tabla__confirm_modal-botones button {
+  margin: 20px;
+  padding: 10px;
+  font-size: 24px;
+  background: white;
+  border-radius: 56px;
+  cursor: pointer;
+  border:none;
+}
+
+.tabla__confirm_modal-botones button:hover {
+  background-color: rgba(148, 148, 148, 0.2);
+}
+
+
+/* Minicard Styles----------------------------------------------------------------------------------------------------------------------- */
+
+.minicards_titulo {
+
+  margin-bottom: 20px;
+}
+
+.minicards_container {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.minicard {
+  margin: 10px;
+  background-color: aliceblue;
+  border-radius: 15px;
+  font-size: small;
+  font-family:'Roboto',sans-serif;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
