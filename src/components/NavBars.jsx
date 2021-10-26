@@ -17,7 +17,7 @@ const NavBars = () => {
             <ul id="leftbar_links">
                 <li>Gestión Productos</li>
                 <NavLink to="/Maestro-Ventas"><li>Gestión Ventas</li></NavLink>
-                <NavLink to="/InterfazGestionUsuarios/Administrador"><li className="far fa-address-card">Gestión Usuarios</li></NavLink>
+                <NavLink to="/InterfazGestionUsuarios/Administrador"><li><i className="far fa-address-card"></i>Gestión Usuarios</li></NavLink>
             </ul>
         </div>
     </header>
