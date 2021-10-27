@@ -1,0 +1,57 @@
+.Datos{
+    position: relative;
+    top: 160px;
+    left: 300px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+    margin: 5px;
+}
+
+.Lista{
+    position: relative;
+    top: 160px;
+    left: 300px;
+    padding: 5px;
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+    margin: 5px;
+    width: 230px;
+}
+
+.Register{
+    position: relative;
+    left: 630px;
+    bottom: 10px;
+    margin: 30px;
+}
+
+.VistaUno{
+    position: relative;
+    border: 0px;
+    bottom: 9ç0px;
+    font-size: 25px;
+    font-family: 'Lato',sans-serif;
+    right: 30px;
+}
+
+.Campo{
+    position: fixed;
+    top: 150px;
+    left: 800px;
+    border: 0px;
+    font-size: 40px;
+    font-family: 'Lato',sans-serif;
+}
+
+.BotonesView{
+    position: relative;
+    bottom: 90px;
+    left: 298px;
+    padding: 5px;
+    width: 230px;
+    font-size: 20px;
+    font-family: 'Lato',sans-serif;
+    display: block;
+    margin: 8px;
+}
