@@ -25,7 +25,6 @@ function App() {
     clientId="V7BQQOwbjNue6TRxRpEMuJPoud4ygvCw"
     redirectUri={window.location.origin}
   >
-    <App />
   </Auth0Provider>,
  <Router>   
   <Switch>
