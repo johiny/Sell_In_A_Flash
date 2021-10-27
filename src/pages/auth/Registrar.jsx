@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import { Link } from "react-router-dom";
 import Inputs from "components/inputs";
 import Boton from "components/BotonJ";
 import logo from "media/logo.png"
 import "styles/estilos.css"
+
 
 const Registrar = () => {
 
@@ -18,6 +21,8 @@ const Registrar = () => {
             'apellidos',apellidos,
             'email',email,
             'contraseña',contraseña)
+
+        toast.success('registro exitoso')
     }
    
 
@@ -79,7 +84,7 @@ const Registrar = () => {
                         </div>
                     </div>
                     <div className="posicion">
-                        <Link to='/'>
+                        <Link to='/Registro'>
                             <button 
                             className='boton-generico boton-entrar' 
                             onClick={()=>{enviarDatos();}}>
@@ -92,6 +97,11 @@ const Registrar = () => {
                     </div>
                     
                 </form>
+                
+                <ToastContainer
+                position="bottom-center"
+                autoClose={5000}
+                />
         </div> 
     )
 }
