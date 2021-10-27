@@ -36,11 +36,14 @@ function App() {
       </Switch>
       </Layout2>
       </Route>
-        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Venta/Table", "/Index"]} >
+        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table", "/Index"]} >
           <Layout>
           <Switch>
             <Route path="/Maestro-Ventas/DetallesVenta">
               <DetallesVenta/>
+            </Route>
+            <Route path ="/Maestro-Ventas/NuevaVenta">
+            <NuevaVenta/>
             </Route>
             <Route path="/Maestro-Ventas/Table">
             <Table/>

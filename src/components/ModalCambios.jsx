@@ -13,8 +13,8 @@ return (
 const GuardarCambios = ({setSaveChanges}) => {
     
      return (
-        <div class="Guardar-Popup" id="guardar-popup">
-        <h2 class="Guardar-Popup__titulo">
+        <div className="Guardar-Popup" id="guardar-popup">
+        <h2 className="Guardar-Popup__titulo">
         Has hecho cambios<br></br>¿Quieres guardarlos?
         </h2>
         <button onClick={ () => setSaveChanges(false)} class="Guardar-Popup__button">
@@ -28,8 +28,8 @@ const GuardarCambios = ({setSaveChanges}) => {
 const CambiosGuardados = ()=> {    
         
     return(
-            <div class="Guardar-Popup" id="guardar-popup">
-        <h2 class="Guardar-Popup__titulo">
+            <div className="Guardar-Popup" id="guardar-popup">
+        <h2 className="Guardar-Popup__titulo">
         ¡Cambios Guardados<br></br>Correctamente!
         </h2>
         <img src={checkmark}></img>
