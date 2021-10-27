@@ -21,8 +21,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 function App() {
   return (
 <Auth0Provider
-    domain="dev-umyi64q7.us.auth0.com"
-    clientId="V7BQQOwbjNue6TRxRpEMuJPoud4ygvCw"
+    domain="dev-0skfin92.us.auth0.com"
+    clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
     redirectUri={window.location.origin}
   >
   </Auth0Provider>,

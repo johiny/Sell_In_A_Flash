@@ -12,15 +12,9 @@ const NavBars = () => {
             <nav>
                 <ul className="navlinks">
                     {isAuthenticated ? (
-                        <button onClick={() => logout()} className='boton-generico boton-entrar'> Cerrar Sesión </button>  ) : (
+                        <button onClick={() => logout()} className='boton-generico boton-salir'> Cerrar Sesión </button>  ) : (
                             
-                            <button onClick={() => loginWithRedirect()} className='boton-generico boton-entrar'>Iniciar Sesión</button>                        )}
-                <button
-                onClick={() => loginWithRedirect()}
-                className='boton-generico '
-            >
-                Iniciar Sesión
-            </button>
+                            <button onClick={() => loginWithRedirect()} className='boton-generico boton-entrar'>Iniciar Sesión</button>                        )}           
                 </ul>    
             </nav>
             <div id="leftbar">
