@@ -51,7 +51,6 @@ const VentaRow = (props) => {
         progress: undefined,
         })};
     const [editVenta,setEditVenta] = useState({
-        _id : props.venta._id,
         fecha_venta: props.venta.fecha_venta,
         nombre_cliente : props.venta.nombre_cliente,
         documento_cliente: props.venta.documento_cliente,
@@ -63,7 +62,7 @@ const VentaRow = (props) => {
     const [editActivate,setEditActivate] = useState(false);
 
     const editSubmit = async () => {
-        await editarVenta(editVenta,
+        await editarVenta(editVenta,props.venta._id,
             (response) =>{
             setEditActivate(false)
             modal('✔️Venta Guardada!',toast.success);
@@ -74,9 +73,8 @@ const VentaRow = (props) => {
         }) 
     };
     
-    const deleteSubmit = async () => {
-        const id = { _id : editVenta._id} 
-        await borrarVenta(id,
+    const deleteSubmit = async () => { 
+        await borrarVenta(props.venta._id,
             (response) => {
                 interruptorModalConfirm();
                 modal('✔️Venta Borrada con exito!',toast.success);

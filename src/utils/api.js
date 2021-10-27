@@ -11,19 +11,19 @@ await axios.request(options).then(successCallback).catch(errorCallback);
 };
 
 export const enviarVenta = async (data,successCallback,errorCallback) => {
-    const options = {method: 'POST',url: `${baseURL}/Ventas/Newventa`,data};
+    const options = {method: 'POST',url: `${baseURL}/Ventas/`,data};
 
     await axios.request(options).then(successCallback).catch(errorCallback);
 };
 
-export const editarVenta = async (data,successCallback,errorCallback) => {
-    const options = {method: 'PATCH' ,url: `${baseURL}/Ventas/Updateventa`, data};
+export const editarVenta = async (data,id,successCallback,errorCallback) => {
+    const options = {method: 'PATCH' ,url: `${baseURL}/Ventas/${id}/`, data};
 
     await axios.request(options).then(successCallback).catch(errorCallback);
 }
 
-export const borrarVenta = async (data,successCallback,errorCallback) => {
-    const options = {method: 'DELETE' ,url: `${baseURL}/Ventas/Deleteventa`, data};
+export const borrarVenta = async (data,id,successCallback,errorCallback) => {
+    const options = {method: 'DELETE' ,url: `${baseURL}/Ventas/${id}/`};
 
     await axios.request(options).then(successCallback).catch(errorCallback);
 }

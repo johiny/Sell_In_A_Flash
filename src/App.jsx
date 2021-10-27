@@ -14,6 +14,7 @@ import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
 import Login from 'pages/auth/Login';
 import Index from 'pages/Index';
+import NuevaVenta from "pages/Maestro-Ventas/NuevaVenta"
 import Registrar from "pages/auth/Registrar";
 
 
