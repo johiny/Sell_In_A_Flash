@@ -99,35 +99,7 @@ body {
 }
 
 
-.sidebar{
-  border: solid 1px;
-  position: fixed;
-  width: 200px;
-  height: 100%;
-  background: rgb(214, 212, 212);
-}
-.sidebar > ul {
-  text-align: center;
 
-}
-.navbar > button {
-  width: 100px;
-}
-
-.navbar {
-  display: flex;
-  position: absolute;
-  height: 50px;
-  width: 100%;
-  background: rgb(214, 212, 212);
-}
-
-.navbar > ul {
-  display: flex;
-  position: relative;
-  left: 1065px;
-  text-align: center;
-}
 
 .botonav {
   width: 100px;

@@ -11,6 +11,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  width: 100%;
 }
 
 /* topbar settings */

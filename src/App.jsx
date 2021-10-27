@@ -7,7 +7,6 @@ import {
 import UserdataAD from 'pages/InterfazGestionUsuarios/UserdataAD';
 import UserdataUS from 'pages/InterfazGestionUsuarios/UserdataUS';
 import UserdataUSedit from 'pages/InterfazGestionUsuarios/UserdataUSedit';
-import Layout2 from 'layouts/Layout2';
 import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
@@ -16,30 +15,29 @@ import Login from 'pages/auth/Login';
 import Index from 'pages/Index';
 import NuevaVenta from "pages/Maestro-Ventas/NuevaVenta"
 import Registrar from "pages/auth/Registrar";
+import { Auth0Provider } from "@auth0/auth0-react";
 
 
 function App() {
   return (
+<Auth0Provider
+    domain="dev-umyi64q7.us.auth0.com"
+    clientId="V7BQQOwbjNue6TRxRpEMuJPoud4ygvCw"
+    redirectUri={window.location.origin}
+  >
+    <App />
+  </Auth0Provider>,
  <Router>   
   <Switch>
-    <Route path ={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/InterfazGestionUsuarios/Usuarios/Editar"]}>
-      <Layout2>
-      <Switch>
-        <Route path='/InterfazGestionUsuarios/Usuarios/Editar'>
-          <UserdataUSedit/>
-        </Route>
-        <Route path='/InterfazGestionUsuarios/Usuarios'>
-          <UserdataUS/>
-        </Route>
-        <Route path='/InterfazGestionUsuarios/Administrador'>
-          <UserdataAD/>
-        </Route>
-      </Switch>
-      </Layout2>
-      </Route>
-        <Route path={["/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table", "/Index"]} >
+        <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table", "/Index"]} >
           <Layout>
           <Switch>
+            <Route path='/InterfazGestionUsuarios/Usuarios'>
+              <UserdataUS/>
+            </Route>
+            <Route path='/InterfazGestionUsuarios/Administrador'>
+              <UserdataAD/>
+            </Route>
             <Route path="/Maestro-Ventas/DetallesVenta">
               <DetallesVenta/>
             </Route>

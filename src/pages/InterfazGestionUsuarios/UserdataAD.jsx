@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import 'styles/stylegu.css';
 import React, { useEffect, useState, useRef } from "react";
-
+import { Auth0Provider } from "@auth0/auth0-react";
 
 
 const UserdataAD = () =>{
