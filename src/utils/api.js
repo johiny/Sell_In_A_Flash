@@ -27,3 +27,29 @@ export const borrarVenta = async (data,id,successCallback,errorCallback) => {
 
     await axios.request(options).then(successCallback).catch(errorCallback);
 }
+
+// CRUD usuarios
+export const obtenerUsuarios = async (successCallback,errorCallback) => {
+
+    const options = {method: 'GET', url: `${baseURL}/Usuarios/`};
+   
+   await axios.request(options).then(successCallback).catch(errorCallback);
+   };
+   
+   export const enviarUsuario = async (data,successCallback,errorCallback) => {
+       const options = {method: 'POST',url: `${baseURL}/Usuarios/`,data};
+   
+       await axios.request(options).then(successCallback).catch(errorCallback);
+   };
+   
+   export const editarUsuario = async (data,id,successCallback,errorCallback) => {
+       const options = {method: 'PATCH' ,url: `${baseURL}/Usuarios/${id}/`, data};
+   
+       await axios.request(options).then(successCallback).catch(errorCallback);
+   }
+   
+   export const borrarUsuario = async (data,id,successCallback,errorCallback) => {
+       const options = {method: 'DELETE' ,url: `${baseURL}/Usuarios/${id}/`};
+   
+       await axios.request(options).then(successCallback).catch(errorCallback);
+   }
