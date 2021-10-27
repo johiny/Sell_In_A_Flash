@@ -12,9 +12,9 @@ import Layout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
-import Login from 'pages/Login';
+import Login from 'pages/auth/Login';
 import Index from 'pages/Index';
-import Registrar from "pages/Registrar";
+import Registrar from "pages/auth/Registrar";
 
 
 function App() {
