@@ -20,9 +20,9 @@ const NavBars = () => {
             <div id="leftbar">
                 <Link to="/index"><img id="logo" src={Logo} alt="logo SF"></img></Link>
                 <ul id="leftbar_links">
-                    <li>Gestión Productos</li>
-                    <NavLink to="/Maestro-Ventas"><li>Gestión Ventas</li></NavLink>
-                    <NavLink to="/InterfazGestionUsuarios/Administrador"><li><i className="far fa-address-card"></i>Gestión Usuarios</li></NavLink>
+                    <li>Productos</li>
+                    <NavLink to="/Maestro-Ventas"><li>Ventas</li></NavLink>
+                    <div><NavLink to="/InterfazGestionUsuarios/Administrador"><li><i className="far fa-address-card">Usuarios</i></li></NavLink> </div>
                 </ul>
             </div>
         </header>

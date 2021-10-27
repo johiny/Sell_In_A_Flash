@@ -32,7 +32,7 @@ function Login(){
                         <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
                         <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
                         <div className="posicion">
-                            {isAuthenticated ? <Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/> : <Boton mensaje='Inicia sesión' className='boton-generico boton-entrar' link='/index'/>}
+                            {isAuthenticated ? (<Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/>) : (<Boton mensaje='Inicia sesión' className='boton-generico boton-entrar' link='/index'/>)}
                             <div className="enlace">
                                 <Link to='/'>¿Recuperar Contraseña?</Link>
                                 <Link to='/Registro'>Registrate</Link>
