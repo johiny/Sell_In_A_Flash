@@ -19,8 +19,7 @@ const UserdataAD = () =>{
     
     const formAdmingu = useRef(null);
 
-//    const enviarAlBackendgu = () => {console.log('Id: ',idnum, ' nombre: ', nombre, ' apellidos: ', apellidos, ' correo: ', correo, ' telefono: ', telefono, ' cargo: ', cargo, ' rol: ', rol, ' estado: ', estado );
-//    toast.success(`datos de usuario con ID: ${idnum} actualizados`);}
+
 
     const submitFormAdmingu = (e) => {
         e.preventDefault();
@@ -33,11 +32,7 @@ const UserdataAD = () =>{
 
 
     
-    const listaUsuarios = [
-        {
 
-        }
-    ];
     
 
     return(
