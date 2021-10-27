@@ -23,9 +23,6 @@ function App() {
           <Route path='/ViewRegister'>
             <ViewRegister/>
           </Route>
-          <Route path='/'>
-            <Principal/>
-          </Route>
         </Switch>
       </Router>
   </div>
