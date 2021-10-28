@@ -30,15 +30,15 @@ export const borrarVenta = async (data,id,successCallback,errorCallback) => {
 
 // CRUD usuarios
 const getToken = () => {
-    return `Bearer ${localStorage.getItem('token')}`;
-  };
+  return `Bearer ${localStorage.getItem('token')}`;
+};
 
 export const obtenerUsuarios = async (successCallback, errorCallback) => {
     const options = {
       method: 'GET',
       url: `${baseURL}/usuarios/`,
       headers: {
-        Authorization: getToken(),
+      Authorization: getToken(),
       },
     };
     await axios.request(options).then(successCallback).catch(errorCallback);
@@ -49,7 +49,7 @@ export const obtenerUsuarios = async (successCallback, errorCallback) => {
       method: 'GET',
       url: `${baseURL}/usuarios/self/`,
       headers: {
-        Authorization: getToken(), // 3. enviarle el token a backend
+      Authorization: getToken(), // 3. enviarle el token a backend
       },
     };
     await axios.request(options).then(successCallback).catch(errorCallback);

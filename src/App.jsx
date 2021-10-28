@@ -21,16 +21,16 @@ import PrivateRoute from 'components/PrivateRoute';
 
 function App() {
   return (
-/*   <Auth0Provider
+   <Auth0Provider
       domain="dev-0skfin92.us.auth0.com"
       clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
-      redirectUri={window.location.origin}
+      
       audience="api-autenticacion-sellinaflash "
-    > */  
+    >   
     <Router>   
       <Switch>
-        <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table", "/Index"]} >
-          < GlobalLayout>
+        <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table"]} >
+          < Layout>
             <Switch>
               <Route path='/InterfazGestionUsuarios/Usuarios'>
                 <UserdataUS/>
@@ -51,7 +51,7 @@ function App() {
                 <IndexVentas/>
               </Route>
             </Switch>
-          </GlobalLayout> 
+          </Layout> 
         </Route>
         <Route>
         <GlobalLayout>
@@ -68,7 +68,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-/*     </Auth0Provider> */
+    </Auth0Provider> 
   );
 }  
         

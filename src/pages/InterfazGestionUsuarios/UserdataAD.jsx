@@ -57,10 +57,10 @@ const UserdataAD = () =>{
                 </form>
             </div>
             <fieldset className="fieldsetgu">
-                    <legend>ID de usuario</legend>
+
                         <div id="informacion1">
                             <div id="foto1">
-                                <img  src={imagenn} height="400px"/>
+                                <img  src={imagenn} height="500px"/>
                             </div>
 
                             <table cellpadding="50" cellspacing="20">

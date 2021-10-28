@@ -6,7 +6,9 @@ import { useUser } from 'context/userContext';
 import NavBars from "components/NavBars";
 import "styles/LayoutStyle.css";
 
+
 const Layout = ({ children }) => {
+  
   const { isAuthenticated, isLoading, loginWithRedirect, getAccessTokenSilently, logout } =
     useAuth0();
   const [loadingUserInformation, setLoadingUserInformation] = useState(false);
