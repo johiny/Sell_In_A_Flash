@@ -1,0 +1,141 @@
+.Etiquetas{
+    position: relative;
+    left: 300px;
+    top: 80px;
+    font-family: 'Lato',sans-serif;
+    font-size: 20px;
+    color: rgb(90, 88, 88);
+}
+
+
+.FotoProducto{
+    position: relative;
+    float: left;
+    left: 810px;
+    bottom: 160px;
+    opacity: 40%;
+    background-color: rgb(66, 233, 177);
+}
+
+.CamposInput{
+    display: flex;
+    flex-direction: row;
+    left: 100px;
+    top: 5px;
+    padding: 3px;
+    width: 10%;
+    font-family: 'Lato',sans-serif;
+    font-size: 15px;
+    color: rgb(90, 88, 88);
+}
+
+.CampoDescrip{
+    font-family: 'Lato',sans-serif;
+    width: 300px;
+    height: 70px;
+    font-size: 15px;
+    color: rgb(90, 88, 88);
+}
+
+.BotonesRegistro{
+    position: fixed;
+    bottom: 250px;
+    left: 350px;
+    padding: 3px;
+    width: 80px;
+    font-size: 15px;
+    box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
+}
+
+.BotonVer{
+    position: fixed;
+    left: 450px;
+    bottom: 250px;
+    padding: 3px;
+    width: 80px;
+    font-family: 'Lato',sans-serif;
+    font-size: 15px;
+    box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
+
+}
+
+.BotonBuscar{
+    position: fixed;
+    bottom: 250px;
+    right: 130px;
+    width: 80px;
+    padding: 3px;
+    font-family: 'Lato',sans-serif;
+    font-size: 15px;
+    box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
+
+}
+
+.CampoBuscar{
+    position: fixed;
+    bottom: 250px;
+    right: 215px;
+    padding: 3px;
+    width: 10%;
+    font-size: 15px;
+    color: rgb(90, 88, 88);
+    }
+
+.contenido{
+    position: absolute;
+    bottom: 70px;
+    left: 308px;
+    font-size: 18px;
+    font-family: 'Lato',sans-serif;
+    width: 68%;
+}
+
+.contenido td{
+    border: solid rgb(184, 184, 184) 1px;
+    box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
+    width: 25%;
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.contenido thead tr{
+    position: relative;
+    bottom: 5px;
+    background-color: rgb(129, 129, 129);
+    text-align: center;
+    color: white;
+    width: 68%;
+}
+
+.check{
+    display: flex;
+    position: relative;
+    bottom: -5px;
+    left: -5px;
+    border: solid rgb(184, 184, 184) -15px;
+    box-shadow: 1px 1px 5px rgba(49, 49, 49, 0.377);
+
+}
+
+.LeyendaMostrar{
+   display: inline-block;
+   position: fixed;
+   left: 325px;
+   bottom: 30px;
+   font-family: 'Lato',sans-serif;
+   font-size: 20px;
+   color: rgb(90, 88, 88);
+  
+}
+
+.pages{
+   position: fixed;
+   right: 134px;
+   bottom: 30px;
+   color: rgb(90, 88, 88);
+}
+
+.pages li{
+    float: left;
+    padding: 2px;
+}
