@@ -1,7 +1,7 @@
 import VentaRow from "components/VentaRow.jsx"
-import CheckMark from "media/check-mark.svg"
+/* import CheckMark from "media/check-mark.svg" */
 import { nanoid } from "nanoid"
-import { useEffect, useState, useRef } from "react/cjs/react.development"
+import { useEffect, useRef } from "react/cjs/react.development"
 import trashcan from "media/delete.png"
 const Tabla = ({ventasbackend,setEjecutarConsulta}) => {
     

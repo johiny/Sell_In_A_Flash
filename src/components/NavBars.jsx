@@ -1,6 +1,6 @@
 import Logo from 'media/logo.png';
 import {NavLink,Link} from "react-router-dom";
-import Logout from "media/logout.svg"
+
 import { useAuth0 } from '@auth0/auth0-react';
 
 

@@ -12,12 +12,6 @@ body {
   background-color: white;
 }
 
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
 
 /* topbar settings */
 nav {

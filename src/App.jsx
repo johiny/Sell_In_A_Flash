@@ -14,29 +14,46 @@ import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
 import Login from 'pages/auth/Login';
 import Index from 'pages/Index';
 import NuevaVenta from "pages/Maestro-Ventas/NuevaVenta"
+import Principal from 'pages/Interfaz-Productos/Principal';
 import Registrar from "pages/auth/Registrar";
 import { Auth0Provider } from "@auth0/auth0-react";
-import PrivateRoute from 'components/PrivateRoute';
+import EditPage from "pages/Interfaz-Productos/Editar";
+import ViewRegister from "pages/Interfaz-Productos/Ver";
+import 'styles/App.css';
+import 'styles/App2.css';
+import "styles/View.css";
+import "styles/estilos.css";
+
 
 
 function App() {
+  
   return (
-   <Auth0Provider
+    <Auth0Provider
       domain="dev-0skfin92.us.auth0.com"
-      clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
-      
+      clientId="oz7TFOdHR2htL97M1ipah864UNmoz9br"
+      redirectUri={window.location.origin}
       audience="api-autenticacion-sellinaflash "
-    >   
+    >
     <Router>   
       <Switch>
         <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table"]} >
-          < Layout>
+          < GlobalLayout>
             <Switch>
               <Route path='/InterfazGestionUsuarios/Usuarios'>
                 <UserdataUS/>
               </Route>
               <Route path='/InterfazGestionUsuarios/Administrador'>              
                 <UserdataAD/>                
+              </Route>
+              <Route path="/Interfaz-Productos/Editar">
+              <EditPage/>
+            </Route>
+            <Route path="/Interfaz-Productos/Ver">
+              <ViewRegister/>
+            </Route>
+            <Route path="/Interfaz-Productos/Principal">
+              <Principal/>
               </Route>
               <Route path="/Maestro-Ventas/DetallesVenta">
                 <DetallesVenta/>
@@ -51,11 +68,11 @@ function App() {
                 <IndexVentas/>
               </Route>
             </Switch>
-          </Layout> 
+          </GlobalLayout> 
         </Route>
         <Route>
         <GlobalLayout>
-              <Route path='/Index'>
+              <Route path='/'>
                 <Index />
               </Route>
         </GlobalLayout>
@@ -63,12 +80,13 @@ function App() {
         <Route path='/Registro'>
           <Registrar />
         </Route>    
-        <Route path='/'>
+        <Route path='/Login'>
           <Login />
         </Route>
       </Switch>
     </Router>
-    </Auth0Provider> 
+    </Auth0Provider>
+    
   );
 }  
         

@@ -7,8 +7,7 @@
 }
 /* Nav Bar Styles ------------------------------------------------------------------*/
 .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: aqua;
   display: flex;
   position: relative;
   width: 100%;

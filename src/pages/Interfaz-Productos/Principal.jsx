@@ -8,7 +8,7 @@ import Tabla from 'Componentes/Tabla';
 import NavMostrar from 'Componentes/NavMostrar';
 import NavPages from 'Componentes/NavPages';
 import SinFoto from 'Imagenes/SinFoto.png';
-import NavBars from 'Componentes/NavBars';
+
 
 function Principal(){
   return(

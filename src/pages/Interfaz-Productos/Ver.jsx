@@ -1,6 +1,6 @@
 import 'styles/View.css';
 import BotonesEdición from 'Componentes/BotonesEdición';
-import NavBarView from 'Componentes/NavBarView';
+/* import NavBarView from 'Componentes/NavBarView'; */
 import CampoAEditar from 'Componentes/CampoAEditar';
 import ListaDesplegable from 'Componentes/ListaEdición';
 import DescripView from 'Componentes/DescripView';
