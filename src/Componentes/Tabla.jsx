@@ -4,23 +4,15 @@ const Tabla = ({Campo1, Campo2, Campo3, Campo4 }) => {
     return (
         <div>
             <table className="contenido">
-              <thead className="tabla">
-                  <tr>
-                    <th></th>
-                    <th>{Campo1}</th>
-                    <th>{Campo2}</th>
-                    <th>{Campo3}</th>
-                    <th>{Campo4}</th>
-                  </tr>
-                </thead>
-                <tbody>
+              <thead>
                     <tr>
-                      <th className="check"><input type="checkbox" name="" id=""/></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{Campo1}</td>
+                        <td>{Campo2}</td>
+                        <td>{Campo3}</td>
+                        <td>{Campo4}</td>
                     </tr>
+                    </thead>
+                    <tbody>
                     <tr>
                         <th className="check"><input type="checkbox" name="" id=""/></th>
                         <td></td>

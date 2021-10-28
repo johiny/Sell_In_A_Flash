@@ -1,7 +1,7 @@
 .Datos{
     position: relative;
     top: 160px;
-    left: 300px;
+    left: 150px;
     padding: 5px;
     font-size: 20px;
     font-family: 'Lato',sans-serif;
@@ -11,7 +11,7 @@
 .Lista{
     position: relative;
     top: 160px;
-    left: 300px;
+    left: 150px;
     padding: 5px;
     font-size: 20px;
     font-family: 'Lato',sans-serif;
@@ -21,7 +21,7 @@
 
 .Register{
     position: relative;
-    left: 630px;
+    left: 500px;
     bottom: 10px;
     margin: 30px;
 }
@@ -46,10 +46,10 @@
 
 .BotonesView{
     position: relative;
-    bottom: 90px;
-    left: 298px;
+    bottom: 30px;
+    left: 147px;
     padding: 5px;
-    width: 230px;
+    width: 231px;
     font-size: 20px;
     font-family: 'Lato',sans-serif;
     display: block;
