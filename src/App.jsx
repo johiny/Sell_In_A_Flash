@@ -6,7 +6,8 @@ import {
 
 import UserdataAD from 'pages/InterfazGestionUsuarios/UserdataAD';
 import UserdataUS from 'pages/InterfazGestionUsuarios/UserdataUS';
-import Layout from "layouts/Globallayout";
+import Layout from "layouts/PrivateLayout";
+import GlobalLayout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
@@ -20,16 +21,16 @@ import PrivateRoute from 'components/PrivateRoute';
 
 function App() {
   return (
-  <Auth0Provider
+/*   <Auth0Provider
       domain="dev-0skfin92.us.auth0.com"
       clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
       redirectUri={window.location.origin}
       audience="api-autenticacion-sellinaflash "
-    >  
+    > */  
     <Router>   
       <Switch>
         <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table", "/Index"]} >
-          <Layout>
+          < GlobalLayout>
             <Switch>
               <Route path='/InterfazGestionUsuarios/Usuarios'>
                 <UserdataUS/>
@@ -49,11 +50,15 @@ function App() {
               <Route path ="/Maestro-Ventas">
                 <IndexVentas/>
               </Route>
+            </Switch>
+          </GlobalLayout> 
+        </Route>
+        <Route>
+        <GlobalLayout>
               <Route path='/Index'>
                 <Index />
               </Route>
-            </Switch>
-          </Layout> 
+        </GlobalLayout>
         </Route>
         <Route path='/Registro'>
           <Registrar />
@@ -63,7 +68,7 @@ function App() {
         </Route>
       </Switch>
     </Router>
-    </Auth0Provider>
+/*     </Auth0Provider> */
   );
 }  
         

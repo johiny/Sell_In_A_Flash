@@ -1,6 +1,8 @@
 import NavBars from "components/NavBars";
 import "styles/LayoutStyle.css";
-const Layout = ({children}) => {
+
+
+const GlobalLayout = ({children}) => {
     return (
         <>
         <NavBars/>
@@ -10,4 +12,4 @@ const Layout = ({children}) => {
     )
 }
 
-export default Layout;
+export default GlobalLayout;

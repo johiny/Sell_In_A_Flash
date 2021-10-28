@@ -29,27 +29,39 @@ export const borrarVenta = async (data,id,successCallback,errorCallback) => {
 }
 
 // CRUD usuarios
-export const obtenerUsuarios = async (successCallback,errorCallback) => {
+const getToken = () => {
+    return `Bearer ${localStorage.getItem('token')}`;
+  };
 
-    const options = {method: 'GET', url: `${baseURL}/Usuarios/`};
-   
-   await axios.request(options).then(successCallback).catch(errorCallback);
-   };
-   
-   export const enviarUsuario = async (data,successCallback,errorCallback) => {
-       const options = {method: 'POST',url: `${baseURL}/Usuarios/`,data};
-   
-       await axios.request(options).then(successCallback).catch(errorCallback);
-   };
-   
-   export const editarUsuario = async (data,id,successCallback,errorCallback) => {
-       const options = {method: 'PATCH' ,url: `${baseURL}/Usuarios/${id}/`, data};
-   
-       await axios.request(options).then(successCallback).catch(errorCallback);
-   }
-   
-   export const borrarUsuario = async (data,id,successCallback,errorCallback) => {
-       const options = {method: 'DELETE' ,url: `${baseURL}/Usuarios/${id}/`};
-   
-       await axios.request(options).then(successCallback).catch(errorCallback);
-   }
+export const obtenerUsuarios = async (successCallback, errorCallback) => {
+    const options = {
+      method: 'GET',
+      url: `${baseURL}/usuarios/`,
+      headers: {
+        Authorization: getToken(),
+      },
+    };
+    await axios.request(options).then(successCallback).catch(errorCallback);
+  };
+  
+  export const obtenerDatosUsuario = async (successCallback, errorCallback) => {
+    const options = {
+      method: 'GET',
+      url: `${baseURL}/usuarios/self/`,
+      headers: {
+        Authorization: getToken(), // 3. enviarle el token a backend
+      },
+    };
+    await axios.request(options).then(successCallback).catch(errorCallback);
+  };
+  
+  export const editarUsuario = async (id, data, successCallback, errorCallback) => {
+    const options = {
+      method: 'PATCH',
+      url: `${baseURL}/usuarios/${id}/`,
+      headers: { 'Content-Type': 'application/json', Authorization: getToken() },
+      data,
+    };
+    await axios.request(options).then(successCallback).catch(errorCallback);
+  };
+  
