@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Tabla = ({Campo1, Campo2, Campo3, Campo4 }) => {
+const Tabla2 = ({Campo1, Campo2, Campo3, Campo4 }) => {
     return (
         <div>
             <table className="contenido">
@@ -55,4 +55,4 @@ const Tabla = ({Campo1, Campo2, Campo3, Campo4 }) => {
     )
 }
 
-export default Tabla
+export default Tabla2

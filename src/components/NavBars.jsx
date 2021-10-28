@@ -21,7 +21,7 @@ const NavBars = () => {
             <div id="leftbar">
                 <Link to="/index"><img id="logo" src={Logo} alt="logo SF"></img></Link>
                 <ul id="leftbar_links">
-                    <li>Productos</li>
+                <NavLink to="/Interfaz-Productos/Principal"><li>Productos</li></NavLink>
                     <NavLink to="/Maestro-Ventas"><li>Ventas</li></NavLink>
                     <div><NavLink to="/InterfazGestionUsuarios/Administrador"><li>Usuarios</li></NavLink> </div>
                 </ul>
@@ -29,5 +29,5 @@ const NavBars = () => {
         </header>
     )
 }
-
+//
 export default NavBars;

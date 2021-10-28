@@ -1,11 +1,11 @@
 import 'styles/View.css';
-import BotonesEdición from 'Componentes/BotonesEdición';
-/* import NavBarView from 'Componentes/NavBarView'; */
-import CampoAEditar from 'Componentes/CampoAEditar';
-import ListaDesplegable from 'Componentes/ListaEdición';
-import DescripView from 'Componentes/DescripView';
-import CampoID from 'Componentes/CampoID';
-import CamposAdd from 'Componentes/CamposAdd';
+import BotonesEdición from 'components/BotonesEdición';
+/* import NavBarView from 'components/NavBarView'; */
+import CampoAEditar from 'components/CampoAEditar';
+import ListaDesplegable from 'components/ListaEdición';
+import DescripView from 'components/DescripView';
+import CampoID from 'components/CampoID';
+import CamposAdd from 'components/CamposAdd';
 
 
 function ViewRegister(){

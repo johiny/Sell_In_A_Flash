@@ -1,7 +1,5 @@
 import NavBars from "components/NavBars";
 import "styles/LayoutStyle.css";
-
-
 const GlobalLayout = ({children}) => {
     return (
         <>
