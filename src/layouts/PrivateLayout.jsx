@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
 
       setLoadingUserInformation(true);
       const accessToken = await getAccessTokenSilently({
-        audience: `api-autenticacion-sellinaflash`,
+        audience: `https://dev-0skfin92.us.auth0.com/api/v2/`,
       });
 
       localStorage.setItem('token', accessToken);

@@ -30,13 +30,13 @@ function App() {
   return (
   <Auth0Provider
       domain="dev-0skfin92.us.auth0.com"
-      clientId="oz7TFOdHR2htL97M1ipah864UNmoz9br"
+      clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
       redirectUri={window.location.origin}
-      audience="api-autenticacion-sellinaflash "
+      audience="https://dev-0skfin92.us.auth0.com/api/v2/ "
     >
     <Router>   
       <Switch>
-        <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver" ]} >
+        <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver", "/index" ]} >
           < GlobalLayout>
             <Switch>
               <Route path='/InterfazGestionUsuarios/Usuarios'>
@@ -66,7 +66,7 @@ function App() {
               <Route path ="/Maestro-Ventas">
                 <IndexVentas/>
               </Route>
-              <Route path='/'>
+              <Route path='/index'>
                 <Index />
               </Route>            
             </Switch>
@@ -76,7 +76,7 @@ function App() {
         <Route path='/Registro'>
           <Registrar />
         </Route>    
-        <Route path='/Login'>
+        <Route path='/'>
           <Login />
         </Route>
       </Switch>

@@ -9,7 +9,7 @@ import "styles/estilos.css"
 
 function Login(){
 
-    const {isAuthenticated, isLoading} = useAuth0();
+    const {isAuthenticated, isLoading, loginWithRedirect} = useAuth0();
     
     if (isLoading) return <h1>Loading...</h1>
 
@@ -29,10 +29,9 @@ function Login(){
                         <h1 className="titulo_login">Inicio de sesión</h1>
                     </div>
                     <div>
-                        <Inputs nombre='ID Usuario' icono='fas fa-user icono' tipo='text'/>
-                        <Inputs nombre='Contraseña' icono='fas fa-key icono' tipo='password'/>
+                        
                         <div className="posicion">
-                            {isAuthenticated ? (<Boton mensaje='Index' className='boton-generico boton-entrar' link='/index'/>) : (<Boton mensaje='Inicia sesión' className='boton-generico boton-entrar' link='/index'/>)}
+                            <button onClick={() => loginWithRedirect()} className='boton-generico boton-entrar'>Iniciar Sesión</button>
                             <div className="enlace">
                                 <Link to='/'>¿Recuperar Contraseña?</Link>
                                 <Link to='/Registro'>Registrate</Link>
