@@ -10,11 +10,11 @@ import GlobalLayout from "layouts/Globallayout";
 import IndexVentas from "pages/Maestro-Ventas/IndexVentas"
 import Table from "pages/Maestro-Ventas/Table";
 import DetallesVenta from "pages/Maestro-Ventas/DetallesVenta"
-import Login from 'pages/auth/Login';
+/* import Login from 'pages/auth/Login';
+import Registrar from "pages/auth/Registrar"; */
 import Index from 'pages/Index';
 import NuevaVenta from "pages/Maestro-Ventas/NuevaVenta"
 import Principal from 'pages/Interfaz-Productos/Principal';
-import Registrar from "pages/auth/Registrar";
 import { Auth0Provider } from "@auth0/auth0-react";
 import EditPage from "pages/Interfaz-Productos/Editar";
 import ViewRegister from "pages/Interfaz-Productos/Ver";
@@ -29,20 +29,20 @@ function App() {
   
   return (
   <Auth0Provider
-      domain="dev-0skfin92.us.auth0.com"
-      clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
+      domain="sellinaflash1994.us.auth0.com"
+      clientId="QQ5COkJZY9l8UVUoqaiQQ4URH3KuYTG9"
       redirectUri={'https://nameless-waters-95508.herokuapp.com/'}
-      audience="https://dev-0skfin92.us.auth0.com/api/v2/ "
+      audience="api-autentication-sellinaflash"
     >
     <Router>   
       <Switch>
-        <Route path={["/InterfazGestionUsuarios/Administrador", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver", "/index" ]} >
+        <Route path={["usuarios/admin", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver", "/index", "/" ]} >
           < GlobalLayout>
             <Switch>
-              <Route path='/InterfazGestionUsuarios/Usuarios'>
+              <Route path='usuarios/usuarios'>
                 <UserdataUS/>
               </Route>
-              <Route path='/InterfazGestionUsuarios/Administrador'>              
+              <Route path='usuarios/admin'>              
                 <UserdataAD/>                
               </Route>
               <Route path="/Interfaz-Productos/Editar">
@@ -69,16 +69,16 @@ function App() {
               <Route path='/index'>
                 <Index />
               </Route>            
+              <Route path='/'>
+                <Index />
+              </Route>
             </Switch>
           </GlobalLayout> 
         </Route>
 
-        <Route path='/Registro'>
+        {/* <Route path='/Registro'>
           <Registrar />
-        </Route>    
-        <Route path='/'>
-          <Login />
-        </Route>
+        </Route>  */}   
       </Switch>
     </Router>
     </Auth0Provider>
