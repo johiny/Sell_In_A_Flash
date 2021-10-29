@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'https://sf-backapi.herokuapp.com'
+const baseURL = 'https://secure-badlands-88672.herokuapp.com/'
 
 // CRUD ventas
 export const obtenerVentas = async (successCallback,errorCallback) => {

@@ -31,7 +31,7 @@ function App() {
   <Auth0Provider
       domain="dev-0skfin92.us.auth0.com"
       clientId="NOstxx6zUuNbSfMxHCYO6SrYZ2c8NXZ8"
-      redirectUri={window.location.origin}
+      redirectUri={'https://nameless-waters-95508.herokuapp.com/'}
       audience="https://dev-0skfin92.us.auth0.com/api/v2/ "
     >
     <Router>   
