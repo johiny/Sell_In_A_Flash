@@ -36,7 +36,7 @@ function App() {
     >
     <Router>   
       <Switch>
-        <Route path={["usuarios/admin", "/InterfazGestionUsuarios/Usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver", "/index", "/" ]} >
+        <Route path={["usuarios/admin", "usuarios/usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver", "/index", "/" ]} >
           < GlobalLayout>
             <Switch>
               <Route path='usuarios/usuarios'>
