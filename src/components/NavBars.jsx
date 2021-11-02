@@ -23,7 +23,7 @@ const NavBars = () => {
                 <ul id="leftbar_links">
                 <NavLink to="/Interfaz-Productos/Principal"><li>Productos</li></NavLink>
                     <NavLink to="/Maestro-Ventas"><li>Ventas</li></NavLink>
-                    <div><NavLink to="usuarios/admin"><li>Usuarios</li></NavLink> </div>
+                    <div><NavLink to="/usuarios/admin"><li>Usuarios</li></NavLink> </div>
                 </ul>
             </div>
         </header>
