@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,500&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,8 +8,10 @@
 }
 /* Nav Bar Styles ------------------------------------------------------------------*/
 
-
 /* topbar settings */
+.appContainer{
+  overflow-x: hidden !important;
+}
 nav {
   position: fixed;
   width: 2200px;
@@ -19,7 +22,7 @@ nav {
 
 .navlinks {
   float: right;
-  margin-right: 0%;
+  margin-right: 2vh;
   cursor: pointer;
 }
 
@@ -49,7 +52,6 @@ nav li:hover {
   border-right: 1px solid rgba(97, 97, 97, 0.1);
   position: fixed;
   width: 200px;
-  height: 900%;
   padding: 15px 0px;
 }
 
@@ -82,6 +84,21 @@ nav li:hover {
   color: #47525E;
 }
 
+/* index styles */
+.indexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.indexContainer  h1 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 500;
+}
+.indexContainer__title{
+  text-align: center;
+  margin-top: 5vh;
+}
 /* Cuerpo Central main */
 
 .cuerpo_central {
@@ -121,7 +138,6 @@ body {
 }
 
 .cuerpo_central__opciones div {
-  background: green;
   font-family: 'Roboto',sans-serif;
   font-style: normal;
   font-weight: 100;
@@ -134,7 +150,7 @@ body {
   width: 320px;
   float: left;
   margin: 2px;
-  background: rgba(117, 231, 149, 0.12);
+  background: rgba(117, 231, 149, 0.25);
 }
 
 .Button_grande{

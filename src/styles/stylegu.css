@@ -24,7 +24,6 @@ nav {
 
 .navlinks {
   float: right;
-  margin-right: 30%;
 }
 
 .navlinks li {
@@ -53,7 +52,6 @@ nav li:hover {
   border-right: 1px solid rgba(97, 97, 97, 0.1);
   position: fixed;
   width: 200px;
-  height: 900%;
   padding: 15px 0px;
 }
 

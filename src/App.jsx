@@ -39,10 +39,10 @@ function App() {
         <Route path={["usuarios/admin", "usuarios/usuarios","/Maestro-Ventas","/Maestro-Venta/DetallesVenta","/Maestro-Ventas/NuevaVenta","/Maestro-Venta/Table","/Interfaz-Productos/Principal", "/Interfaz-Productos/Ver", "/Interfaz-Productos/Ver", "/index", "/" ]} >
           < GlobalLayout>
             <Switch>
-              <Route path='usuarios/usuarios'>
+              <Route path='/usuarios/usuarios'>
                 <UserdataUS/>
               </Route>
-              <Route path='usuarios/admin'>              
+              <Route path='/usuarios/admin'>              
                 <UserdataAD/>                
               </Route>
               <Route path="/Interfaz-Productos/Editar">
