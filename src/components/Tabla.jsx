@@ -1,15 +1,10 @@
 import VentaRow from "components/VentaRow.jsx"
 /* import CheckMark from "media/check-mark.svg" */
 import { nanoid } from "nanoid"
-import { useEffect, useRef } from "react/cjs/react.development"
+import { useRef } from "react/cjs/react.development"
 import trashcan from "media/delete.png"
 const Tabla = ({ventasbackend,setEjecutarConsulta}) => {
     
-
-    useEffect(()=> {
-        console.log(ventasbackend)
-    },[ventasbackend])
-
     const tabla = useRef(null)
 
     return(
