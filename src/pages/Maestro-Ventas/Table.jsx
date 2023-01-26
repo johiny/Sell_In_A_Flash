@@ -41,10 +41,6 @@ useEffect(() => {
                 })
         )
     },[busqueda,listaVentas])
-    
-    useEffect(() => {
-        console.log(listaVentas)
-    },[listaVentas])
 
     
     return(
