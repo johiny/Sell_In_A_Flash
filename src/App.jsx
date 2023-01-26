@@ -18,7 +18,6 @@ import Principal from 'pages/Interfaz-Productos/Principal';
 import { Auth0Provider } from "@auth0/auth0-react";
 import EditPage from "pages/Interfaz-Productos/Editar";
 import ViewRegister from "pages/Interfaz-Productos/Ver";
-import 'styles/App.css';
 import 'styles/App2.css';
 import "styles/View.css";
 import "styles/estilos.css";
