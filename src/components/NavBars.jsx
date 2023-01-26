@@ -5,7 +5,6 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const NavBars = () => {
     const { loginWithRedirect, isAuthenticated, isLoading, logout, loginWithPopup} = useAuth0();
-    const {} = useAuth0();
     return(
         <header className="wrapper">
             <nav className='topbar'>

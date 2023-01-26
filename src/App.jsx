@@ -29,10 +29,9 @@ function App() {
   
   return (
   <Auth0Provider
-      domain="sellinaflash1994.us.auth0.com"
-      clientId="QQ5COkJZY9l8UVUoqaiQQ4URH3KuYTG9"
-      redirectUri={'https://nameless-waters-95508.herokuapp.com/'}
-      audience="api-autentication-sellinaflash"
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
+      redirectUri= {window.location.origin}
     >
     <Router>   
       <Switch>

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = 'https://secure-badlands-88672.herokuapp.com/'
+const baseURL = process.env.REACT_APP_API
 
 // CRUD ventas
 export const obtenerVentas = async (successCallback,errorCallback) => {
