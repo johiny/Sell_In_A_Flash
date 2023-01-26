@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 import { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import trashcan from "media/delete.png"
 import pencil from "media/pencil.svg"
 import cross from "media/cancel.svg"
