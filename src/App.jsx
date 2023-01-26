@@ -55,6 +55,12 @@ function App() {
               <Route path="/Maestro-Ventas/DetallesVenta">
                 <DetallesVenta/>
               </Route>
+              <Route path ="/Maestro-Ventas/NuevaVenta">
+                <NuevaVenta/>
+              </Route>
+              <Route path="/Maestro-Ventas/Table">
+                <Table/>
+              </Route>
               <Route path ="/Maestro-Ventas">
                 <IndexVentas/>
               </Route>
